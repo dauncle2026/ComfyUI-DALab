@@ -1,87 +1,57 @@
-[build-system]
-requires = ["setuptools>=70.0"]
-build-backend = "setuptools.build_meta"
-
 [project]
-name = "dauncle"
+name = "dalab"
 version = "0.0.1"
-description = "A collection of custom nodes for ComfyUI"
-authors = [
-  {name = "ComfyUI-Uncleda", email = "dauncle2026@gmail.com"}
-]
+description = "A comprehensive collection of ComfyUI nodes for Flux, Wan2.2, Qwen models, and Feishu integration."
 readme = "README.md"
-license = {text = "GNU General Public License v3"}
+license = { file = "LICENSE" }
 requires-python = ">=3.10"
-classifiers = []
+
+keywords = ["comfyui", "flux", "wan", "qwen", "feishu", "audio", "video"]
+
+authors = [
+  { name = "dauncle2026", email = "dauncle2026@gmail.com" }
+]
+
 dependencies = [
-
+    "openai",
+    "opencv-python",
+    "lark-oapi",
+    "matplotlib",
+    "timm",
+    "librosa",
+    "omegaconf",
+    "json5",
+    "munch",
+    "modelscope",
+    "accelerate",
+    "descript-audiotools",
+    "WeTextProcessing",
+    "wetext",
+    "hyperpyyaml",
+    "onnxruntime-gpu",
+    "openai-whisper",
+    "conformer",
+    "diffusers",
+    "hydra-core",
+    "lightning",
+    "gdown",
+    "x_transformers",
+    "wget",
+    "pyarrow",
+    "pyworld",
+    "torchcodec",
+    "inflect",
+    "funasr"
 ]
 
-
-
-[project.optional-dependencies]
-dev = [
-    "bump-my-version",
-    "coverage",  # testing
-    "mypy",  # linting
-    "pre-commit", # runs linting on commit
-    "pytest",  # testing
-    "ruff",  # linting
-]
 
 [project.urls]
-Repository = "https://github.com/dauncle2026/dauncle"
-BugTracker = "https://github.com/dauncle2026/dauncle/issues"
-Documentation = "https://github.com/dauncle2026/dauncle/wiki"
-
+Repository = "https://github.com/dauncle2026/ComfyUI-DALab"
+Documentation = "https://github.com/dauncle2026/ComfyUI-DALab/wiki"
+"Bug Tracker" = "https://github.com/dauncle2026/ComfyUI-DALab/issues"
 
 [tool.comfy]
 PublisherId = "dauncle2026"
-DisplayName = "dauncle"
-Icon = ""
-Tags = []
-Repository = "https://github.com/dauncle2026/dauncle"
-
-includes = []
-
-[tool.setuptools.package-data]
-"*" = ["*.*"]
-
-[tool.pytest.ini_options]
-minversion = "8.0"
-testpaths = [
-    "tests",
-]
-
-[tool.mypy]
-files = "."
-
-# Use strict defaults
-strict = true
-warn_unreachable = true
-warn_no_return = true
-
-[[tool.mypy.overrides]]
-# Don't require test functions to include types
-module = "tests.*"
-allow_untyped_defs = true
-disable_error_code = "attr-defined"
-
-[tool.ruff]
-# extend-exclude = ["static", "ci/templates"]
-line-length = 140
-src = ["src", "tests"]
-target-version = "py39"
-
-# Add rules to ban exec/eval
-[tool.ruff.lint]
-select = [
-    "S102",  # exec-builtin
-    "S307",  # eval-used
-    "W293",
-    "F",  # The "F" series in Ruff stands for "Pyflakes" rules, which catch various Python syntax errors and undefined names.
-    # See all rules here: https://docs.astral.sh/ruff/rules/#pyflakes-f
-]
-
-[tool.ruff.lint.flake8-quotes]
-inline-quotes = "double"
+DisplayName = "ComfyUI-DALab"
+Icon = "https://github.com/dauncle2026/ComfyUI-DALab/blob/dev/DALab_icon.jpg"
+requires-comfyui = ">=0.3.0"

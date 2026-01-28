@@ -351,7 +351,7 @@ class DAQwenImage(io.ComfyNode):
     def fingerprint_inputs(cls, **kwargs):
         try:
             config_mtime = os.path.getmtime(_CONFIG_FILE_PATH)
-            global_config_mtime = os.path.getmtime(utils.get_config_file_path("global"))
+            global_config_mtime = os.path.getmtime(get_config_file_path("global"))
         except:
             config_mtime = 0
             global_config_mtime = 0

@@ -17,6 +17,7 @@ _GLOBAL_CONFIG_PATH = get_config_file_path("global")
 class ModelManager:
     _instance = None
     _cache = {}
+    _lora_cache = {} 
 
     _model_switch_offload = False
     _offload_after_run = False
@@ -155,6 +156,22 @@ class ModelManager:
 
         return self._get_or_load(cache_key, loader)
 
+    def get_lora_dict(self, path: str):
+        if path in self._lora_cache:
+            logger.info(f"Using cached LoRA: {path}")
+            return self._lora_cache[path]
+
+        logger.info(f"Loading LoRA from disk: {path}")
+        try:
+            lora_dict = comfy.utils.load_torch_file(path, safe_load=True)
+        except Exception as e:
+            logger.error(f"Failed to load LoRA: {path}, error: {e}")
+            raise e
+
+        self._lora_cache[path] = lora_dict
+        
+        return lora_dict
+
     def _unload_from_comfyui(self, model):
         if isinstance(model, comfy.model_patcher.ModelPatcher):
             patcher = model
@@ -219,6 +236,7 @@ class ModelManager:
                 self._offload_model(key, cached_model)
 
         self._cache.clear()
+        self._lora_cache.clear()
         mm.soft_empty_cache()
         logger.info("All models released and VRAM cleared")
 

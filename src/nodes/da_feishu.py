@@ -13,8 +13,10 @@ from comfy_api.latest import io
 from ..utils import utils
 from ..utils.feishu_manager import FeishuManager
 from ..utils.config_loader import ConfigLoader
+from ..utils.paths import get_config_file_path
+from ..utils.logger import logger
 
-_CONFIG_FILE_PATH = utils.get_config_file_path("feishu")
+_CONFIG_FILE_PATH = get_config_file_path("feishu")
 
 class DAFeishuConfig(io.ComfyNode):
     @classmethod
@@ -216,7 +218,7 @@ class DAFeishuLoad(io.ComfyNode):
             feishu_config
         ]
 
-        print(f"[UncleDa Tools] DAFeishuLoad record number: {len(record_ids)}")
+        logger.info(f"[UncleDa Tools] DAFeishuLoad record number: {len(record_ids)}")
 
         return io.NodeOutput(*results)
 

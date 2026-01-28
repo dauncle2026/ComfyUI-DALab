@@ -32,8 +32,9 @@ from ..utils.logger import logger
 from .da_florence2 import DAFlorence2
 from .da_sam2 import DASAM2
 from .da_dwpose import DADWPose
+from ..utils.paths import get_config_file_path
 
-_CONFIG_FILE_PATH = utils.get_config_file_path("wan_animate")
+_CONFIG_FILE_PATH = get_config_file_path("wan_animate")
 
 _CACHE = SimpleNamespace(
     positive={},
@@ -991,7 +992,7 @@ class DAWanAnimate(io.ComfyNode):
     def fingerprint_inputs(cls, **kwargs):
         try:
             config_mtime = os.path.getmtime(_CONFIG_FILE_PATH)
-            global_config_mtime = os.path.getmtime(utils.get_config_file_path("global"))
+            global_config_mtime = os.path.getmtime(get_config_file_path("global"))
         except:
             config_mtime = 0
             global_config_mtime = 0

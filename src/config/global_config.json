@@ -1,6 +1,6 @@
 {
     "debug": true,
-    "model_switch_offload": true,
+    "model_switch_offload": false,
     "offload_after_run": false,
-    "release_after_run": false
+    "release_after_run": true
 }

@@ -1,9 +1,1188 @@
 {
-    "DAWanAnimate": {
-        "display_name": "DA Wan2.2 Animate",
+    "DACosyVoice3Config": {
+        "display_name": "DA CosyVoice3 配置",
         "inputs": {
+            "model_path": {
+                "name": "模型路径",
+                "tooltip": "CosyVoice3模型的文件夹路径"
+            },
+            "rich_tags": {
+                "name": "副标题/标签",
+                "tooltip": "富文本标签配置"
+            }
+        },
+        "outputs": {}
+    },
+    "DACosyVoice3": {
+        "display_name": "DA CosyVoice3 生成",
+        "inputs": {
+            "text": {
+                "name": "文本",
+                "tooltip": "要转换的文本内容"
+            },
+            "ref_audios": {
+                "name": "参考音频",
+                "tooltip": "用于克隆声音的参考音频文件"
+            },
+            "speed": {
+                "name": "语速",
+                "tooltip": "语音播放速度，默认1.0"
+            },
+            "seed": {
+                "name": "随机种子",
+                "tooltip": "控制生成的随机性"
+            }
         },
         "outputs": {
+            "audios": {
+                "name": "音频",
+                "tooltip": "生成的音频结果"
+            }
+        }
+    },
+    "DADWPoseConfig": {
+        "display_name": "DA DWPose 配置",
+        "inputs": {
+            "bbox_detector": {
+                "name": "BBox检测器",
+                "tooltip": "选择边界框检测模型"
+            },
+            "pose_estimator": {
+                "name": "姿态估计器",
+                "tooltip": "选择姿态估计模型"
+            }
+        },
+        "outputs": {}
+    },
+    "DADWPose": {
+        "display_name": "DA DWPose 姿态提取",
+        "inputs": {
+            "images": {
+                "name": "图像",
+                "tooltip": "输入的原始图像"
+            },
+            "detect_hand": {
+                "name": "检测手部",
+                "tooltip": "是否检测手部关键点"
+            },
+            "detect_body": {
+                "name": "检测身体",
+                "tooltip": "是否检测身体关键点"
+            },
+            "detect_face": {
+                "name": "检测面部",
+                "tooltip": "是否检测面部关键点"
+            },
+            "resolution": {
+                "name": "分辨率",
+                "tooltip": "检测时的分辨率"
+            }
+        },
+        "outputs": {
+            "pose_images": {
+                "name": "姿态图",
+                "tooltip": "可视化的姿态图像"
+            }
+        }
+    },
+    "DAFeishuConfig": {
+        "display_name": "DA 飞书配置",
+        "inputs": {
+            "app_id": {
+                "name": "应用ID",
+                "tooltip": "飞书自建应用的App ID"
+            },
+            "app_secret": {
+                "name": "应用密钥",
+                "tooltip": "飞书自建应用的App Secret"
+            }
+        },
+        "outputs": {
+            "feishu_config": {
+                "name": "飞书配置",
+                "tooltip": "生成的飞书配置对象"
+            }
+        }
+    },
+    "DAFeishuLoad": {
+        "display_name": "DA 飞书加载",
+        "inputs": {
+            "app_token": {
+                "name": "应用Token",
+                "tooltip": "多维表格的App Token"
+            },
+            "table_id": {
+                "name": "数据表ID",
+                "tooltip": "多维表格的数据表ID"
+            },
+            "view_id": {
+                "name": "视图ID",
+                "tooltip": "多维表格的视图ID"
+            }
+        },
+        "outputs": {
+            "field_values": {
+                "name": "字段值",
+                "tooltip": "读取到的字段值列表"
+            }
+        }
+    },
+    "DASaveImage": {
+        "display_name": "DA 保存图像",
+        "inputs": {
+            "images": {
+                "name": "图像",
+                "tooltip": "要保存的图像"
+            },
+            "save_to_feishu": {
+                "name": "保存到飞书",
+                "tooltip": "是否同步上传到飞书"
+            },
+            "filename_prefix": {
+                "name": "文件名前缀",
+                "tooltip": "保存文件的名称前缀"
+            }
+        },
+        "outputs": {
+            "images": {
+                "name": "图像",
+                "tooltip": "原始图像"
+            }
+        }
+    },
+    "DASaveVideo": {
+        "display_name": "DA 保存视频",
+        "inputs": {
+            "videos": {
+                "name": "视频",
+                "tooltip": "要保存的视频"
+            },
+            "save_to_feishu": {
+                "name": "保存到飞书",
+                "tooltip": "是否同步上传到飞书"
+            },
+            "filename_prefix": {
+                "name": "文件名前缀",
+                "tooltip": "保存文件的名称前缀"
+            }
+        },
+        "outputs": {
+            "videos": {
+                "name": "视频",
+                "tooltip": "原始视频"
+            }
+        }
+    },
+    "DAConcatVideo": {
+        "display_name": "DA 拼接视频",
+        "inputs": {
+            "videos": {
+                "name": "视频列表",
+                "tooltip": "要拼接的视频列表"
+            }
+        },
+        "outputs": {
+            "videos": {
+                "name": "视频",
+                "tooltip": "拼接后的视频"
+            }
+        }
+    },
+    "DASaveAudio": {
+        "display_name": "DA 保存音频",
+        "inputs": {
+            "audios": {
+                "name": "音频",
+                "tooltip": "要保存的音频"
+            },
+            "save_to_feishu": {
+                "name": "保存到飞书",
+                "tooltip": "是否同步上传到飞书"
+            },
+            "filename_prefix": {
+                "name": "文件名前缀",
+                "tooltip": "保存文件的名称前缀"
+            }
+        },
+        "outputs": {
+            "audios": {
+                "name": "音频",
+                "tooltip": "原始音频"
+            }
+        }
+    },
+    "DAFlorence2Config": {
+        "display_name": "DA Florence2 配置",
+        "inputs": {
+            "model_path": {
+                "name": "模型路径",
+                "tooltip": "Florence2模型的文件夹路径"
+            }
+        },
+        "outputs": {}
+    },
+    "DAFlorence2": {
+        "display_name": "DA Florence2 图像分析",
+        "inputs": {
+            "images": {
+                "name": "图像",
+                "tooltip": "要分析的图像"
+            },
+            "task": {
+                "name": "任务类型",
+                "tooltip": "选择具体的分析任务"
+            },
+            "text_input": {
+                "name": "文本输入",
+                "tooltip": "辅助提示文本"
+            },
+            "max_new_tokens": {
+                "name": "最大生成Token数",
+                "tooltip": "控制生成文本的最大长度"
+            },
+            "num_beams": {
+                "name": "Beam搜索数量",
+                "tooltip": "Beam Search的数量"
+            }
+        },
+        "outputs": {
+            "results": {
+                "name": "结果",
+                "tooltip": "分析结果文本"
+            }
+        }
+    },
+    "DAFlux1Config": {
+        "display_name": "DA Flux1 配置",
+        "inputs": {
+            "clip_model": {
+                "name": "CLIP模型",
+                "tooltip": "选择CLIP文本编码器"
+            },
+            "t5_model": {
+                "name": "T5模型",
+                "tooltip": "选择T5文本编码器"
+            },
+            "vae_model": {
+                "name": "VAE模型",
+                "tooltip": "选择VAE模型"
+            },
+            "diffusion_model": {
+                "name": "扩散模型",
+                "tooltip": "选择Flux扩散模型"
+            },
+            "steps": {
+                "name": "步数",
+                "tooltip": "采样步数"
+            },
+            "batch_size": {
+                "name": "批次大小",
+                "tooltip": "一次生成的图片数量"
+            },
+            "guidance": {
+                "name": "引导系数",
+                "tooltip": "CFG Scale"
+            },
+            "sampler": {
+                "name": "采样器",
+                "tooltip": "采样算法"
+            },
+            "scheduler": {
+                "name": "调度器",
+                "tooltip": "调度策略"
+            },
+            "easycache": {
+                "name": "简易缓存",
+                "tooltip": "启用模型缓存"
+            },
+            "loras": {
+                "name": "LoRA列表",
+                "tooltip": "加载的LoRA模型"
+            }
+        },
+        "outputs": {}
+    },
+    "DAFlux1": {
+        "display_name": "DA Flux1 生成",
+        "inputs": {
+            "width": {
+                "name": "宽度",
+                "tooltip": "生成图像的宽度"
+            },
+            "height": {
+                "name": "高度",
+                "tooltip": "生成图像的高度"
+            },
+            "prompts": {
+                "name": "提示词",
+                "tooltip": "正向提示词"
+            },
+            "seed": {
+                "name": "随机种子",
+                "tooltip": "控制生成的随机性"
+            }
+        },
+        "outputs": {
+            "images": {
+                "name": "图像",
+                "tooltip": "生成的图像"
+            }
+        }
+    },
+    "DAFlux2KleinConfig": {
+        "display_name": "DA Flux2 Klein 配置",
+        "inputs": {
+            "text_encoder_model": {
+                "name": "文本编码器模型",
+                "tooltip": "选择文本编码器"
+            },
+            "vae_model": {
+                "name": "VAE模型",
+                "tooltip": "选择VAE模型"
+            },
+            "diffusion_model": {
+                "name": "扩散模型",
+                "tooltip": "选择Flux2 Klein扩散模型"
+            },
+            "steps": {
+                "name": "步数",
+                "tooltip": "采样步数"
+            },
+            "guidance": {
+                "name": "引导系数",
+                "tooltip": "CFG Scale"
+            },
+            "sampler": {
+                "name": "采样器",
+                "tooltip": "采样算法"
+            },
+            "scheduler": {
+                "name": "调度器",
+                "tooltip": "调度策略"
+            },
+            "loras": {
+                "name": "LoRA列表",
+                "tooltip": "加载的LoRA模型"
+            }
+        },
+        "outputs": {}
+    },
+    "DAFlux2Klein": {
+        "display_name": "DA Flux2 Klein 生成",
+        "inputs": {
+            "width": {
+                "name": "宽度",
+                "tooltip": "生成图像的宽度"
+            },
+            "height": {
+                "name": "高度",
+                "tooltip": "生成图像的高度"
+            },
+            "prompts": {
+                "name": "提示词",
+                "tooltip": "正向提示词"
+            },
+            "seed": {
+                "name": "随机种子",
+                "tooltip": "控制生成的随机性"
+            }
+        },
+        "outputs": {
+            "images": {
+                "name": "图像",
+                "tooltip": "生成的图像"
+            }
+        }
+    },
+    "DAFlux2Config": {
+        "display_name": "DA Flux2 配置",
+        "inputs": {
+            "text_encoder_model": {
+                "name": "文本编码器模型",
+                "tooltip": "选择文本编码器"
+            },
+            "vae_model": {
+                "name": "VAE模型",
+                "tooltip": "选择VAE模型"
+            },
+            "diffusion_model": {
+                "name": "扩散模型",
+                "tooltip": "选择Flux2扩散模型"
+            },
+            "steps": {
+                "name": "步数",
+                "tooltip": "采样步数"
+            },
+            "guidance": {
+                "name": "引导系数",
+                "tooltip": "CFG Scale"
+            },
+            "sampler": {
+                "name": "采样器",
+                "tooltip": "采样算法"
+            },
+            "scheduler": {
+                "name": "调度器",
+                "tooltip": "调度策略"
+            },
+            "loras": {
+                "name": "LoRA列表",
+                "tooltip": "加载的LoRA模型"
+            }
+        },
+        "outputs": {}
+    },
+    "DAFlux2": {
+        "display_name": "DA Flux2 生成",
+        "inputs": {
+            "width": {
+                "name": "宽度",
+                "tooltip": "生成图像的宽度"
+            },
+            "height": {
+                "name": "高度",
+                "tooltip": "生成图像的高度"
+            },
+            "prompts": {
+                "name": "提示词",
+                "tooltip": "正向提示词"
+            },
+            "seed": {
+                "name": "随机种子",
+                "tooltip": "控制生成的随机性"
+            }
+        },
+        "outputs": {
+            "images": {
+                "name": "图像",
+                "tooltip": "生成的图像"
+            }
+        }
+    },
+    "DAGlobalConfig": {
+        "display_name": "DA 全局配置",
+        "inputs": {
+            "debug": {
+                "name": "调试模式",
+                "tooltip": "是否开启调试日志"
+            },
+            "model_switch_offload": {
+                "name": "模型切换时卸载",
+                "tooltip": "切换模型时自动卸载旧模型以节省VRAM"
+            },
+            "offload_after_run": {
+                "name": "运行后卸载(RAM)",
+                "tooltip": "运行结束后将模型卸载到内存"
+            },
+            "release_after_run": {
+                "name": "运行后释放(VRAM)",
+                "tooltip": "运行结束后释放显存"
+            }
+        },
+        "outputs": {}
+    },
+    "DAIndexTTS2Config": {
+        "display_name": "DA IndexTTS2 配置",
+        "inputs": {
+            "model_path": {
+                "name": "模型路径",
+                "tooltip": "IndexTTS2模型的文件夹路径"
+            },
+            "config_path": {
+                "name": "配置文件路径",
+                "tooltip": "config.yaml文件的路径"
+            }
+        },
+        "outputs": {}
+    },
+    "DAIndexTTS2": {
+        "display_name": "DA IndexTTS2 生成",
+        "inputs": {
+            "text": {
+                "name": "文本",
+                "tooltip": "要转换的文本"
+            },
+            "ref_audios": {
+                "name": "参考音频",
+                "tooltip": "用于克隆的参考音频"
+            },
+            "seed": {
+                "name": "随机种子",
+                "tooltip": "控制生成的随机性"
+            }
+        },
+        "outputs": {
+            "audios": {
+                "name": "音频",
+                "tooltip": "生成的语音"
+            }
+        }
+    },
+    "DAInfiniteTalkConfig": {
+        "display_name": "DA InfiniteTalk 配置",
+        "inputs": {
+            "base_model": {
+                "name": "基础模型",
+                "tooltip": "选择基础模型路径"
+            },
+            "loras": {
+                "name": "LoRA列表",
+                "tooltip": "加载的LoRA模型"
+            }
+        },
+        "outputs": {}
+    },
+    "DAInfiniteTalk": {
+        "display_name": "DA InfiniteTalk 生成",
+        "inputs": {
+            "images": {
+                "name": "图像",
+                "tooltip": "输入的人像图片"
+            },
+            "audio": {
+                "name": "音频",
+                "tooltip": "驱动说话的音频"
+            },
+            "width": {
+                "name": "宽度",
+                "tooltip": "生成视频的宽度"
+            },
+            "height": {
+                "name": "高度",
+                "tooltip": "生成视频的高度"
+            },
+            "seed": {
+                "name": "随机种子",
+                "tooltip": "控制生成的随机性"
+            }
+        },
+        "outputs": {
+            "videos": {
+                "name": "视频",
+                "tooltip": "生成的说话视频"
+            }
+        }
+    },
+    "DALTX2Config": {
+        "display_name": "DA LTX2 配置",
+        "inputs": {
+            "text_encoder_model": {
+                "name": "文本编码器模型",
+                "tooltip": "选择文本编码器"
+            },
+            "diffusion_model": {
+                "name": "扩散模型",
+                "tooltip": "选择LTX2扩散模型"
+            },
+            "video_vae_model": {
+                "name": "视频VAE模型",
+                "tooltip": "选择视频VAE"
+            },
+            "audio_vae_model": {
+                "name": "音频VAE模型",
+                "tooltip": "选择音频VAE"
+            },
+            "upscale_model": {
+                "name": "放大模型",
+                "tooltip": "选择Latent Upscale模型"
+            },
+            "step1_loras": {
+                "name": "第一步LoRA",
+                "tooltip": "第一阶段使用的LoRA"
+            },
+            "step2_loras": {
+                "name": "第二步LoRA",
+                "tooltip": "第二阶段使用的LoRA"
+            }
+        },
+        "outputs": {}
+    },
+    "DALTX2": {
+        "display_name": "DA LTX2 生成",
+        "inputs": {
+            "width": {
+                "name": "宽度",
+                "tooltip": "生成视频的宽度"
+            },
+            "height": {
+                "name": "高度",
+                "tooltip": "生成视频的高度"
+            },
+            "frame_count": {
+                "name": "帧数",
+                "tooltip": "生成视频的总帧数"
+            },
+            "fps": {
+                "name": "帧率",
+                "tooltip": "视频帧率"
+            },
+            "prompts": {
+                "name": "提示词",
+                "tooltip": "视频描述文本"
+            },
+            "seed": {
+                "name": "随机种子",
+                "tooltip": "控制生成的随机性"
+            },
+            "first_frames": {
+                "name": "首帧",
+                "tooltip": "视频起始帧参考"
+            },
+            "last_frames": {
+                "name": "尾帧",
+                "tooltip": "视频结束帧参考"
+            },
+            "audios": {
+                "name": "音频",
+                "tooltip": "输入音频"
+            }
+        },
+        "outputs": {
+            "videos": {
+                "name": "视频",
+                "tooltip": "生成的视频"
+            }
+        }
+    },
+    "DAQwenImageEditConfig": {
+        "display_name": "DA Qwen 图像编辑配置",
+        "inputs": {
+            "text_encoder_model": {
+                "name": "文本编码器模型",
+                "tooltip": "选择文本编码器"
+            },
+            "vae_model": {
+                "name": "VAE模型",
+                "tooltip": "选择VAE模型"
+            },
+            "diffusion_model": {
+                "name": "扩散模型",
+                "tooltip": "选择Qwen扩散模型"
+            },
+            "loras": {
+                "name": "LoRA列表",
+                "tooltip": "加载的LoRA模型"
+            }
+        },
+        "outputs": {}
+    },
+    "DAQwenImageEdit": {
+        "display_name": "DA Qwen 图像编辑",
+        "inputs": {
+            "images": {
+                "name": "图像",
+                "tooltip": "待编辑的图像"
+            },
+            "mask": {
+                "name": "遮罩",
+                "tooltip": "编辑区域遮罩"
+            },
+            "prompts": {
+                "name": "提示词",
+                "tooltip": "编辑描述文本"
+            },
+            "width": {
+                "name": "宽度",
+                "tooltip": "生成图像的宽度"
+            },
+            "height": {
+                "name": "高度",
+                "tooltip": "生成图像的高度"
+            },
+            "seed": {
+                "name": "随机种子",
+                "tooltip": "控制生成的随机性"
+            }
+        },
+        "outputs": {
+            "images": {
+                "name": "图像",
+                "tooltip": "编辑后的图像"
+            }
+        }
+    },
+    "DAQwenImageConfig": {
+        "display_name": "DA Qwen 图像生成配置",
+        "inputs": {
+            "text_encoder_model": {
+                "name": "文本编码器模型",
+                "tooltip": "选择文本编码器"
+            },
+            "vae_model": {
+                "name": "VAE模型",
+                "tooltip": "选择VAE模型"
+            },
+            "diffusion_model": {
+                "name": "扩散模型",
+                "tooltip": "选择Qwen扩散模型"
+            },
+            "loras": {
+                "name": "LoRA列表",
+                "tooltip": "加载的LoRA模型"
+            }
+        },
+        "outputs": {}
+    },
+    "DAQwenImage": {
+        "display_name": "DA Qwen 图像生成",
+        "inputs": {
+            "prompts": {
+                "name": "提示词",
+                "tooltip": "图像描述文本"
+            },
+            "width": {
+                "name": "宽度",
+                "tooltip": "生成图像的宽度"
+            },
+            "height": {
+                "name": "高度",
+                "tooltip": "生成图像的高度"
+            },
+            "seed": {
+                "name": "随机种子",
+                "tooltip": "控制生成的随机性"
+            }
+        },
+        "outputs": {
+            "images": {
+                "name": "图像",
+                "tooltip": "生成的图像"
+            }
+        }
+    },
+    "DAQwenLLMConfig": {
+        "display_name": "DA QwenLLM 配置",
+        "inputs": {
+            "base_url": {
+                "name": "API地址",
+                "tooltip": "OpenAI兼容的API URL"
+            },
+            "api_key": {
+                "name": "API密钥",
+                "tooltip": "API Key"
+            },
+            "model": {
+                "name": "模型名称",
+                "tooltip": "调用的模型名称"
+            }
+        },
+        "outputs": {}
+    },
+    "DAQwenLLM": {
+        "display_name": "DA QwenLLM 对话",
+        "inputs": {
+            "system_prompt": {
+                "name": "系统提示词",
+                "tooltip": "System Prompt"
+            },
+            "user_prompt": {
+                "name": "用户提示词",
+                "tooltip": "User Prompt"
+            },
+            "temperature": {
+                "name": "温度",
+                "tooltip": "采样温度"
+            },
+            "seed": {
+                "name": "随机种子",
+                "tooltip": "控制生成的随机性"
+            }
+        },
+        "outputs": {
+            "content": {
+                "name": "内容",
+                "tooltip": "模型生成的回复内容"
+            }
+        }
+    },
+    "DAQwenVL": {
+        "display_name": "DA QwenVL 视觉问答",
+        "inputs": {
+            "images": {
+                "name": "图像",
+                "tooltip": "输入的图像"
+            },
+            "prompt": {
+                "name": "提示词",
+                "tooltip": "关于图像的问题或描述"
+            },
+            "seed": {
+                "name": "随机种子",
+                "tooltip": "控制生成的随机性"
+            }
+        },
+        "outputs": {
+            "content": {
+                "name": "内容",
+                "tooltip": "模型生成的回复"
+            }
+        }
+    },
+    "DASAM2Config": {
+        "display_name": "DA SAM2 配置",
+        "inputs": {
+            "model_path": {
+                "name": "模型路径",
+                "tooltip": "SAM2模型路径"
+            },
+            "model_type": {
+                "name": "模型类型",
+                "tooltip": "SAM2模型变体"
+            },
+            "device": {
+                "name": "设备",
+                "tooltip": "运行设备(cuda/cpu)"
+            }
+        },
+        "outputs": {}
+    },
+    "DASAM2": {
+        "display_name": "DA SAM2 分割",
+        "inputs": {
+            "images": {
+                "name": "图像",
+                "tooltip": "待分割的图像"
+            },
+            "boxes": {
+                "name": "检测框",
+                "tooltip": "提示框"
+            },
+            "points": {
+                "name": "点",
+                "tooltip": "提示点"
+            },
+            "labels": {
+                "name": "标签",
+                "tooltip": "提示点的标签"
+            }
+        },
+        "outputs": {
+            "mask": {
+                "name": "遮罩",
+                "tooltip": "生成的分割遮罩"
+            }
+        }
+    },
+    "DAVoxCPM15Config": {
+        "display_name": "DA VoxCPM1.5 配置",
+        "inputs": {
+            "model_path": {
+                "name": "模型路径",
+                "tooltip": "VoxCPM1.5模型路径"
+            }
+        },
+        "outputs": {}
+    },
+    "DAVoxCPM15": {
+        "display_name": "DA VoxCPM1.5 生成",
+        "inputs": {
+            "text": {
+                "name": "文本",
+                "tooltip": "要转换的文本"
+            },
+            "ref_audios": {
+                "name": "参考音频",
+                "tooltip": "用于克隆的参考音频"
+            },
+            "seed": {
+                "name": "随机种子",
+                "tooltip": "控制生成的随机性"
+            }
+        },
+        "outputs": {
+            "audios": {
+                "name": "音频",
+                "tooltip": "生成的语音"
+            }
+        }
+    },
+    "DAWanAnimateConfig": {
+        "display_name": "DA Wan2.2 动画配置",
+        "inputs": {
+            "text_encoder": {
+                "name": "文本编码器",
+                "tooltip": "选择文本编码器"
+            },
+            "vae": {
+                "name": "VAE模型",
+                "tooltip": "选择VAE模型"
+            },
+            "diffusion_model": {
+                "name": "扩散模型",
+                "tooltip": "选择Wan2.2扩散模型"
+            },
+            "loras": {
+                "name": "LoRA列表",
+                "tooltip": "加载的LoRA模型"
+            }
+        },
+        "outputs": {}
+    },
+    "DAWanAnimate": {
+        "display_name": "DA Wan2.2 动画生成",
+        "inputs": {
+            "images": {
+                "name": "图像",
+                "tooltip": "输入的原始图像"
+            },
+            "width": {
+                "name": "宽度",
+                "tooltip": "生成视频的宽度"
+            },
+            "height": {
+                "name": "高度",
+                "tooltip": "生成视频的高度"
+            },
+            "frame_count": {
+                "name": "帧数",
+                "tooltip": "总帧数"
+            },
+            "fps": {
+                "name": "帧率",
+                "tooltip": "播放帧率"
+            },
+            "prompts": {
+                "name": "提示词",
+                "tooltip": "动画描述"
+            },
+            "seed": {
+                "name": "随机种子",
+                "tooltip": "控制生成的随机性"
+            }
+        },
+        "outputs": {
+            "videos": {
+                "name": "视频",
+                "tooltip": "生成的动画视频"
+            }
+        }
+    },
+    "DAWanI2VConfig": {
+        "display_name": "DA Wan2.2 图生视频配置",
+        "inputs": {
+            "text_encoder_model": {
+                "name": "文本编码器模型",
+                "tooltip": "选择文本编码器"
+            },
+            "vae_model": {
+                "name": "VAE模型",
+                "tooltip": "选择VAE模型"
+            },
+            "diffusion_model": {
+                "name": "扩散模型",
+                "tooltip": "选择Wan2.2扩散模型"
+            },
+            "image_vae_model": {
+                "name": "图像VAE模型",
+                "tooltip": "选择图像VAE"
+            },
+            "loras": {
+                "name": "LoRA列表",
+                "tooltip": "加载的LoRA模型"
+            }
+        },
+        "outputs": {}
+    },
+    "DAWanI2V": {
+        "display_name": "DA Wan2.2 图生视频",
+        "inputs": {
+            "images": {
+                "name": "图像",
+                "tooltip": "起始参考图像"
+            },
+            "prompts": {
+                "name": "提示词",
+                "tooltip": "视频描述"
+            },
+            "width": {
+                "name": "宽度",
+                "tooltip": "生成视频的宽度"
+            },
+            "height": {
+                "name": "高度",
+                "tooltip": "生成视频的高度"
+            },
+            "frame_count": {
+                "name": "帧数",
+                "tooltip": "总帧数"
+            },
+            "fps": {
+                "name": "帧率",
+                "tooltip": "播放帧率"
+            },
+            "seed": {
+                "name": "随机种子",
+                "tooltip": "控制生成的随机性"
+            }
+        },
+        "outputs": {
+            "videos": {
+                "name": "视频",
+                "tooltip": "生成的视频"
+            }
+        }
+    },
+    "DAWanS2VConfig": {
+        "display_name": "DA Wan2.2 S2V 配置",
+        "inputs": {
+            "text_encoder_model": {
+                "name": "文本编码器模型",
+                "tooltip": "选择文本编码器"
+            },
+            "vae_model": {
+                "name": "VAE模型",
+                "tooltip": "选择VAE模型"
+            },
+            "diffusion_model": {
+                "name": "扩散模型",
+                "tooltip": "选择Wan2.2扩散模型"
+            },
+            "loras": {
+                "name": "LoRA列表",
+                "tooltip": "加载的LoRA模型"
+            }
+        },
+        "outputs": {}
+    },
+    "DAWanS2V": {
+        "display_name": "DA Wan2.2 S2V 生成",
+        "inputs": {
+            "text": {
+                "name": "文本",
+                "tooltip": "输入的文本内容"
+            },
+            "width": {
+                "name": "宽度",
+                "tooltip": "生成视频的宽度"
+            },
+            "height": {
+                "name": "高度",
+                "tooltip": "生成视频的高度"
+            },
+            "frame_count": {
+                "name": "帧数",
+                "tooltip": "总帧数"
+            },
+            "fps": {
+                "name": "帧率",
+                "tooltip": "播放帧率"
+            },
+            "seed": {
+                "name": "随机种子",
+                "tooltip": "控制生成的随机性"
+            }
+        },
+        "outputs": {
+            "videos": {
+                "name": "视频",
+                "tooltip": "生成的视频"
+            }
+        }
+    },
+    "DAWanT2VConfig": {
+        "display_name": "DA Wan2.2 文生视频配置",
+        "inputs": {
+            "text_encoder_model": {
+                "name": "文本编码器模型",
+                "tooltip": "选择文本编码器"
+            },
+            "vae_model": {
+                "name": "VAE模型",
+                "tooltip": "选择VAE模型"
+            },
+            "diffusion_model": {
+                "name": "扩散模型",
+                "tooltip": "选择Wan2.2扩散模型"
+            },
+            "loras": {
+                "name": "LoRA列表",
+                "tooltip": "加载的LoRA模型"
+            }
+        },
+        "outputs": {}
+    },
+    "DAWanT2V": {
+        "display_name": "DA Wan2.2 文生视频",
+        "inputs": {
+            "prompts": {
+                "name": "提示词",
+                "tooltip": "视频描述"
+            },
+            "width": {
+                "name": "宽度",
+                "tooltip": "生成视频的宽度"
+            },
+            "height": {
+                "name": "高度",
+                "tooltip": "生成视频的高度"
+            },
+            "frame_count": {
+                "name": "帧数",
+                "tooltip": "总帧数"
+            },
+            "fps": {
+                "name": "帧率",
+                "tooltip": "播放帧率"
+            },
+            "seed": {
+                "name": "随机种子",
+                "tooltip": "控制生成的随机性"
+            }
+        },
+        "outputs": {
+            "videos": {
+                "name": "视频",
+                "tooltip": "生成的视频"
+            }
+        }
+    },
+    "DAZImageConfig": {
+        "display_name": "DA ZImage 配置",
+        "inputs": {
+            "text_encoder_model": {
+                "name": "文本编码器模型",
+                "tooltip": "选择文本编码器"
+            },
+            "vae_model": {
+                "name": "VAE模型",
+                "tooltip": "选择VAE模型"
+            },
+            "diffusion_model": {
+                "name": "扩散模型",
+                "tooltip": "选择ZImage扩散模型"
+            },
+            "loras": {
+                "name": "LoRA列表",
+                "tooltip": "加载的LoRA模型"
+            }
+        },
+        "outputs": {}
+    },
+    "DAZImage": {
+        "display_name": "DA ZImage 生成",
+        "inputs": {
+            "width": {
+                "name": "宽度",
+                "tooltip": "生成图像的宽度"
+            },
+            "height": {
+                "name": "高度",
+                "tooltip": "生成图像的高度"
+            },
+            "prompts": {
+                "name": "提示词",
+                "tooltip": "图像描述"
+            },
+            "seed": {
+                "name": "随机种子",
+                "tooltip": "控制生成的随机性"
+            }
+        },
+        "outputs": {
+            "images": {
+                "name": "图像",
+                "tooltip": "生成的图像"
+            }
         }
     }
 }

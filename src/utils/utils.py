@@ -17,7 +17,7 @@ from comfy_api.latest import io
 from comfy_extras.nodes_easycache import EasyCacheNode
 
 from .logger import logger
-from .paths import get_config_file_path
+from .model_manager import ModelManager
 
 def unload_model(model):
     current_loaded_models = comfy.model_management.current_loaded_models
@@ -242,6 +242,7 @@ def dynamic_combo_loras(config,lora_options,key_name="loras"):
 def patch_model_with_loras(model, config, key_name="loras"):
     loras_config = config.get(key_name,{})
     lora_number = loras_config.get(key_name, "[0]")
+    manager = ModelManager()
     
     try:
         log_logger = logging.getLogger()
@@ -253,8 +254,9 @@ def patch_model_with_loras(model, config, key_name="loras"):
             )
             strength = loras_config.get(f"lora_strength{i+1}", 1.0)
 
+            lora_dict = manager.get_lora_dict(path)
             model, _ = comfy.sd.load_lora_for_models(
-                model, None, comfy.utils.load_torch_file(path, safe_load=True), strength, 0
+                model, None, lora_dict, strength, 0
             )
     finally:
         log_logger.setLevel(logging.INFO)

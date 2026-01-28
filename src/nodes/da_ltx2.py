@@ -22,8 +22,9 @@ from ..utils import utils
 from ..utils.config_loader import ConfigLoader
 from ..utils.model_manager import ModelManager
 from ..utils.logger import logger
+from ..utils.paths import get_config_file_path
 
-_CONFIG_FILE_PATH = utils.get_config_file_path("ltx2")
+_CONFIG_FILE_PATH = get_config_file_path("ltx2")
 
 _CACHE = SimpleNamespace(
     positive={},
@@ -793,7 +794,7 @@ class DALTX2(io.ComfyNode):
         audio_latent_mask,
     ):
         if audio["cache_key"] in _CACHE.audio_latents:
-            logger.info(f"LTX2 audio latent cache hit: {audio["cache_key"]}")
+            logger.info(f"LTX2 audio latent cache hit: {audio['cache_key']}")
 
             audio_latent = _CACHE.audio_latents[audio["cache_key"]]["latent"]
             audio_latent_mask = _CACHE.audio_latents[audio["cache_key"]]["mask"]
@@ -838,10 +839,12 @@ class DALTX2(io.ComfyNode):
     def fingerprint_inputs(cls, **kwargs):
         try:
             config_mtime = os.path.getmtime(_CONFIG_FILE_PATH)
+            global_config_mtime = os.path.getmtime(get_config_file_path("global"))
         except:
             config_mtime = 0
+            global_config_mtime = 0
             
-        return hash((str(kwargs),str(config_mtime)))
+        return hash((str(kwargs),str(config_mtime),str(global_config_mtime)))
 
 _LATENT_UPSCALE_CACHE = None
 
