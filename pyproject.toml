@@ -1,6 +1,6 @@
 [project]
 name = "dalab"
-version = "0.0.1"
+version = "0.0.2"
 description = "A comprehensive collection of ComfyUI nodes for Flux, Wan2.2, Qwen models, and Feishu integration."
 readme = "README.md"
 license = { file = "LICENSE" }
