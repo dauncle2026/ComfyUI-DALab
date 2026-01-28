@@ -5,10 +5,7 @@ from .paths import get_config_file_path
 
 _GLOBAL_CONFIG_PATH = get_config_file_path("global")
 
-
 class DALabLogger:
-    """Centralized logger for all DALab nodes."""
-
     _instance = None
     _logger = None
     _debug = False
@@ -59,6 +56,4 @@ class DALabLogger:
     def error(self, message: str):
         self._logger.error(message)
 
-
-# Global instance - use directly: logger.info("message")
 logger = DALabLogger()

@@ -6,13 +6,11 @@ from ..utils import utils
 from ..utils.config_loader import ConfigLoader
 from ..utils.model_manager import ModelManager
 from ..utils.logger import logger
+from ..utils.paths import get_config_file_path
 
-_CONFIG_FILE_PATH = utils.get_config_file_path("global")
-
+_CONFIG_FILE_PATH = get_config_file_path("global")
 
 class DAGlobalConfig(io.ComfyNode):
-    """Global configuration for all DALab nodes."""
-
     @classmethod
     def define_schema(cls) -> io.Schema:
         config = ConfigLoader(_CONFIG_FILE_PATH, strict=False)

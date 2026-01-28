@@ -11,8 +11,10 @@ from comfy_api.latest import io, ui, Types,InputImpl
 from ..utils import utils
 from ..utils.feishu_manager import FeishuManager
 from ..utils.config_loader import ConfigLoader
+from ..utils.paths import get_config_file_path
+from ..utils.logger import logger
 
-_CONFIG_FILE_PATH = utils.get_config_file_path("feishu")
+_CONFIG_FILE_PATH = get_config_file_path("feishu")
 
 class DASaveImage(io.ComfyNode):
     @classmethod
@@ -182,7 +184,7 @@ class DASaveVideo(io.ComfyNode):
             if width % 2 != 0 or height % 2 != 0:
                 new_width = width - (width % 2)
                 new_height = height - (height % 2)
-                logging.info(f"[DALab] Auto-cropping video from {width}x{height} to {new_width}x{new_height}")
+                logger.info(f"Auto-cropping video from {width}x{height} to {new_width}x{new_height}")
 
                 video_components = video.get_components()
                 cropped_images = video_components.images[:, :new_height, :new_width, :]
@@ -324,16 +326,16 @@ class DAConcatVideo(io.ComfyNode):
 
         results = []
         for idx, inputs in enumerate(batch_inputs):
-            logging.info(f"Process video batch {idx+1} of {len(batch_inputs)}")
+            logger.info(f"Process video batch {idx+1} of {len(batch_inputs)}")
             output_images = []
             output_audio_waveform = []
             counter = 0
 
             for i,video_input in enumerate(inputs["videos"].values()):
-                logging.info(f"[DALab] Concat video batch:{idx+1} part: {i+1}/{len(inputs["videos"].values())}")
+                logger.info(f"Concat video batch:{idx+1} part: {i+1}/{len(inputs['videos'].values())}")
 
                 if video_input["value"] is None:
-                    logging.info(f"[DALab] Concat video batch:{idx+1} part: {i+1}/{len(inputs["videos"].values())} is None")
+                    logger.info(f"Concat video batch:{idx+1} part: {i+1}/{len(inputs['videos'].values())} is None")
                     continue
                 else:
                     video = video_input["value"]
@@ -363,7 +365,7 @@ class DAConcatVideo(io.ComfyNode):
                     target_width = video_width - (video_width % 2)
                     target_height = video_height - (video_height % 2)
                     if target_width != video_width or target_height != video_height:
-                        logging.info(f"[DALab] Auto-adjusting target size from {video_width}x{video_height} to {target_width}x{target_height}")
+                        logger.info(f"Auto-adjusting target size from {video_width}x{video_height} to {target_width}x{target_height}")
 
                     if audio_waveform is not None:
                         target_audio_sample_rate = audio_sample_rate
@@ -371,34 +373,34 @@ class DAConcatVideo(io.ComfyNode):
                         target_audio_sample_rate = 44100
                 
                 if video_fps != target_fps:
-                    logging.info(
-                        f"[DALab] Resample video batch:{idx+1} part: {i+1}/{len(inputs["videos"].values())} from {video_fps} to {target_fps}"
+                    logger.info(
+                        f"Resample video batch:{idx+1} part: {i+1}/{len(inputs['videos'].values())} from {video_fps} to {target_fps}"
                     )
                     video_images = utils.resample_video_tensor(video_images, video_fps, target_fps)
                 
                 if video_width != target_width or video_height != target_height:
-                    logging.info(
-                        f"[DALab] Scale video batch:{idx+1} part: {i+1}/{len(inputs["videos"].values())} from {video_width}x{video_height} to {target_width}x{target_height}"
+                    logger.info(
+                        f"Scale video batch:{idx+1} part: {i+1}/{len(inputs['videos'].values())} from {video_width}x{video_height} to {target_width}x{target_height}"
                     )
                     video_images = utils.scale_by_width_height(video_images, target_width, target_height, "bilinear", "center")
 
                 if audio_waveform is not None:
                     if audio_waveform.shape[1] == 1:
                         audio_waveform = audio_waveform.repeat(1, 2, 1)
-                        logging.info(
-                            f"[DALab] Convert mono audio batch:{idx+1} part: {i+1}/{len(inputs["videos"].values())} to stereo"
+                        logger.info(
+                            f"Convert mono audio batch:{idx+1} part: {i+1}/{len(inputs['videos'].values())} to stereo"
                         )
 
                     if audio_sample_rate != target_audio_sample_rate:
-                        logging.info(
-                            f"[DALab] Resample audio batch:{idx+1} part: {i+1}/{len(inputs["videos"].values())} from {audio_sample_rate} to {target_audio_sample_rate}"
+                        logger.info(
+                            f"Resample audio batch:{idx+1} part: {i+1}/{len(inputs['videos'].values())} from {audio_sample_rate} to {target_audio_sample_rate}"
                         )
                         audio_waveform = torchaudio.functional.resample(
                             audio_waveform, audio_sample_rate, target_audio_sample_rate
                         )
                 else:
-                    logging.info(
-                        f"[DALab] Create empty audio batch:{idx+1} part: {i+1}/{len(inputs["videos"].values())} with sample rate {target_audio_sample_rate}"
+                    logger.info(
+                        f"Create empty audio batch:{idx+1} part: {i+1}/{len(inputs['videos'].values())} with sample rate {target_audio_sample_rate}"
                     )
                     audio_waveform = torch.zeros((1,2,math.ceil(len(video_images)/target_fps * target_audio_sample_rate)))
 

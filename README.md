@@ -1,67 +1,74 @@
-# dauncle
+# ComfyUI-DALab (Dauncle)
 
-A collection of custom nodes for ComfyUI
+[![ComfyUI](https://img.shields.io/badge/ComfyUI-Extension-blue)](https://github.com/comfyanonymous/ComfyUI)
+[![Python](https://img.shields.io/badge/Python-3.10%2B-green)](https://www.python.org/)
 
-> [!NOTE]
-> This projected was created with a [cookiecutter](https://github.com/Comfy-Org/cookiecutter-comfy-extension) template. It helps you start writing custom nodes without worrying about the Python setup.
+[English](README.md) | [中文文档](README_ZH.md)
 
-## Quickstart
+ComfyUI-DALab is a powerful collection of custom nodes for ComfyUI, aggregating cutting-edge AI generation models. It covers image, video, and audio generation, along with practical productivity tools.
 
-1. Install [ComfyUI](https://docs.comfy.org/get_started).
-1. Install [ComfyUI-Manager](https://github.com/ltdrdata/ComfyUI-Manager)
-1. Look up this extension in ComfyUI-Manager. If you are installing manually, clone this repository under `ComfyUI/custom_nodes`.
-1. Restart ComfyUI.
+## ✨ Key Features
 
-# Features
+*   **Image Generation**: Deep integration with top-tier T2I models like **Flux.1 / Flux.2**, **Qwen-VL**, and **ZImage**, featuring LoRA support and advanced control.
+*   **Video Creation**: Full support for the **Wan2.2 (Wanxiang)** suite (T2V, I2V, S2V, Animation), as well as **LTX-Video** and **InfiniteTalk** for digital human generation.
+*   **Audio Cloning**: Integrated high-quality TTS and voice cloning models including **CosyVoice 3**, **VoxCPM 1.5**, and **IndexTTS 2**.
+*   **Visual Tools**: Provides visual analysis tools such as **Florence 2** for captioning, **SAM 2** for automated segmentation, and **DWPose** for pose detection.
+*   **Productivity Integration**: Exclusive support for **Feishu (Lark)** integration, allowing prompt reading from Feishu Base or uploading generation results directly to Feishu.
 
-- A list of features
+## 📦 Installation
 
-## Develop
+### Method 1: ComfyUI Manager (Recommended)
+1.  Open ComfyUI Manager.
+2.  Search for `ComfyUI-DALab` or `dauncle`.
+3.  Click Install and restart ComfyUI.
 
-To install the dev dependencies and pre-commit (will run the ruff hook), do:
-
+### Method 2: Manual Installation
 ```bash
-cd dauncle
-pip install -e .[dev]
-pre-commit install
+cd ComfyUI/custom_nodes
+git clone https://github.com/dauncle2026/ComfyUI-DALab.git
+cd ComfyUI-DALab
+pip install -r requirements.txt
 ```
 
-The `-e` flag above will result in a "live" install, in the sense that any changes you make to your node extension will automatically be picked up the next time you run ComfyUI.
+## 🧩 Node List
 
-## Publish to Github
+This project includes 46 custom nodes, categorized as follows:
 
-Install Github Desktop or follow these [instructions](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) for ssh.
+### 🎨 Image Generation
+*   **Flux Series**: Supports Flux.1, Flux.2, and the optimized Klein version.
+*   **Qwen Image**: Tongyi Wanxiang image generation and editing.
+*   **ZImage**: Support for Zhipu AI image generation models.
 
-1. Create a Github repository that matches the directory name. 
-2. Push the files to Git
-```
-git add .
-git commit -m "project scaffolding"
-git push
-``` 
+### 🎬 Video Generation
+*   **Wan 2.2**: Ali Wanxiang 2.2 full suite (T2V, I2V, S2V, Animate).
+*   **LTX Video**: Lightweight and efficient video generation.
+*   **Infinite Talk**: Digital human video generation capable of animating static portraits.
 
-## Writing custom nodes
+### 🎵 Audio & Speech
+*   **CosyVoice 3**: High-quality multilingual voice cloning.
+*   **VoxCPM 1.5**: Powerful speech synthesis model.
+*   **IndexTTS 2**: Another excellent option for speech generation.
 
-An example custom node is located in [node.py](src/dauncle/nodes.py). To learn more, read the [docs](https://docs.comfy.org/essentials/custom_node_overview).
+### 🧠 LLM & Visual Models
+*   **Qwen VL / LLM**: Tongyi Qianwen visual understanding and dialogue models.
 
+### 🛠 Tools & Utilities
+*   **Feishu Integration**: Read/Write Feishu Base tables for automated workflows.
+*   **Computer Vision**: SAM2 (Segmentation), Florence2 (Captioning), DWPose (Pose Estimation).
+*   **File Handling**: Enhanced tools for saving and concatenating images/videos/audio.
 
-## Tests
+## 📂 Example Workflows
 
-This repo contains unit tests written in Pytest in the `tests/` directory. It is recommended to unit test your custom node.
+The `example_workflows` directory contains a rich set of example workflow files (including preview images and JSONs) covering most core features. Simply drag and drop them into ComfyUI to start using them.
 
-- [build-pipeline.yml](.github/workflows/build-pipeline.yml) will run pytest and linter on any open PRs
-- [validate.yml](.github/workflows/validate.yml) will run [node-diff](https://github.com/Comfy-Org/node-diff) to check for breaking changes
+## 🌍 Multilingual Support
 
-## Publishing to Registry
+The interface fully supports Chinese. If your ComfyUI is configured for Chinese (or has a translation plugin), node names and descriptions will automatically appear in Chinese.
 
-If you wish to share this custom node with others in the community, you can publish it to the registry. We've already auto-populated some fields in `pyproject.toml` under `tool.comfy`, but please double-check that they are correct.
+## ⚠️ Notes
 
-You need to make an account on https://registry.comfy.org and create an API key token.
+*   **Model Downloads**: Most nodes require pre-downloaded model files. Please refer to the error messages in the ComfyUI console to place models in the correct directories.
+*   **API Keys**: When using Qwen API or Feishu integration features, please enter the correct API Keys in the corresponding node configurations.
 
-- [ ] Go to the [registry](https://registry.comfy.org). Login and create a publisher id (everything after the `@` sign on your registry profile). 
-- [ ] Add the publisher id into the pyproject.toml file.
-- [ ] Create an api key on the Registry for publishing from Github. [Instructions](https://docs.comfy.org/registry/publishing#create-an-api-key-for-publishing).
-- [ ] Add it to your Github Repository Secrets as `REGISTRY_ACCESS_TOKEN`.
-
-A Github action will run on every git push. You can also run the Github action manually. Full instructions [here](https://docs.comfy.org/registry/publishing). Join our [discord](https://discord.com/invite/comfyorg) if you have any questions!
-
+---
+*Created by dauncle2026*

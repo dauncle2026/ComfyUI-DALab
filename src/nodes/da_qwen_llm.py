@@ -22,8 +22,9 @@ from comfy_api.latest import io
 
 from ..utils import utils
 from ..utils.config_loader import ConfigLoader
+from ..utils.paths import get_config_file_path
 
-_CONFIG_FILE_PATH = utils.get_config_file_path("qwen_llm")
+_CONFIG_FILE_PATH = get_config_file_path("qwen_llm")
 
 class DAQwenLLMConfig(io.ComfyNode):
     @classmethod

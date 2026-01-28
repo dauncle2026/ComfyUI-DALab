@@ -20,8 +20,9 @@ from ..utils import utils
 from ..utils.config_loader import ConfigLoader
 from ..utils.model_manager import ModelManager
 from ..utils.logger import logger
+from ..utils.paths import get_config_file_path
 
-_CONFIG_FILE_PATH = utils.get_config_file_path("wan_s2v")
+_CONFIG_FILE_PATH = get_config_file_path("wan_s2v")
 
 _CACHE = SimpleNamespace(
     positive={},
@@ -710,7 +711,7 @@ class DAWanS2V(io.ComfyNode):
     def fingerprint_inputs(cls, **kwargs):
         try:
             config_mtime = os.path.getmtime(_CONFIG_FILE_PATH)
-            global_config_mtime = os.path.getmtime(utils.get_config_file_path("global"))
+            global_config_mtime = os.path.getmtime(get_config_file_path("global"))
         except:
             config_mtime = 0
             global_config_mtime = 0

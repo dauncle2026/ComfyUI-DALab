@@ -12,7 +12,7 @@ from ..utils.wrappers.base import handle_wrapper_after_run, log_memory
 from ..utils.logger import logger
 from ..utils.paths import get_config_file_path
 
-_CONFIG_FILE_PATH = utils.get_config_file_path("index_tts2")
+_CONFIG_FILE_PATH = get_config_file_path("index_tts2")
 
 class DAIndexTTS2Config(io.ComfyNode):
     @classmethod
