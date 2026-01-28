@@ -1,6 +1,6 @@
 [project]
 name = "dalab"
-version = "0.0.2"
+version = "0.0.3"
 description = "A comprehensive collection of ComfyUI nodes for Flux, Wan2.2, Qwen models, and Feishu integration."
 readme = "README.md"
 license = { file = "LICENSE" }
@@ -54,4 +54,5 @@ Documentation = "https://github.com/dauncle2026/ComfyUI-DALab/wiki"
 PublisherId = "dauncle"
 DisplayName = "ComfyUI-DALab"
 Icon = "https://raw.githubusercontent.com/dauncle2026/ComfyUI-DALab/refs/heads/master/DALab_icon.jpg"
+Banner = "https://raw.githubusercontent.com/dauncle2026/ComfyUI-DALab/refs/heads/master/DALab_banner.jpg"
 requires-comfyui = ">=0.3.0"
