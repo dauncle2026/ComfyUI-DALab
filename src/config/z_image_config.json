@@ -1,0 +1,16 @@
+{
+    "text_encoder_model": "z-image/qwen_3_4b.safetensors",
+    "vae_model": "flux/flux1-vae.safetensors",
+    "diffusion_model": "z-image/z_image_turbo_bf16.safetensors",
+    "steps": 9,
+    "batch_size": 1,
+    "shift": 3.0,
+    "sampler": "res_multistep",
+    "scheduler": "simple",
+    "easycache": {
+        "easycache": "false"
+    },
+    "loras": {
+        "loras": "[0]"
+    }
+}

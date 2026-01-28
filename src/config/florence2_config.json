@@ -1,0 +1,9 @@
+{
+    "model_path": "/data/work/program/Comfy/models/dalab/florence2/Florence-2-large-ft",
+    "precision": "fp16",
+    "max_new_tokens": 1024,
+    "num_beams": 3,
+    "do_sample": false,
+    "bbox_line_width": 3,
+    "font_size": 24
+}

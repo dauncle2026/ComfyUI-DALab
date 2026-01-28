@@ -1,0 +1,20 @@
+{
+    "text_encoder_model": "qwen/qwen_2.5_vl_7b_fp8_scaled.safetensors",
+    "vae_model": "qwen/qwen_image_vae.safetensors",
+    "diffusion_model": "qwen-image-edit/qwen_image_edit_2511_fp8_e4m3fn_scaled_lightning_comfyui.safetensors",
+    "steps": 4,
+    "cfg": 1.0,
+    "shift": 3.1,
+    "sampler": "euler",
+    "scheduler": "simple",
+    "negative_prompt": "",
+    "template": "<|im_start|>system\nDescribe the key features of the input image (color, shape, size, texture, objects, background), then explain how the user's text instruction should alter or modify the image. Generate a new image that meets the user's requirements while maintaining consistency with the original input where appropriate.<|im_end|>\n<|im_start|>user\n{}<|im_end|>\n<|im_start|>assistant\n",
+    "batch_size": 1,
+    "cfg_norm_strength": 1.0,
+    "easycache": {
+        "easycache": "false"
+    },
+    "loras": {
+        "loras": "[0]"
+    }
+}

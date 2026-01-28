@@ -1,0 +1,892 @@
+{
+  "id": "459ace2d-65f2-4336-80f4-c5de4df6fa2a",
+  "revision": 0,
+  "last_node_id": 109,
+  "last_link_id": 133,
+  "nodes": [
+    {
+      "id": 105,
+      "type": "DAWanS2VConfig",
+      "pos": [
+        3035.537169055823,
+        2230.8471755370774
+      ],
+      "size": [
+        577.4211418021828,
+        456.7450651610711
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "DAWanS2VConfig"
+      },
+      "widgets_values": [
+        "wan/umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+        "wan/wan_2.1_vae.safetensors",
+        "wan2.2/wan2.2_s2v_14B_fp8_scaled.safetensors",
+        "wan/wav2vec2_large_english_fp16.safetensors",
+        4,
+        1,
+        8,
+        77,
+        73,
+        "simple",
+        "uni_pc",
+        "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走",
+        "[1]",
+        "wan2.1/wan2.1_i2v_lora_rank64_lightx2v_4step.safetensors",
+        1
+      ]
+    },
+    {
+      "id": 64,
+      "type": "LoadImage",
+      "pos": [
+        4156.951521769549,
+        2378.8364678206167
+      ],
+      "size": [
+        282.798828125,
+        314
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            116
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "ComfyUI_00475_.png",
+        "image"
+      ]
+    },
+    {
+      "id": 70,
+      "type": "DASaveVideo",
+      "pos": [
+        5396.861498167296,
+        2403.254338501044
+      ],
+      "size": [
+        399.9269361173158,
+        351
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "videos",
+          "type": "VIDEO",
+          "link": 118
+        }
+      ],
+      "outputs": [
+        {
+          "name": "videos",
+          "shape": 6,
+          "type": "VIDEO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DASaveVideo",
+        "savedVideos": [
+          {
+            "filename": "ComfyUI_01029_.mp4",
+            "subfolder": "video",
+            "type": "output",
+            "format": "video/mp4",
+            "width": 640,
+            "height": 360
+          }
+        ]
+      },
+      "widgets_values": [
+        "no",
+        "video/ComfyUI",
+        null
+      ]
+    },
+    {
+      "id": 103,
+      "type": "DAWanS2V",
+      "pos": [
+        4789.717167841922,
+        2395.136339716805
+      ],
+      "size": [
+        400,
+        272
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "first_frames",
+          "name": "first_frames",
+          "shape": 7,
+          "type": "IMAGE,VIDEO",
+          "link": 116
+        },
+        {
+          "label": "audios",
+          "name": "audios",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": 117
+        },
+        {
+          "label": "control_videos",
+          "name": "control_videos",
+          "shape": 7,
+          "type": "VIDEO",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "videos",
+          "shape": 6,
+          "type": "VIDEO",
+          "links": [
+            118
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DAWanS2V"
+      },
+      "widgets_values": [
+        640,
+        360,
+        80,
+        16,
+        "一位激情演讲的男士",
+        1092210247984570,
+        "randomize"
+      ]
+    },
+    {
+      "id": 62,
+      "type": "LoadVideo",
+      "pos": [
+        3876.1831577148396,
+        3150.0050907130117
+      ],
+      "size": [
+        593.6568683058266,
+        547.6470452159492
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            121
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadVideo"
+      },
+      "widgets_values": [
+        "ComfyUI_00771_.mp4",
+        "image"
+      ]
+    },
+    {
+      "id": 68,
+      "type": "DASaveVideo",
+      "pos": [
+        5398.252353606683,
+        2997.893165247956
+      ],
+      "size": [
+        417.7980610708248,
+        365
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "videos",
+          "type": "VIDEO",
+          "link": 122
+        }
+      ],
+      "outputs": [
+        {
+          "name": "videos",
+          "shape": 6,
+          "type": "VIDEO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DASaveVideo",
+        "savedVideos": [
+          {
+            "filename": "ComfyUI_01030_.mp4",
+            "subfolder": "video",
+            "type": "output",
+            "format": "video/mp4",
+            "width": 640,
+            "height": 360
+          }
+        ]
+      },
+      "widgets_values": [
+        "no",
+        "video/ComfyUI",
+        null
+      ]
+    },
+    {
+      "id": 106,
+      "type": "DAWanS2V",
+      "pos": [
+        4790.618415456301,
+        3002.9445653598777
+      ],
+      "size": [
+        400,
+        272
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "first_frames",
+          "name": "first_frames",
+          "shape": 7,
+          "type": "IMAGE,VIDEO",
+          "link": 121
+        },
+        {
+          "label": "audios",
+          "name": "audios",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": 120
+        },
+        {
+          "label": "control_videos",
+          "name": "control_videos",
+          "shape": 7,
+          "type": "VIDEO",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "videos",
+          "shape": 6,
+          "type": "VIDEO",
+          "links": [
+            122
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DAWanS2V"
+      },
+      "widgets_values": [
+        640,
+        360,
+        80,
+        16,
+        "一位激情演讲的男士",
+        949867307140761,
+        "randomize"
+      ]
+    },
+    {
+      "id": 76,
+      "type": "LoadImage",
+      "pos": [
+        3876.015114629182,
+        3839.9999315191017
+      ],
+      "size": [
+        590.9312251018865,
+        433.53215904438684
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            123
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "ComfyUI_00475_.png",
+        "image"
+      ]
+    },
+    {
+      "id": 99,
+      "type": "DAFeishuLoad",
+      "pos": [
+        4034.2407869536387,
+        4362.74394635086
+      ],
+      "size": [
+        421.835241321789,
+        240.1086070303054
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "text1",
+          "shape": 6,
+          "type": "STRING",
+          "links": []
+        },
+        {
+          "name": "image1",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": []
+        },
+        {
+          "name": "audio1",
+          "shape": 6,
+          "type": "AUDIO",
+          "links": [
+            126
+          ]
+        },
+        {
+          "name": "video1",
+          "shape": 6,
+          "type": "VIDEO",
+          "links": []
+        },
+        {
+          "name": "frame_count",
+          "shape": 6,
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "feishu_record_ids",
+          "shape": 6,
+          "type": "FEISHU_RECORD_IDS",
+          "links": []
+        },
+        {
+          "name": "feishu_config",
+          "type": "FEISHU_CONFIG",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DAFeishuLoad"
+      },
+      "widgets_values": [
+        "V8XSbj2xuaWpiHsp4bkce7mqnhc",
+        "tblxWCfIVo251wHS",
+        "vewS3mlxAo"
+      ]
+    },
+    {
+      "id": 78,
+      "type": "DASaveVideo",
+      "pos": [
+        5380.277682682792,
+        3936.1058704039474
+      ],
+      "size": [
+        489.4485163428121,
+        437
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "videos",
+          "type": "VIDEO",
+          "link": 125
+        }
+      ],
+      "outputs": [
+        {
+          "name": "videos",
+          "shape": 6,
+          "type": "VIDEO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DASaveVideo",
+        "savedVideos": [
+          {
+            "filename": "ComfyUI_01031_.mp4",
+            "subfolder": "video",
+            "type": "output",
+            "format": "video/mp4",
+            "width": 640,
+            "height": 360
+          },
+          {
+            "filename": "ComfyUI_01032_.mp4",
+            "subfolder": "video",
+            "type": "output",
+            "format": "video/mp4",
+            "width": 640,
+            "height": 360
+          },
+          {
+            "filename": "ComfyUI_01033_.mp4",
+            "subfolder": "video",
+            "type": "output",
+            "format": "video/mp4",
+            "width": 640,
+            "height": 360
+          }
+        ]
+      },
+      "widgets_values": [
+        "no",
+        "video/ComfyUI",
+        null
+      ]
+    },
+    {
+      "id": 107,
+      "type": "DAWanS2V",
+      "pos": [
+        4751.540387994403,
+        3938.912460570933
+      ],
+      "size": [
+        400,
+        272
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "first_frames",
+          "name": "first_frames",
+          "shape": 7,
+          "type": "IMAGE,VIDEO",
+          "link": 123
+        },
+        {
+          "label": "audios",
+          "name": "audios",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": 126
+        },
+        {
+          "label": "control_videos",
+          "name": "control_videos",
+          "shape": 7,
+          "type": "VIDEO",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "videos",
+          "shape": 6,
+          "type": "VIDEO",
+          "links": [
+            125
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DAWanS2V"
+      },
+      "widgets_values": [
+        640,
+        360,
+        80,
+        16,
+        "一位激情演讲的男士",
+        1054592586406153,
+        "randomize"
+      ]
+    },
+    {
+      "id": 108,
+      "type": "DAWanS2V",
+      "pos": [
+        4696.414066875294,
+        5074.250474146956
+      ],
+      "size": [
+        400,
+        272
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "first_frames",
+          "name": "first_frames",
+          "shape": 7,
+          "type": "IMAGE,VIDEO",
+          "link": 128
+        },
+        {
+          "label": "audios",
+          "name": "audios",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": 133
+        },
+        {
+          "label": "control_videos",
+          "name": "control_videos",
+          "shape": 7,
+          "type": "VIDEO",
+          "link": 131
+        }
+      ],
+      "outputs": [
+        {
+          "name": "videos",
+          "shape": 6,
+          "type": "VIDEO",
+          "links": [
+            132
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DAWanS2V"
+      },
+      "widgets_values": [
+        640,
+        360,
+        -1,
+        16,
+        "一位激情演讲的男士",
+        1018984891615971,
+        "randomize"
+      ]
+    },
+    {
+      "id": 67,
+      "type": "LoadAudio",
+      "pos": [
+        4166.855498869647,
+        2870.673834879724
+      ],
+      "size": [
+        282.798828125,
+        136
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            117,
+            120,
+            133
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadAudio"
+      },
+      "widgets_values": [
+        "ComfyUI_00150_.flac",
+        null,
+        null
+      ]
+    },
+    {
+      "id": 109,
+      "type": "LoadVideo",
+      "pos": [
+        3940.856967590034,
+        5298.4132533461525
+      ],
+      "size": [
+        512.7078660807574,
+        478.07370120908547
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            131
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadVideo"
+      },
+      "widgets_values": [
+        "ComfyUI_00971_.mp4",
+        "image"
+      ]
+    },
+    {
+      "id": 92,
+      "type": "LoadImage",
+      "pos": [
+        4134.7074217129075,
+        4860.333444092668
+      ],
+      "size": [
+        282.798828125,
+        314
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            128
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "videoframe_0.png",
+        "image"
+      ]
+    },
+    {
+      "id": 91,
+      "type": "DASaveVideo",
+      "pos": [
+        5366.018190633619,
+        5069.95294287273
+      ],
+      "size": [
+        648,
+        490
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "videos",
+          "type": "VIDEO",
+          "link": 132
+        }
+      ],
+      "outputs": [
+        {
+          "name": "videos",
+          "shape": 6,
+          "type": "VIDEO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DASaveVideo",
+        "savedVideos": [
+          {
+            "filename": "ComfyUI_01035_.mp4",
+            "subfolder": "video",
+            "type": "output",
+            "format": "video/mp4",
+            "width": 640,
+            "height": 360
+          }
+        ]
+      },
+      "widgets_values": [
+        "no",
+        "video/ComfyUI",
+        null
+      ]
+    }
+  ],
+  "links": [
+    [
+      116,
+      64,
+      0,
+      103,
+      0,
+      "IMAGE"
+    ],
+    [
+      117,
+      67,
+      0,
+      103,
+      1,
+      "AUDIO"
+    ],
+    [
+      118,
+      103,
+      0,
+      70,
+      0,
+      "VIDEO"
+    ],
+    [
+      120,
+      67,
+      0,
+      106,
+      1,
+      "AUDIO"
+    ],
+    [
+      121,
+      62,
+      0,
+      106,
+      0,
+      "VIDEO"
+    ],
+    [
+      122,
+      106,
+      0,
+      68,
+      0,
+      "VIDEO"
+    ],
+    [
+      123,
+      76,
+      0,
+      107,
+      0,
+      "IMAGE"
+    ],
+    [
+      125,
+      107,
+      0,
+      78,
+      0,
+      "VIDEO"
+    ],
+    [
+      126,
+      99,
+      2,
+      107,
+      1,
+      "AUDIO"
+    ],
+    [
+      128,
+      92,
+      0,
+      108,
+      0,
+      "IMAGE"
+    ],
+    [
+      131,
+      109,
+      0,
+      108,
+      2,
+      "VIDEO"
+    ],
+    [
+      132,
+      108,
+      0,
+      91,
+      0,
+      "VIDEO"
+    ],
+    [
+      133,
+      67,
+      0,
+      108,
+      1,
+      "AUDIO"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "workflowRendererVersion": "LG",
+    "ds": {
+      "scale": 0.3306279443046965,
+      "offset": [
+        -2917.337924630281,
+        -3181.509625789073
+      ]
+    },
+    "frontendVersion": "1.37.11"
+  },
+  "version": 0.4
+}

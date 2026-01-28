@@ -1,0 +1,95 @@
+# qwenllm
+openai
+# utils,animate
+opencv-python
+# feishu
+lark-oapi
+# dwpose
+matplotlib
+# florence2
+timm
+
+#index_tts2
+librosa
+omegaconf
+json5
+munch
+modelscope
+accelerate
+descript-audiotools
+WeTextProcessing
+wetext
+
+#cosyvoice3
+hyperpyyaml
+onnxruntime-gpu
+openai-whisper
+conformer
+diffusers
+hydra-core
+lightning
+gdown
+x_transformers
+wget
+pyarrow
+pyworld
+torchcodec
+inflect
+
+#voxcpm15
+funasr
+
+# accelerate
+# transformers
+# tokenizers
+# #git+https://github.com/descriptinc/audiotools
+# cn2an
+# ffmpeg-python
+# Cython
+# g2p-en
+# jieba
+# json5
+# keras
+# munch
+# numba
+# numpy
+# pandas
+# matplotlib
+# opencv-python
+# tensorboard
+# librosa
+# safetensors
+# modelscope
+# omegaconf
+# sentencepiece
+# tqdm
+# textstat
+
+# pynini==2.1.6; platform_system!="Windows"
+# WeTextProcessing>=1.0.3; platform_system!="Windows"
+
+# WeTextProcessing; platform_machine != "Darwin"
+# wetext; platform_system == "Darwin"
+# wetext; platform_system == "Windows"
+
+# # cosyvoice
+# hyperpyyaml
+# onnxruntime
+# openai-whisper
+# conformer
+# diffusers
+# hydra-core
+# gdown
+# wget
+# lightning
+# x_transformers
+# pyarrow
+# pyworld
+# torchcodec
+
+# # voxcpm15
+# addict
+# funasr
+# datasets>=3,<4
+# simplejson
+# sortedcontainers

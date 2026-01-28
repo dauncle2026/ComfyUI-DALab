@@ -1,0 +1,5 @@
+{
+    "bbox_detector": "/data/work/program/Comfy/models/dalab/dwpose/yolox_l.torchscript.pt",
+    "pose_estimator": "/data/work/program/Comfy/models/dalab/dwpose/dw-ll_ucoco_384_bs5.torchscript.pt",
+    "resolution": 512
+}

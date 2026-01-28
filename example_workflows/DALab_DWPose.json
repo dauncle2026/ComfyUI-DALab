@@ -1,0 +1,870 @@
+{
+  "id": "10d57fab-7516-46c1-83ea-0c2cb89f6a4b",
+  "revision": 0,
+  "last_node_id": 46,
+  "last_link_id": 42,
+  "nodes": [
+    {
+      "id": 7,
+      "type": "LoadImage",
+      "pos": [
+        -1693.294286929729,
+        945.2346755476592
+      ],
+      "size": [
+        282.798828125,
+        314.0000000000001
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            24
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "3c622277-1c11-465a-a65d-2ba8a0203d7e_1344x896.jpg",
+        "image"
+      ]
+    },
+    {
+      "id": 31,
+      "type": "DADWPose",
+      "pos": [
+        -1268.980597395007,
+        942.0525358278113
+      ],
+      "size": [
+        270,
+        146
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "frames",
+          "type": "IMAGE,VIDEO",
+          "link": 24
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": [
+            27
+          ]
+        },
+        {
+          "name": "videos",
+          "shape": 6,
+          "type": "VIDEO",
+          "links": []
+        },
+        {
+          "name": "keypoints",
+          "shape": 6,
+          "type": "DWPOSE_KEYPOINTS",
+          "links": [
+            25
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DADWPose"
+      },
+      "widgets_values": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "id": 39,
+      "type": "DASaveImage",
+      "pos": [
+        -762.3479321591487,
+        1588.3602446707132
+      ],
+      "size": [
+        337.349609375,
+        294
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 32
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DASaveImage"
+      },
+      "widgets_values": [
+        "no",
+        "ComfyUI"
+      ]
+    },
+    {
+      "id": 6,
+      "type": "PreviewAny",
+      "pos": [
+        -792.2768846063715,
+        1058.945829424861
+      ],
+      "size": [
+        767.1911406314819,
+        286.65752427597977
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "source",
+          "type": "*",
+          "link": 25
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "PreviewAny"
+      },
+      "widgets_values": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": 33,
+      "type": "DASaveImage",
+      "pos": [
+        -787.2767302262398,
+        646.7753019147484
+      ],
+      "size": [
+        337.349609375,
+        294.00000000000006
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 27
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DASaveImage"
+      },
+      "widgets_values": [
+        "no",
+        "ComfyUI"
+      ]
+    },
+    {
+      "id": 36,
+      "type": "PreviewAny",
+      "pos": [
+        -770.930853350342,
+        2076.200900732628
+      ],
+      "size": [
+        382.73173220403646,
+        296.74545996267966
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "source",
+          "type": "*",
+          "link": 29
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "PreviewAny"
+      },
+      "widgets_values": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": 41,
+      "type": "DASaveVideo",
+      "pos": [
+        -796.3000990004765,
+        2497.7479908237888
+      ],
+      "size": [
+        648,
+        490
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "videos",
+          "type": "VIDEO",
+          "link": 34
+        }
+      ],
+      "outputs": [
+        {
+          "name": "videos",
+          "shape": 6,
+          "type": "VIDEO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DASaveVideo",
+        "savedVideos": [
+          {
+            "filename": "ComfyUI_01036_.mp4",
+            "subfolder": "video",
+            "type": "output",
+            "format": "video/mp4",
+            "width": 910,
+            "height": 512
+          }
+        ]
+      },
+      "widgets_values": [
+        "no",
+        "video/ComfyUI",
+        null
+      ]
+    },
+    {
+      "id": 43,
+      "type": "PreviewAny",
+      "pos": [
+        -780.178903751395,
+        3091.541015354274
+      ],
+      "size": [
+        643.1776934126865,
+        287.1823695785986
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "source",
+          "type": "*",
+          "link": 36
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "PreviewAny"
+      },
+      "widgets_values": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": 30,
+      "type": "DADWPoseConfig",
+      "pos": [
+        -2174.493782917716,
+        363.7761796500219
+      ],
+      "size": [
+        714.0943762648731,
+        208.19208209397777
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "DADWPoseConfig"
+      },
+      "widgets_values": [
+        "/data/work/program/Comfy/models/dalab/dwpose/yolox_l.torchscript.pt",
+        "/data/work/program/Comfy/models/dalab/dwpose/dw-ll_ucoco_384_bs5.torchscript.pt",
+        512
+      ]
+    },
+    {
+      "id": 38,
+      "type": "DADWPose",
+      "pos": [
+        -1243.906336322177,
+        1818.0600671179195
+      ],
+      "size": [
+        270,
+        146
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "frames",
+          "type": "IMAGE,VIDEO",
+          "link": 31
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": [
+            32
+          ]
+        },
+        {
+          "name": "videos",
+          "shape": 6,
+          "type": "VIDEO",
+          "links": []
+        },
+        {
+          "name": "keypoints",
+          "shape": 6,
+          "type": "DWPOSE_KEYPOINTS",
+          "links": [
+            29
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DADWPose"
+      },
+      "widgets_values": [
+        true,
+        true,
+        false
+      ]
+    },
+    {
+      "id": 35,
+      "type": "LoadImage",
+      "pos": [
+        -1708.7618546241379,
+        1817.2413873745616
+      ],
+      "size": [
+        282.798828125,
+        314.0000000000001
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            31
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "uncleda_tools_00067_.png",
+        "image"
+      ]
+    },
+    {
+      "id": 40,
+      "type": "DADWPose",
+      "pos": [
+        -1231.8539076213317,
+        2696.5633426544227
+      ],
+      "size": [
+        270,
+        146
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "frames",
+          "type": "IMAGE,VIDEO",
+          "link": 37
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": []
+        },
+        {
+          "name": "videos",
+          "shape": 6,
+          "type": "VIDEO",
+          "links": [
+            34
+          ]
+        },
+        {
+          "name": "keypoints",
+          "shape": 6,
+          "type": "DWPOSE_KEYPOINTS",
+          "links": [
+            36
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DADWPose"
+      },
+      "widgets_values": [
+        true,
+        true,
+        false
+      ]
+    },
+    {
+      "id": 20,
+      "type": "LoadVideo",
+      "pos": [
+        -1710.640323238778,
+        2697.4961368601676
+      ],
+      "size": [
+        282.798828125,
+        233.0743408203125
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            37
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadVideo"
+      },
+      "widgets_values": [
+        "ComfyUI_00848_.mp4",
+        "image"
+      ]
+    },
+    {
+      "id": 45,
+      "type": "DASaveImage",
+      "pos": [
+        -778.827345625209,
+        3701.3516009302684
+      ],
+      "size": [
+        337.349609375,
+        294
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 40
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DASaveImage"
+      },
+      "widgets_values": [
+        "no",
+        "ComfyUI"
+      ]
+    },
+    {
+      "id": 44,
+      "type": "DADWPose",
+      "pos": [
+        -1291.9311090454662,
+        3854.9526908712455
+      ],
+      "size": [
+        270,
+        146
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "frames",
+          "type": "IMAGE,VIDEO",
+          "link": 42
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": [
+            40
+          ]
+        },
+        {
+          "name": "videos",
+          "shape": 6,
+          "type": "VIDEO",
+          "links": []
+        },
+        {
+          "name": "keypoints",
+          "shape": 6,
+          "type": "DWPOSE_KEYPOINTS",
+          "links": [
+            39
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DADWPose"
+      },
+      "widgets_values": [
+        true,
+        true,
+        false
+      ]
+    },
+    {
+      "id": 46,
+      "type": "DAFlux2Klein",
+      "pos": [
+        -1822.7457588759169,
+        3850.2773166875822
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "image1",
+          "name": "images.image1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "prompts",
+          "type": "STRING",
+          "widget": {
+            "name": "prompts"
+          },
+          "link": 41
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": [
+            42
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DAFlux2Klein"
+      },
+      "widgets_values": [
+        1920,
+        1080,
+        "A beautiful girl",
+        515636584092425,
+        "randomize"
+      ]
+    },
+    {
+      "id": 24,
+      "type": "DAQwenLLM",
+      "pos": [
+        -2409.7863020491013,
+        3926.270681161355
+      ],
+      "size": [
+        400,
+        664
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "en_prompts",
+          "shape": 6,
+          "type": "STRING",
+          "links": [
+            41
+          ]
+        },
+        {
+          "name": "zh_prompts",
+          "shape": 6,
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DAQwenLLM",
+        "savedPrompts": [
+          {
+            "zh_prompt": "温馨家庭聚餐场景：六位不同年龄的家庭成员围坐在木质圆桌旁，桌上摆满中式家常菜——红烧肉、清蒸鱼、青菜、米饭和热汤，蒸汽袅袅升起；窗外黄昏柔光透过纱帘洒入，人物笑容自然，衣物纹理清晰，桌面木纹与瓷器反光细腻，广角构图捕捉整个餐厅空间，电影级布光与体积光营造温暖氛围",
+            "en_prompt": "A warm family dinner scene: six family members of diverse ages seated around a rustic wooden round table, laden with authentic Chinese home-cooked dishes—braised pork belly, steamed fish, stir-fried greens, steamed rice, and hot soup with visible steam rising; soft golden-hour light filters through sheer curtains from outside, casting cinematic volumetric lighting across smiling faces and textured clothing; ultra-detailed wood grain on table surface, realistic ceramic glaze reflections, wide-angle composition capturing the entire cozy dining room, photorealistic, 8k, masterpiece, ultra-sharp focus"
+          },
+          {
+            "zh_prompt": "现代都市朋友聚餐：八位年轻人在开放式 loft 餐厅长桌旁欢聚，桌上散落红酒杯、牛排、沙拉、面包篮和手机，背景是落地窗与城市夜景；人物姿态放松，服饰时尚，发丝与布料质感逼真，烛光与LED吊灯交织出柔和高光，微距特写与广角融合构图，强调食物油润光泽与人物眼神交流瞬间",
+            "en_prompt": "Modern urban friends' dinner party: eight stylish young adults gathered around a long minimalist table in an open-plan loft restaurant, dishes include medium-rare steak with herb butter, fresh salad, artisanal bread basket, wine glasses with subtle condensation, and casually placed smartphones; city night skyline visible through floor-to-ceiling windows; dynamic yet relaxed poses, hyper-realistic fabric textures and individual hair strands, interplay of candlelight and ambient LED pendant lighting creating soft specular highlights; hybrid macro-wide composition emphasizing glistening food surfaces and genuine eye-contact moments, cinematic volumetric lighting, 8k, photorealistic, masterpiece"
+          },
+          {
+            "zh_prompt": "传统节日团圆饭：十二人围坐于雕花红木八仙桌旁，身着新中式服饰，桌上铺红布，陈列饺子、年糕、鱼、柑橘与灯笼装饰；暖色灯笼光与顶灯混合照明，蒸汽从热腾腾的饺子锅中升腾，人物神态庄重而喜悦，丝绸衣料褶皱精细，漆器餐具反光真实，对称式广角构图展现大厅纵深与雕梁画栋细节",
+            "en_prompt": "Traditional Chinese festive reunion dinner: twelve family members dressed in modernized hanfu-style attire seated around an ornately carved rosewood ba xian table draped in crimson silk, set with jiaozi dumplings, nian gao cake, whole auspicious fish, tangerines, and decorative paper lanterns; warm ambient lighting from hanging red lanterns blended with soft overhead illumination creates rich volumetric glow; visible steam rising from a steaming copper dumpling pot; expressive yet dignified facial expressions, intricate silk fabric folds and embroidery details, realistic lacquerware reflections on plates and bowls; symmetrical wide-angle composition capturing deep perspective of ancestral hall with painted beams and carved ceiling motifs, ultra-detailed texture, 8k, cinematic lighting, masterpiece"
+          }
+        ],
+        "savedWidgetHeight": 420
+      },
+      "widgets_values": [
+        "qwen-plus",
+        "image",
+        3,
+        "多人的在聚餐",
+        230860595567702,
+        "fixed",
+        true,
+        null
+      ]
+    },
+    {
+      "id": 28,
+      "type": "PreviewAny",
+      "pos": [
+        -770.9220231947936,
+        4095.5333917115954
+      ],
+      "size": [
+        303.241109256875,
+        219.594550118092
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "source",
+          "type": "*",
+          "link": 39
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "PreviewAny"
+      },
+      "widgets_values": [
+        null,
+        null,
+        null
+      ]
+    }
+  ],
+  "links": [
+    [
+      24,
+      7,
+      0,
+      31,
+      0,
+      "IMAGE"
+    ],
+    [
+      25,
+      31,
+      2,
+      6,
+      0,
+      "DWPOSE_KEYPOINTS"
+    ],
+    [
+      27,
+      31,
+      0,
+      33,
+      0,
+      "IMAGE"
+    ],
+    [
+      29,
+      38,
+      2,
+      36,
+      0,
+      "DWPOSE_KEYPOINTS"
+    ],
+    [
+      31,
+      35,
+      0,
+      38,
+      0,
+      "IMAGE"
+    ],
+    [
+      32,
+      38,
+      0,
+      39,
+      0,
+      "IMAGE"
+    ],
+    [
+      34,
+      40,
+      1,
+      41,
+      0,
+      "VIDEO"
+    ],
+    [
+      36,
+      40,
+      2,
+      43,
+      0,
+      "DWPOSE_KEYPOINTS"
+    ],
+    [
+      37,
+      20,
+      0,
+      40,
+      0,
+      "VIDEO"
+    ],
+    [
+      39,
+      44,
+      2,
+      28,
+      0,
+      "DWPOSE_KEYPOINTS"
+    ],
+    [
+      40,
+      44,
+      0,
+      45,
+      0,
+      "IMAGE"
+    ],
+    [
+      41,
+      24,
+      0,
+      46,
+      1,
+      "STRING"
+    ],
+    [
+      42,
+      46,
+      0,
+      44,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "workflowRendererVersion": "LG",
+    "ds": {
+      "scale": 0.5209868481924415,
+      "offset": [
+        2298.035285503476,
+        -2948.3161242915216
+      ]
+    },
+    "frontendVersion": "1.37.11"
+  },
+  "version": 0.4
+}

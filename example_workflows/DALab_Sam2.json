@@ -1,0 +1,942 @@
+{
+  "id": "8680c81c-86a6-4d8c-a2bb-b511e832a075",
+  "revision": 0,
+  "last_node_id": 26,
+  "last_link_id": 41,
+  "nodes": [
+    {
+      "id": 2,
+      "type": "LoadImage",
+      "pos": [
+        -2935.389172107082,
+        1102.4689218960311
+      ],
+      "size": [
+        282.798828125,
+        314
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            2,
+            27
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "uncleda_tools_00067_.png",
+        "image"
+      ]
+    },
+    {
+      "id": 15,
+      "type": "DASAM2",
+      "pos": [
+        -1825.6615328905207,
+        1130.362683919138
+      ],
+      "size": [
+        270,
+        102
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "images",
+          "name": "images",
+          "type": "IMAGE,VIDEO",
+          "link": 27
+        },
+        {
+          "label": "bbox_data",
+          "name": "bbox_data",
+          "type": "BBOX_DATA",
+          "link": 28
+        }
+      ],
+      "outputs": [
+        {
+          "name": "masks",
+          "shape": 6,
+          "type": "MASK",
+          "links": [
+            24
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DASAM2"
+      },
+      "widgets_values": [
+        828366877988927,
+        "randomize"
+      ]
+    },
+    {
+      "id": 11,
+      "type": "LoadVideo",
+      "pos": [
+        -2953.118437027222,
+        1729.5369522172102
+      ],
+      "size": [
+        282.798828125,
+        233.0743408203125
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            9,
+            31
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadVideo"
+      },
+      "widgets_values": [
+        "ComfyUI_00771_.mp4",
+        "image"
+      ]
+    },
+    {
+      "id": 13,
+      "type": "DASAM2",
+      "pos": [
+        -1830.8647318751327,
+        528.9600444716634
+      ],
+      "size": [
+        270,
+        102
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "images",
+          "name": "images",
+          "type": "IMAGE,VIDEO",
+          "link": 25
+        },
+        {
+          "label": "bbox_data",
+          "name": "bbox_data",
+          "type": "BBOX_DATA",
+          "link": 26
+        }
+      ],
+      "outputs": [
+        {
+          "name": "masks",
+          "shape": 6,
+          "type": "MASK",
+          "links": [
+            19
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DASAM2"
+      },
+      "widgets_values": [
+        303511830461240,
+        "fixed"
+      ]
+    },
+    {
+      "id": 10,
+      "type": "DAFlorence2",
+      "pos": [
+        -2421.4167724887566,
+        1726.3025500047277
+      ],
+      "size": [
+        383.49354475699283,
+        386
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "images",
+          "name": "images",
+          "type": "IMAGE,VIDEO",
+          "link": 9
+        }
+      ],
+      "outputs": [
+        {
+          "name": "prompts",
+          "shape": 6,
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "bbox_data",
+          "shape": 6,
+          "type": "BBOX_DATA",
+          "links": [
+            30
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DAFlorence2"
+      },
+      "widgets_values": [
+        "bbox_by_index",
+        "object_with_detail",
+        2,
+        936078307332225,
+        "fixed"
+      ]
+    },
+    {
+      "id": 17,
+      "type": "DASAM2",
+      "pos": [
+        -1809.2230310073396,
+        1728.2002118563287
+      ],
+      "size": [
+        270,
+        102
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "images",
+          "name": "images",
+          "type": "IMAGE,VIDEO",
+          "link": 31
+        },
+        {
+          "label": "bbox_data",
+          "name": "bbox_data",
+          "type": "BBOX_DATA",
+          "link": 30
+        }
+      ],
+      "outputs": [
+        {
+          "name": "masks",
+          "shape": 6,
+          "type": "MASK",
+          "links": [
+            29
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DASAM2"
+      },
+      "widgets_values": [
+        333093178395672,
+        "randomize"
+      ]
+    },
+    {
+      "id": 20,
+      "type": "DAFlorence2",
+      "pos": [
+        -2421.79548288542,
+        2460.8983026626197
+      ],
+      "size": [
+        386.9505290035536,
+        386
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "images",
+          "name": "images",
+          "type": "IMAGE,VIDEO",
+          "link": 38
+        }
+      ],
+      "outputs": [
+        {
+          "name": "prompts",
+          "shape": 6,
+          "type": "STRING",
+          "links": []
+        },
+        {
+          "name": "bbox_data",
+          "shape": 6,
+          "type": "BBOX_DATA",
+          "links": [
+            34
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DAFlorence2"
+      },
+      "widgets_values": [
+        "bbox_by_index",
+        "object",
+        0,
+        717771849433579,
+        "randomize"
+      ]
+    },
+    {
+      "id": 22,
+      "type": "DASAM2",
+      "pos": [
+        -1793.9125397275907,
+        2455.5592608250454
+      ],
+      "size": [
+        270,
+        102
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "images",
+          "name": "images",
+          "type": "IMAGE,VIDEO",
+          "link": 41
+        },
+        {
+          "label": "bbox_data",
+          "name": "bbox_data",
+          "type": "BBOX_DATA",
+          "link": 34
+        }
+      ],
+      "outputs": [
+        {
+          "name": "masks",
+          "shape": 6,
+          "type": "MASK",
+          "links": [
+            36
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DASAM2"
+      },
+      "widgets_values": [
+        682654971590905,
+        "randomize"
+      ]
+    },
+    {
+      "id": 25,
+      "type": "DAFlux2Klein",
+      "pos": [
+        -3006.5579093353485,
+        2464.582448516124
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "image1",
+          "name": "images.image1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "prompts",
+          "type": "STRING",
+          "widget": {
+            "name": "prompts"
+          },
+          "link": 39
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": [
+            40
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DAFlux2Klein"
+      },
+      "widgets_values": [
+        2128,
+        1080,
+        "A beautiful girl",
+        846765984864746,
+        "randomize"
+      ]
+    },
+    {
+      "id": 6,
+      "type": "DASAM2Config",
+      "pos": [
+        -2914.5047398716333,
+        29.35383697376467
+      ],
+      "size": [
+        553.6760066788979,
+        117.05357619602046
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "DASAM2Config"
+      },
+      "widgets_values": [
+        "/data/work/program/Comfy/models/dalab/sam2/sam2.1-hiera-large",
+        "bf16"
+      ]
+    },
+    {
+      "id": 1,
+      "type": "DAFlorence2",
+      "pos": [
+        -2425.982320246645,
+        521.5030336214643
+      ],
+      "size": [
+        383.49354475699283,
+        386
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "images",
+          "name": "images",
+          "type": "IMAGE,VIDEO",
+          "link": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "prompts",
+          "shape": 6,
+          "type": "STRING",
+          "links": []
+        },
+        {
+          "name": "bbox_data",
+          "shape": 6,
+          "type": "BBOX_DATA",
+          "links": [
+            26
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DAFlorence2"
+      },
+      "widgets_values": [
+        "bbox_by_index",
+        "object_with_detail",
+        -1,
+        936078307332225,
+        "fixed"
+      ]
+    },
+    {
+      "id": 4,
+      "type": "LoadImage",
+      "pos": [
+        -2920.357444731885,
+        523.9968099384092
+      ],
+      "size": [
+        282.798828125,
+        314
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            1,
+            25
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "3c622277-1c11-465a-a65d-2ba8a0203d7e_1344x896.jpg",
+        "image"
+      ]
+    },
+    {
+      "id": 9,
+      "type": "MaskPreview",
+      "pos": [
+        -1353.9320836285053,
+        518.6930591946153
+      ],
+      "size": [
+        462.5635857785021,
+        407.1188490693994
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 19
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "MaskPreview"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 3,
+      "type": "DAFlorence2",
+      "pos": [
+        -2420.309691737303,
+        1117.1346201848462
+      ],
+      "size": [
+        371.85850955817705,
+        436
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "images",
+          "name": "images",
+          "type": "IMAGE,VIDEO",
+          "link": 2
+        }
+      ],
+      "outputs": [
+        {
+          "name": "prompts",
+          "shape": 6,
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "bbox_data",
+          "shape": 6,
+          "type": "BBOX_DATA",
+          "links": [
+            28
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DAFlorence2"
+      },
+      "widgets_values": [
+        "bbox_by_text",
+        "use_text",
+        "man",
+        1,
+        465889762938663,
+        "randomize"
+      ]
+    },
+    {
+      "id": 16,
+      "type": "MaskPreview",
+      "pos": [
+        -1348.7288846438933,
+        1124.7740717646072
+      ],
+      "size": [
+        462.5635857785021,
+        407.1188490693994
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 24
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "MaskPreview"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 18,
+      "type": "MaskPreview",
+      "pos": [
+        -1332.6559774815444,
+        1726.2055817032021
+      ],
+      "size": [
+        462.5635857785021,
+        407.1188490693994
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 29
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "MaskPreview"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 19,
+      "type": "DAQwenLLM",
+      "pos": [
+        -3607.4253165512414,
+        2526.3650494940875
+      ],
+      "size": [
+        400,
+        664
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "en_prompts",
+          "shape": 6,
+          "type": "STRING",
+          "links": [
+            39
+          ]
+        },
+        {
+          "name": "zh_prompts",
+          "shape": 6,
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DAQwenLLM",
+        "savedPrompts": [
+          {
+            "zh_prompt": "温馨家庭聚餐场景：六位不同年龄的家人围坐在木质圆桌旁，桌上摆满中式佳肴——热气腾腾的饺子、红亮的东坡肉、翠绿的清炒时蔬和琥珀色黄酒；暖黄色吊灯投下柔和光晕，人物笑容自然，衣着休闲亲和，背景为浅米色墙面与复古挂钟，窗外透入黄昏柔光，画面充满烟火气与亲密感。",
+            "en_prompt": "A warm family dinner scene: six family members of different ages gathered around a rustic wooden round table, laden with authentic Chinese dishes — steaming dumplings, glossy Dongpo pork, vibrant stir-fried seasonal vegetables, and amber huangjiu; cinematic volumetric lighting from a vintage pendant lamp casts soft golden highlights and gentle shadows, natural expressions and relaxed attire, shallow depth of field, rich textile textures on clothing and tablecloth, background features beige walls and an antique wall clock, subtle dusk light filtering through large windows, photorealistic, 8k, masterpiece, wide angle composition"
+          },
+          {
+            "zh_prompt": "都市年轻人朋友聚餐夜景：八人围坐于霓虹微光下的露天屋顶餐厅，玻璃桌面反射城市天际线，每人手持一杯特调鸡尾酒，桌上散落着披萨、烤串、薯条与手机；笑声定格瞬间，发丝与衣角微微扬起，背景虚化出流动的车灯与远处摩天楼群，氛围轻松热烈而富有现代生活节奏感。",
+            "en_prompt": "Urban friends' rooftop dinner at night: eight young adults seated around a sleek glass-topped table under ambient neon glow, city skyline reflected in the tabletop, each holding a colorful craft cocktail, casual gourmet food scattered — artisanal pizza slices, grilled skewers, crispy fries, and smartphones glowing softly; frozen moment of laughter, subtle motion blur on hair strands and fabric edges, bokeh background of streaking car lights and distant skyscrapers, cinematic volumetric lighting with cool-blue and warm-amber contrast, ultra-detailed skin texture and food gloss, 8k resolution, masterpiece, dynamic wide-angle framing"
+          },
+          {
+            "zh_prompt": "多民族跨文化节日聚餐：十二位来自不同族裔的友人在开放式厨房兼餐厅中围坐长桌，共享融合料理——印度咖喱角、墨西哥玉米卷、日式寿司拼盘与法式面包篮；烛光与串灯交织营造温暖氛围，人物手势生动、服饰各具文化特色，木质餐桌纹理清晰可见，背景中可见开放式置物架与手绘世界地图墙，画面洋溢尊重、欢庆与人文温度。",
+            "en_prompt": "Multicultural festive dinner: twelve friends of diverse ethnicities seated along a long reclaimed-wood dining table in an open-concept kitchen-living space, sharing fusion cuisine — crispy samosas, fresh corn tacos, delicate sushi platter, and rustic French bread basket; interwoven candlelight and string lights create layered volumetric warmth, expressive gestures and culturally distinct attire (e.g., embroidered kurtas, woven huipil, kimono accents), hyper-detailed wood grain and food surface textures, background features open shelving with cookbooks and a hand-painted world map mural, shallow depth of field, cinematic color grading, 8k, masterpiece, macro detail on hands and food, wide-angle environmental composition"
+          }
+        ],
+        "savedWidgetHeight": 420
+      },
+      "widgets_values": [
+        "qwen-plus",
+        "image",
+        3,
+        "多人的在聚餐",
+        230860595567702,
+        "fixed",
+        true,
+        null
+      ]
+    },
+    {
+      "id": 24,
+      "type": "DASaveImage",
+      "pos": [
+        -2959.7684774964105,
+        2803.009415801335
+      ],
+      "size": [
+        337.349609375,
+        294
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 40
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": [
+            38,
+            41
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DASaveImage"
+      },
+      "widgets_values": [
+        "no",
+        "ComfyUI"
+      ]
+    },
+    {
+      "id": 23,
+      "type": "MaskPreview",
+      "pos": [
+        -1331.655562053429,
+        2451.5087222517045
+      ],
+      "size": [
+        462.5635857785021,
+        407.1188490693994
+      ],
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 36
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "MaskPreview"
+      },
+      "widgets_values": []
+    }
+  ],
+  "links": [
+    [
+      1,
+      4,
+      0,
+      1,
+      0,
+      "IMAGE"
+    ],
+    [
+      2,
+      2,
+      0,
+      3,
+      0,
+      "IMAGE"
+    ],
+    [
+      9,
+      11,
+      0,
+      10,
+      0,
+      "VIDEO"
+    ],
+    [
+      19,
+      13,
+      0,
+      9,
+      0,
+      "MASK"
+    ],
+    [
+      24,
+      15,
+      0,
+      16,
+      0,
+      "MASK"
+    ],
+    [
+      25,
+      4,
+      0,
+      13,
+      0,
+      "IMAGE"
+    ],
+    [
+      26,
+      1,
+      1,
+      13,
+      1,
+      "BBOX_DATA"
+    ],
+    [
+      27,
+      2,
+      0,
+      15,
+      0,
+      "IMAGE"
+    ],
+    [
+      28,
+      3,
+      1,
+      15,
+      1,
+      "BBOX_DATA"
+    ],
+    [
+      29,
+      17,
+      0,
+      18,
+      0,
+      "MASK"
+    ],
+    [
+      30,
+      10,
+      1,
+      17,
+      1,
+      "BBOX_DATA"
+    ],
+    [
+      31,
+      11,
+      0,
+      17,
+      0,
+      "VIDEO"
+    ],
+    [
+      34,
+      20,
+      1,
+      22,
+      1,
+      "BBOX_DATA"
+    ],
+    [
+      36,
+      22,
+      0,
+      23,
+      0,
+      "MASK"
+    ],
+    [
+      38,
+      24,
+      0,
+      20,
+      0,
+      "IMAGE"
+    ],
+    [
+      39,
+      19,
+      0,
+      25,
+      1,
+      "STRING"
+    ],
+    [
+      40,
+      25,
+      0,
+      24,
+      0,
+      "IMAGE"
+    ],
+    [
+      41,
+      24,
+      0,
+      22,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "workflowRendererVersion": "LG",
+    "ds": {
+      "scale": 0.6303940863128542,
+      "offset": [
+        3635.154681217419,
+        -1481.009386228956
+      ]
+    },
+    "frontendVersion": "1.37.11"
+  },
+  "version": 0.4
+}

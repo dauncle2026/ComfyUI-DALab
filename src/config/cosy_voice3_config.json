@@ -1,0 +1,7 @@
+{
+    "model_path": "/data/work/program/Comfy/models/dalab/cosy_voice3",
+    "device": "cuda",
+    "use_fp16": false,
+    "speed": 1.0,
+    "rich_tags": "[breath], [laughter], [cough], [clucking], [accent], [quick_breath], [sigh], [lipsmack], [mn], <strong></strong>, <laughter></laughter>"
+}

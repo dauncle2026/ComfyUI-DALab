@@ -1,0 +1,25 @@
+{
+    "app_id": "",
+    "app_secret": "",
+    "view_server_address": "http://192.168.1.100:8188",
+    "open_field_name": "open",
+    "open_field_value": "on",
+    "frame_count_field_name": "frame_count",
+    "image_local_save_ext": ".jpg",
+    "text_options": {
+        "text1": "text1",
+        "text_options": "[1]"
+    },
+    "image_options": {
+        "image1": "image1",
+        "image_options": "[1]"
+    },
+    "audio_options": {
+        "audio1": "audio1",
+        "audio_options": "[1]"
+    },
+    "video_options": {
+        "video1": "video1",
+        "video_options": "[1]"
+    }
+}

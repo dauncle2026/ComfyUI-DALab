@@ -1,0 +1,1987 @@
+{
+  "id": "3527104f-dc8d-4be6-b60f-76fbc353f83a",
+  "revision": 0,
+  "last_node_id": 46,
+  "last_link_id": 69,
+  "nodes": [
+    {
+      "id": 5,
+      "type": "LoadImage",
+      "pos": [
+        4913.537053799677,
+        9943.705696203104
+      ],
+      "size": [
+        282.798828125,
+        314
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            5,
+            41,
+            43
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "3c622277-1c11-465a-a65d-2ba8a0203d7e_1344x896.jpg",
+        "image"
+      ]
+    },
+    {
+      "id": 46,
+      "type": "DAWanI2VConfig",
+      "pos": [
+        4473.982538424581,
+        8981.526501428269
+      ],
+      "size": [
+        560.2605372079433,
+        448
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "DAWanI2VConfig"
+      },
+      "widgets_values": [
+        "wan/umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+        "wan/wan_2.1_vae.safetensors",
+        "wan2.2/wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors",
+        "wan2.2/wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors",
+        4,
+        1,
+        5,
+        "simple",
+        "euler",
+        "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走，裸露，NSFW",
+        "[1]",
+        "wan2.2/wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
+        1,
+        "[1]",
+        "wan2.2/wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
+        1
+      ]
+    },
+    {
+      "id": 35,
+      "type": "DAWanI2V",
+      "pos": [
+        5319.6688708267675,
+        9404.425260915788
+      ],
+      "size": [
+        400,
+        252
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "first_frames",
+          "shape": 7,
+          "type": "IMAGE,VIDEO",
+          "link": null
+        },
+        {
+          "name": "last_frames",
+          "shape": 7,
+          "type": "IMAGE,VIDEO",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "videos",
+          "shape": 6,
+          "type": "VIDEO",
+          "links": [
+            40
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DAWanI2V"
+      },
+      "widgets_values": [
+        640,
+        360,
+        81,
+        16,
+        "A beautiful girl",
+        1013898007571403,
+        "fixed"
+      ]
+    },
+    {
+      "id": 3,
+      "type": "DASaveVideo",
+      "pos": [
+        5885.669415169914,
+        9405.349903335034
+      ],
+      "size": [
+        401.421561340725,
+        96
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "videos",
+          "type": "VIDEO",
+          "link": 40
+        }
+      ],
+      "outputs": [
+        {
+          "name": "videos",
+          "shape": 6,
+          "type": "VIDEO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DASaveVideo",
+        "savedVideos": [
+          {
+            "filename": "ComfyUI_00996_.mp4",
+            "subfolder": "video",
+            "type": "output",
+            "format": "video/mp4",
+            "width": 640,
+            "height": 360
+          }
+        ]
+      },
+      "widgets_values": [
+        "no",
+        "video/ComfyUI",
+        null
+      ]
+    },
+    {
+      "id": 36,
+      "type": "DAWanI2V",
+      "pos": [
+        5333.163033937911,
+        9936.645042810262
+      ],
+      "size": [
+        400,
+        252
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "first_frames",
+          "shape": 7,
+          "type": "IMAGE,VIDEO",
+          "link": 41
+        },
+        {
+          "name": "last_frames",
+          "shape": 7,
+          "type": "IMAGE,VIDEO",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "videos",
+          "shape": 6,
+          "type": "VIDEO",
+          "links": [
+            42
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DAWanI2V"
+      },
+      "widgets_values": [
+        640,
+        360,
+        81,
+        16,
+        "A beautiful girl",
+        863207398535783,
+        "fixed"
+      ]
+    },
+    {
+      "id": 6,
+      "type": "DASaveVideo",
+      "pos": [
+        5889.968416217437,
+        9931.493447928055
+      ],
+      "size": [
+        433.756771645707,
+        96
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "videos",
+          "type": "VIDEO",
+          "link": 42
+        }
+      ],
+      "outputs": [
+        {
+          "name": "videos",
+          "shape": 6,
+          "type": "VIDEO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DASaveVideo",
+        "savedVideos": [
+          {
+            "filename": "ComfyUI_00997_.mp4",
+            "subfolder": "video",
+            "type": "output",
+            "format": "video/mp4",
+            "width": 640,
+            "height": 360
+          }
+        ]
+      },
+      "widgets_values": [
+        "no",
+        "video/ComfyUI",
+        null
+      ]
+    },
+    {
+      "id": 37,
+      "type": "DAWanI2V",
+      "pos": [
+        5336.726581292642,
+        10457.464419845619
+      ],
+      "size": [
+        400,
+        252
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "first_frames",
+          "shape": 7,
+          "type": "IMAGE,VIDEO",
+          "link": 43
+        },
+        {
+          "name": "last_frames",
+          "shape": 7,
+          "type": "IMAGE,VIDEO",
+          "link": 44
+        }
+      ],
+      "outputs": [
+        {
+          "name": "videos",
+          "shape": 6,
+          "type": "VIDEO",
+          "links": [
+            45
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DAWanI2V"
+      },
+      "widgets_values": [
+        640,
+        360,
+        81,
+        16,
+        "A beautiful girl",
+        825859889292565,
+        "fixed"
+      ]
+    },
+    {
+      "id": 9,
+      "type": "DASaveImage",
+      "pos": [
+        4883.4773818336735,
+        10474.532756866172
+      ],
+      "size": [
+        337.349609375,
+        82
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 4
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": [
+            44,
+            54
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DASaveImage"
+      },
+      "widgets_values": [
+        "no",
+        "ComfyUI"
+      ]
+    },
+    {
+      "id": 8,
+      "type": "DAQwenImageEdit",
+      "pos": [
+        4327.127846031718,
+        10475.194294808147
+      ],
+      "size": [
+        400,
+        204
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "image1",
+          "name": "images.image1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 5
+        },
+        {
+          "label": "image2",
+          "name": "images.image2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": [
+            4
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DAQwenImageEdit"
+      },
+      "widgets_values": [
+        1920,
+        1080,
+        "镜头左转",
+        685764544418181,
+        "fixed"
+      ]
+    },
+    {
+      "id": 11,
+      "type": "DASaveVideo",
+      "pos": [
+        5897.986088596524,
+        10459.972562677995
+      ],
+      "size": [
+        433.756771645707,
+        96
+      ],
+      "flags": {},
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "videos",
+          "type": "VIDEO",
+          "link": 45
+        }
+      ],
+      "outputs": [
+        {
+          "name": "videos",
+          "shape": 6,
+          "type": "VIDEO",
+          "links": [
+            47
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DASaveVideo",
+        "savedVideos": [
+          {
+            "filename": "ComfyUI_00998_.mp4",
+            "subfolder": "video",
+            "type": "output",
+            "format": "video/mp4",
+            "width": 640,
+            "height": 360
+          }
+        ]
+      },
+      "widgets_values": [
+        "no",
+        "video/ComfyUI",
+        null
+      ]
+    },
+    {
+      "id": 38,
+      "type": "DAWanI2V",
+      "pos": [
+        6525.901619749043,
+        10464.794823093836
+      ],
+      "size": [
+        400,
+        252
+      ],
+      "flags": {},
+      "order": 26,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "first_frames",
+          "shape": 7,
+          "type": "IMAGE,VIDEO",
+          "link": 47
+        },
+        {
+          "name": "last_frames",
+          "shape": 7,
+          "type": "IMAGE,VIDEO",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "videos",
+          "shape": 6,
+          "type": "VIDEO",
+          "links": [
+            48
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DAWanI2V"
+      },
+      "widgets_values": [
+        640,
+        360,
+        81,
+        16,
+        "A beautiful girl",
+        937861805218348,
+        "fixed"
+      ]
+    },
+    {
+      "id": 29,
+      "type": "DASaveVideo",
+      "pos": [
+        7162.37192051135,
+        10459.891398368149
+      ],
+      "size": [
+        456.39863966077246,
+        96
+      ],
+      "flags": {},
+      "order": 29,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "videos",
+          "type": "VIDEO",
+          "link": 48
+        }
+      ],
+      "outputs": [
+        {
+          "name": "videos",
+          "shape": 6,
+          "type": "VIDEO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DASaveVideo",
+        "savedVideos": [
+          {
+            "filename": "ComfyUI_00999_.mp4",
+            "subfolder": "video",
+            "type": "output",
+            "format": "video/mp4",
+            "width": 640,
+            "height": 360
+          }
+        ]
+      },
+      "widgets_values": [
+        "no",
+        "video/ComfyUI",
+        null
+      ]
+    },
+    {
+      "id": 39,
+      "type": "DAWanI2V",
+      "pos": [
+        5323.600394516312,
+        11100.757953309949
+      ],
+      "size": [
+        400,
+        252
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "first_frames",
+          "shape": 7,
+          "type": "IMAGE,VIDEO",
+          "link": null
+        },
+        {
+          "name": "last_frames",
+          "shape": 7,
+          "type": "IMAGE,VIDEO",
+          "link": null
+        },
+        {
+          "name": "prompts",
+          "type": "STRING",
+          "widget": {
+            "name": "prompts"
+          },
+          "link": 49
+        }
+      ],
+      "outputs": [
+        {
+          "name": "videos",
+          "shape": 6,
+          "type": "VIDEO",
+          "links": [
+            50
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DAWanI2V"
+      },
+      "widgets_values": [
+        640,
+        360,
+        81,
+        16,
+        "slow",
+        1024442246413751,
+        "fixed"
+      ]
+    },
+    {
+      "id": 22,
+      "type": "DASaveVideo",
+      "pos": [
+        5861.431575401488,
+        11100.47972195917
+      ],
+      "size": [
+        472.06592071640716,
+        96
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "videos",
+          "type": "VIDEO",
+          "link": 50
+        }
+      ],
+      "outputs": [
+        {
+          "name": "videos",
+          "shape": 6,
+          "type": "VIDEO",
+          "links": [
+            52,
+            59,
+            60
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DASaveVideo",
+        "savedVideos": [
+          {
+            "filename": "ComfyUI_01000_.mp4",
+            "subfolder": "video",
+            "type": "output",
+            "format": "video/mp4",
+            "width": 640,
+            "height": 360
+          },
+          {
+            "filename": "ComfyUI_01001_.mp4",
+            "subfolder": "video",
+            "type": "output",
+            "format": "video/mp4",
+            "width": 640,
+            "height": 360
+          },
+          {
+            "filename": "ComfyUI_01002_.mp4",
+            "subfolder": "video",
+            "type": "output",
+            "format": "video/mp4",
+            "width": 640,
+            "height": 360
+          }
+        ]
+      },
+      "widgets_values": [
+        "no",
+        "video/ComfyUI",
+        null
+      ]
+    },
+    {
+      "id": 31,
+      "type": "DASaveVideo",
+      "pos": [
+        7164.54601745971,
+        11104.642377265527
+      ],
+      "size": [
+        443.7365873411236,
+        96
+      ],
+      "flags": {},
+      "order": 24,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "videos",
+          "type": "VIDEO",
+          "link": 53
+        }
+      ],
+      "outputs": [
+        {
+          "name": "videos",
+          "shape": 6,
+          "type": "VIDEO",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DASaveVideo",
+        "savedVideos": [
+          {
+            "filename": "ComfyUI_01006_.mp4",
+            "subfolder": "video",
+            "type": "output",
+            "format": "video/mp4",
+            "width": 640,
+            "height": 360
+          },
+          {
+            "filename": "ComfyUI_01007_.mp4",
+            "subfolder": "video",
+            "type": "output",
+            "format": "video/mp4",
+            "width": 640,
+            "height": 360
+          },
+          {
+            "filename": "ComfyUI_01008_.mp4",
+            "subfolder": "video",
+            "type": "output",
+            "format": "video/mp4",
+            "width": 640,
+            "height": 360
+          }
+        ]
+      },
+      "widgets_values": [
+        "no",
+        "video/ComfyUI",
+        null
+      ]
+    },
+    {
+      "id": 40,
+      "type": "DAWanI2V",
+      "pos": [
+        6561.996919036265,
+        11105.835855263638
+      ],
+      "size": [
+        400,
+        252
+      ],
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "first_frames",
+          "shape": 7,
+          "type": "IMAGE,VIDEO",
+          "link": 52
+        },
+        {
+          "name": "last_frames",
+          "shape": 7,
+          "type": "IMAGE,VIDEO",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "videos",
+          "shape": 6,
+          "type": "VIDEO",
+          "links": [
+            53
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DAWanI2V"
+      },
+      "widgets_values": [
+        640,
+        360,
+        81,
+        16,
+        "slow",
+        302880032532271,
+        "fixed"
+      ]
+    },
+    {
+      "id": 25,
+      "type": "DAQwenLLM",
+      "pos": [
+        3550.1600301882713,
+        11820.647182586357
+      ],
+      "size": [
+        400,
+        676
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "en_prompts",
+          "shape": 6,
+          "type": "STRING",
+          "links": [
+            55,
+            68
+          ]
+        },
+        {
+          "name": "zh_prompts",
+          "shape": 6,
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DAQwenLLM",
+        "savedPrompts": [
+          {
+            "zh_prompt": "将图1中的角色置于暴雨倾盆的都市天台，她单膝跪地，左手撑伞微微倾斜，右手紧握一枚发光的青铜罗盘，发丝与风衣下摆剧烈翻飞，霓虹广告牌在雨幕中晕染出紫红光斑，水洼倒映着闪电瞬光，表情坚毅而警觉",
+            "en_prompt": "A cinematic wide-angle shot of the same character on a rain-soaked urban rooftop at night, kneeling on one knee, holding an antique glowing bronze compass in her right hand while propping up a translucent black umbrella with her left; wind-blown hair and trench coat flutter dynamically, neon signs bleed purple and crimson light into wet pavement, puddles reflect a split-second lightning flash; hyper-detailed skin texture, volumetric rain streaks, cinematic lighting, 8k, photorealistic, masterpiece"
+          },
+          {
+            "zh_prompt": "将图1中的角色坐在晨光熹微的旧书店角落，双腿交叠，指尖轻抚摊开的羊皮纸古籍，一缕阳光穿过高窗斜射在浮尘与书页金箔上，猫蜷在她脚边打盹，木质书架纵深延伸至柔焦暗处，神情宁静而专注",
+            "en_prompt": "Same character seated quietly in a sunlit corner of a vintage bookstore at dawn, legs crossed elegantly, fingertips gently tracing gilded text on an open vellum manuscript; a diagonal beam of warm morning light pierces through tall arched windows, illuminating suspended dust motes and shimmering gold leaf on aged pages; a sleeping cat curls beside her boots, wooden shelves recede into soft-focus shadow; rich tactile textures—worn leather, paper grain, woven wool scarf—cinematic volumetric lighting, macro detail on eyelashes and ink strokes, 8k, ultra-detailed, masterpiece"
+          },
+          {
+            "zh_prompt": "将图1中的角色悬浮于深空站观测舱内，身着半透明宇航服，双臂张开呈平衡姿态，脚下是缓缓旋转的蔚蓝地球，舷窗外极光如液态翡翠流淌，面罩内呼吸微雾与睫毛霜晶清晰可见，发丝失重飘散，神情沉静而充满敬畏",
+            "en_prompt": "Same character floating weightlessly inside a glass-domed space station observatory, wearing a semi-transparent advanced spacesuit with subtle HUD glow; arms extended in serene equilibrium, Earth rotates slowly below her boots—vivid blue oceans and swirling white clouds; aurora borealis flows like liquid emerald across the starfield beyond the viewport; visible breath condensation and frost crystals on her visor interior, zero-gravity hair strands drifting organically; ultra-sharp macro focus on eyelash ice, fabric weave, and lens reflections; volumetric cosmic lighting, deep-space contrast, 8k, photorealistic sci-fi masterpiece"
+          }
+        ],
+        "savedWidgetHeight": 420
+      },
+      "widgets_values": [
+        "qwen-plus",
+        "image",
+        3,
+        "同一个角色不同的动作，行为，场景的图片编辑提示词，请以“将图1 xxx”开头",
+        969651943854496,
+        "fixed",
+        true,
+        null
+      ]
+    },
+    {
+      "id": 27,
+      "type": "DASaveVideo",
+      "pos": [
+        5869.183122328785,
+        11675.445502550489
+      ],
+      "size": [
+        469.24540975015043,
+        426
+      ],
+      "flags": {},
+      "order": 21,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "videos",
+          "type": "VIDEO",
+          "link": 56
+        }
+      ],
+      "outputs": [
+        {
+          "name": "videos",
+          "shape": 6,
+          "type": "VIDEO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DASaveVideo",
+        "savedVideos": [
+          {
+            "filename": "ComfyUI_01009_.mp4",
+            "subfolder": "video",
+            "type": "output",
+            "format": "video/mp4",
+            "width": 640,
+            "height": 360
+          },
+          {
+            "filename": "ComfyUI_01010_.mp4",
+            "subfolder": "video",
+            "type": "output",
+            "format": "video/mp4",
+            "width": 640,
+            "height": 360
+          },
+          {
+            "filename": "ComfyUI_01011_.mp4",
+            "subfolder": "video",
+            "type": "output",
+            "format": "video/mp4",
+            "width": 640,
+            "height": 360
+          }
+        ]
+      },
+      "widgets_values": [
+        "no",
+        "video/ComfyUI",
+        null
+      ]
+    },
+    {
+      "id": 15,
+      "type": "DASaveImage",
+      "pos": [
+        4763.644316297795,
+        12210.54814923584
+      ],
+      "size": [
+        337.349609375,
+        294
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 10
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": [
+            13,
+            57,
+            63,
+            66
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DASaveImage"
+      },
+      "widgets_values": [
+        "no",
+        "ComfyUI"
+      ]
+    },
+    {
+      "id": 13,
+      "type": "DAZImage",
+      "pos": [
+        4189.0252288908205,
+        12207.90545361527
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "prompts",
+          "type": "STRING",
+          "widget": {
+            "name": "prompts"
+          },
+          "link": 9
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": [
+            10
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DAZImage"
+      },
+      "widgets_values": [
+        1920,
+        1080,
+        "A beautiful girl",
+        0,
+        "fixed"
+      ]
+    },
+    {
+      "id": 12,
+      "type": "DAQwenLLM",
+      "pos": [
+        3548.9676114383965,
+        11049.002476771291
+      ],
+      "size": [
+        400,
+        676
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "en_prompts",
+          "shape": 6,
+          "type": "STRING",
+          "links": [
+            9,
+            49
+          ]
+        },
+        {
+          "name": "zh_prompts",
+          "shape": 6,
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DAQwenLLM",
+        "savedPrompts": [
+          {
+            "zh_prompt": "一位身着靛蓝扎染长袍的年轻女祭司，赤足行走在晨雾弥漫的石阶上，长发随风轻扬，双手捧着燃烧的银烛台，烛火稳定摇曳；镜头缓慢推进，聚焦她沉静而坚定的眼神，背景古庙檐角若隐若现。",
+            "en_prompt": "Cinematic medium-close shot, static camera with shallow depth of field, a young female priestess in indigo tie-dye robe walks barefoot up misty ancient stone steps, her long hair flowing gently in the breeze, holding a silver candelabrum with steadily flickering flame; morning light diffuses through fog, temple eaves softly blurred in background, realistic texture and volumetric lighting."
+          },
+          {
+            "zh_prompt": "一名戴黄铜蒸汽目镜的机械师少年正半蹲在齿轮轰鸣的飞艇甲板上，左手紧握扳手拧紧青铜螺栓，右臂外骨骼装置随动作同步微震，油渍与铜锈斑驳其工装夹克；镜头从低角度仰拍，随后轻微右移跟拍他抬头望向云层中若隐若现的敌方空艇。",
+            "en_prompt": "Cinematic low-angle tracking shot, camera pans right as the teenage steam-mechanic looks up from tightening a bronze bolt on a roaring airship deck, wearing brass steampunk goggles and an oil-stained jacket with visible copper patina and riveted exo-arm that vibrates subtly with motion, dynamic weight shift and realistic mechanical physics, volumetric cloud lighting above."
+          },
+          {
+            "zh_prompt": "一位白发如雪的老渔妇坐在退潮后的黑曜石滩涂上，缓慢编织海藻纤维渔网，手指粗粝却灵巧，潮水在她脚边轻柔涨落、退散、再漫延，留下闪亮盐晶；无人机俯拍转为侧跟镜头，捕捉她皱纹里沉淀的海风与时间，浪花节奏与呼吸同步。",
+            "en_prompt": "Drone shot descending into smooth lateral follow, capturing an elderly fisherwoman with snow-white hair weaving kelp-fiber net on obsidian-tinted tidal flat, her weathered hands moving with rhythmic precision as waves ebb and flow around her bare feet, leaving glistening salt crystals; tide movement follows natural fluid dynamics, light reflects off wet rock and seaweed with photorealistic subsurface scattering."
+          }
+        ],
+        "savedWidgetHeight": 420
+      },
+      "widgets_values": [
+        "qwen-plus",
+        "video",
+        3,
+        "生成3个不同的角色，用于文生图的提示词",
+        969651943854496,
+        "fixed",
+        true,
+        null
+      ]
+    },
+    {
+      "id": 18,
+      "type": "DASaveImage",
+      "pos": [
+        4757.338562788534,
+        12770.967311895829
+      ],
+      "size": [
+        337.349609375,
+        294
+      ],
+      "flags": {},
+      "order": 22,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 14
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": [
+            64,
+            67
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DASaveImage"
+      },
+      "widgets_values": [
+        "no",
+        "ComfyUI"
+      ]
+    },
+    {
+      "id": 17,
+      "type": "DAQwenImageEdit",
+      "pos": [
+        4174.506129752257,
+        12770.411148923708
+      ],
+      "size": [
+        400,
+        204
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "image1",
+          "name": "images.image1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 13
+        },
+        {
+          "label": "image2",
+          "name": "images.image2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": [
+            14
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DAQwenImageEdit"
+      },
+      "widgets_values": [
+        1920,
+        1080,
+        "镜头拉近，头部特写镜头",
+        685764544418181,
+        "fixed"
+      ]
+    },
+    {
+      "id": 43,
+      "type": "DAWanI2V",
+      "pos": [
+        6555.5795477614765,
+        11681.851727911439
+      ],
+      "size": [
+        400,
+        252
+      ],
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "first_frames",
+          "shape": 7,
+          "type": "IMAGE,VIDEO",
+          "link": 59
+        },
+        {
+          "name": "last_frames",
+          "shape": 7,
+          "type": "IMAGE,VIDEO",
+          "link": 60
+        }
+      ],
+      "outputs": [
+        {
+          "name": "videos",
+          "shape": 6,
+          "type": "VIDEO",
+          "links": [
+            62
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DAWanI2V"
+      },
+      "widgets_values": [
+        640,
+        360,
+        81,
+        16,
+        "slow",
+        302880032532270,
+        "fixed"
+      ]
+    },
+    {
+      "id": 33,
+      "type": "DASaveVideo",
+      "pos": [
+        7178.210354632814,
+        11680.80267058994
+      ],
+      "size": [
+        449.2250147141167,
+        415
+      ],
+      "flags": {},
+      "order": 25,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "videos",
+          "type": "VIDEO",
+          "link": 62
+        }
+      ],
+      "outputs": [
+        {
+          "name": "videos",
+          "shape": 6,
+          "type": "VIDEO",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DASaveVideo",
+        "savedVideos": [
+          {
+            "filename": "ComfyUI_01012_.mp4",
+            "subfolder": "video",
+            "type": "output",
+            "format": "video/mp4",
+            "width": 640,
+            "height": 360
+          },
+          {
+            "filename": "ComfyUI_01013_.mp4",
+            "subfolder": "video",
+            "type": "output",
+            "format": "video/mp4",
+            "width": 640,
+            "height": 360
+          },
+          {
+            "filename": "ComfyUI_01014_.mp4",
+            "subfolder": "video",
+            "type": "output",
+            "format": "video/mp4",
+            "width": 640,
+            "height": 360
+          }
+        ]
+      },
+      "widgets_values": [
+        "no",
+        "video/ComfyUI",
+        null
+      ]
+    },
+    {
+      "id": 41,
+      "type": "DAWanI2V",
+      "pos": [
+        5321.982633493366,
+        11674.368894265905
+      ],
+      "size": [
+        400,
+        252
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "first_frames",
+          "shape": 7,
+          "type": "IMAGE,VIDEO",
+          "link": 54
+        },
+        {
+          "name": "last_frames",
+          "shape": 7,
+          "type": "IMAGE,VIDEO",
+          "link": null
+        },
+        {
+          "name": "prompts",
+          "type": "STRING",
+          "widget": {
+            "name": "prompts"
+          },
+          "link": 55
+        }
+      ],
+      "outputs": [
+        {
+          "name": "videos",
+          "shape": 6,
+          "type": "VIDEO",
+          "links": [
+            56
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DAWanI2V"
+      },
+      "widgets_values": [
+        640,
+        360,
+        81,
+        16,
+        "slow",
+        1024442246413751,
+        "fixed"
+      ]
+    },
+    {
+      "id": 16,
+      "type": "DASaveVideo",
+      "pos": [
+        5874.393751739027,
+        12207.573910281242
+      ],
+      "size": [
+        482.45701731992267,
+        433
+      ],
+      "flags": {},
+      "order": 23,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "videos",
+          "type": "VIDEO",
+          "link": 58
+        }
+      ],
+      "outputs": [
+        {
+          "name": "videos",
+          "shape": 6,
+          "type": "VIDEO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DASaveVideo",
+        "savedVideos": [
+          {
+            "filename": "ComfyUI_01015_.mp4",
+            "subfolder": "video",
+            "type": "output",
+            "format": "video/mp4",
+            "width": 640,
+            "height": 360
+          },
+          {
+            "filename": "ComfyUI_01016_.mp4",
+            "subfolder": "video",
+            "type": "output",
+            "format": "video/mp4",
+            "width": 640,
+            "height": 360
+          },
+          {
+            "filename": "ComfyUI_01017_.mp4",
+            "subfolder": "video",
+            "type": "output",
+            "format": "video/mp4",
+            "width": 640,
+            "height": 360
+          }
+        ]
+      },
+      "widgets_values": [
+        "no",
+        "video/ComfyUI",
+        null
+      ]
+    },
+    {
+      "id": 42,
+      "type": "DAWanI2V",
+      "pos": [
+        5312.430286907506,
+        12210.528246214531
+      ],
+      "size": [
+        400,
+        252
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "first_frames",
+          "shape": 7,
+          "type": "IMAGE,VIDEO",
+          "link": 57
+        },
+        {
+          "name": "last_frames",
+          "shape": 7,
+          "type": "IMAGE,VIDEO",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "videos",
+          "shape": 6,
+          "type": "VIDEO",
+          "links": [
+            58
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DAWanI2V"
+      },
+      "widgets_values": [
+        640,
+        360,
+        81,
+        16,
+        "slow",
+        1024442246413751,
+        "fixed"
+      ]
+    },
+    {
+      "id": 44,
+      "type": "DAWanI2V",
+      "pos": [
+        5315.4998753009195,
+        12759.738537083382
+      ],
+      "size": [
+        400,
+        252
+      ],
+      "flags": {},
+      "order": 27,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "first_frames",
+          "shape": 7,
+          "type": "IMAGE,VIDEO",
+          "link": 63
+        },
+        {
+          "name": "last_frames",
+          "shape": 7,
+          "type": "IMAGE,VIDEO",
+          "link": 64
+        }
+      ],
+      "outputs": [
+        {
+          "name": "videos",
+          "shape": 6,
+          "type": "VIDEO",
+          "links": [
+            65
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DAWanI2V"
+      },
+      "widgets_values": [
+        640,
+        360,
+        81,
+        16,
+        "slow",
+        1024442246413751,
+        "fixed"
+      ]
+    },
+    {
+      "id": 20,
+      "type": "DASaveVideo",
+      "pos": [
+        5881.406872239231,
+        12762.01793745893
+      ],
+      "size": [
+        510.8171082248309,
+        449
+      ],
+      "flags": {},
+      "order": 30,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "videos",
+          "type": "VIDEO",
+          "link": 65
+        }
+      ],
+      "outputs": [
+        {
+          "name": "videos",
+          "shape": 6,
+          "type": "VIDEO",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DASaveVideo",
+        "savedVideos": [
+          {
+            "filename": "ComfyUI_01018_.mp4",
+            "subfolder": "video",
+            "type": "output",
+            "format": "video/mp4",
+            "width": 640,
+            "height": 360
+          },
+          {
+            "filename": "ComfyUI_01019_.mp4",
+            "subfolder": "video",
+            "type": "output",
+            "format": "video/mp4",
+            "width": 640,
+            "height": 360
+          },
+          {
+            "filename": "ComfyUI_01020_.mp4",
+            "subfolder": "video",
+            "type": "output",
+            "format": "video/mp4",
+            "width": 640,
+            "height": 360
+          }
+        ]
+      },
+      "widgets_values": [
+        "no",
+        "video/ComfyUI",
+        null
+      ]
+    },
+    {
+      "id": 24,
+      "type": "DASaveVideo",
+      "pos": [
+        5875.548099213387,
+        13364.274479703015
+      ],
+      "size": [
+        534.7681236982398,
+        463
+      ],
+      "flags": {},
+      "order": 31,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "videos",
+          "type": "VIDEO",
+          "link": 69
+        }
+      ],
+      "outputs": [
+        {
+          "name": "videos",
+          "shape": 6,
+          "type": "VIDEO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DASaveVideo",
+        "savedVideos": [
+          {
+            "filename": "ComfyUI_01021_.mp4",
+            "subfolder": "video",
+            "type": "output",
+            "format": "video/mp4",
+            "width": 640,
+            "height": 360
+          },
+          {
+            "filename": "ComfyUI_01022_.mp4",
+            "subfolder": "video",
+            "type": "output",
+            "format": "video/mp4",
+            "width": 640,
+            "height": 360
+          },
+          {
+            "filename": "ComfyUI_01023_.mp4",
+            "subfolder": "video",
+            "type": "output",
+            "format": "video/mp4",
+            "width": 640,
+            "height": 360
+          }
+        ]
+      },
+      "widgets_values": [
+        "no",
+        "video/ComfyUI",
+        null
+      ]
+    },
+    {
+      "id": 45,
+      "type": "DAWanI2V",
+      "pos": [
+        5313.251907719238,
+        13360.52925029372
+      ],
+      "size": [
+        400,
+        252
+      ],
+      "flags": {},
+      "order": 28,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "first_frames",
+          "shape": 7,
+          "type": "IMAGE,VIDEO",
+          "link": 66
+        },
+        {
+          "name": "last_frames",
+          "shape": 7,
+          "type": "IMAGE,VIDEO",
+          "link": 67
+        },
+        {
+          "name": "prompts",
+          "type": "STRING",
+          "widget": {
+            "name": "prompts"
+          },
+          "link": 68
+        }
+      ],
+      "outputs": [
+        {
+          "name": "videos",
+          "shape": 6,
+          "type": "VIDEO",
+          "links": [
+            69
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DAWanI2V"
+      },
+      "widgets_values": [
+        640,
+        360,
+        81,
+        16,
+        "slow",
+        1024442246413751,
+        "fixed"
+      ]
+    }
+  ],
+  "links": [
+    [
+      4,
+      8,
+      0,
+      9,
+      0,
+      "IMAGE"
+    ],
+    [
+      5,
+      5,
+      0,
+      8,
+      0,
+      "IMAGE"
+    ],
+    [
+      9,
+      12,
+      0,
+      13,
+      0,
+      "STRING"
+    ],
+    [
+      10,
+      13,
+      0,
+      15,
+      0,
+      "IMAGE"
+    ],
+    [
+      13,
+      15,
+      0,
+      17,
+      0,
+      "IMAGE"
+    ],
+    [
+      14,
+      17,
+      0,
+      18,
+      0,
+      "IMAGE"
+    ],
+    [
+      40,
+      35,
+      0,
+      3,
+      0,
+      "VIDEO"
+    ],
+    [
+      41,
+      5,
+      0,
+      36,
+      0,
+      "IMAGE"
+    ],
+    [
+      42,
+      36,
+      0,
+      6,
+      0,
+      "VIDEO"
+    ],
+    [
+      43,
+      5,
+      0,
+      37,
+      0,
+      "IMAGE"
+    ],
+    [
+      44,
+      9,
+      0,
+      37,
+      1,
+      "IMAGE"
+    ],
+    [
+      45,
+      37,
+      0,
+      11,
+      0,
+      "VIDEO"
+    ],
+    [
+      47,
+      11,
+      0,
+      38,
+      0,
+      "VIDEO"
+    ],
+    [
+      48,
+      38,
+      0,
+      29,
+      0,
+      "VIDEO"
+    ],
+    [
+      49,
+      12,
+      0,
+      39,
+      2,
+      "STRING"
+    ],
+    [
+      50,
+      39,
+      0,
+      22,
+      0,
+      "VIDEO"
+    ],
+    [
+      52,
+      22,
+      0,
+      40,
+      0,
+      "VIDEO"
+    ],
+    [
+      53,
+      40,
+      0,
+      31,
+      0,
+      "VIDEO"
+    ],
+    [
+      54,
+      9,
+      0,
+      41,
+      0,
+      "IMAGE"
+    ],
+    [
+      55,
+      25,
+      0,
+      41,
+      2,
+      "STRING"
+    ],
+    [
+      56,
+      41,
+      0,
+      27,
+      0,
+      "VIDEO"
+    ],
+    [
+      57,
+      15,
+      0,
+      42,
+      0,
+      "IMAGE"
+    ],
+    [
+      58,
+      42,
+      0,
+      16,
+      0,
+      "VIDEO"
+    ],
+    [
+      59,
+      22,
+      0,
+      43,
+      0,
+      "VIDEO"
+    ],
+    [
+      60,
+      22,
+      0,
+      43,
+      1,
+      "VIDEO"
+    ],
+    [
+      62,
+      43,
+      0,
+      33,
+      0,
+      "VIDEO"
+    ],
+    [
+      63,
+      15,
+      0,
+      44,
+      0,
+      "IMAGE"
+    ],
+    [
+      64,
+      18,
+      0,
+      44,
+      1,
+      "IMAGE"
+    ],
+    [
+      65,
+      44,
+      0,
+      20,
+      0,
+      "VIDEO"
+    ],
+    [
+      66,
+      15,
+      0,
+      45,
+      0,
+      "IMAGE"
+    ],
+    [
+      67,
+      18,
+      0,
+      45,
+      1,
+      "IMAGE"
+    ],
+    [
+      68,
+      25,
+      0,
+      45,
+      2,
+      "STRING"
+    ],
+    [
+      69,
+      45,
+      0,
+      24,
+      0,
+      "VIDEO"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "workflowRendererVersion": "LG",
+    "ds": {
+      "scale": 0.520986848192451,
+      "offset": [
+        -4013.8841821314236,
+        -11560.283566013297
+      ]
+    },
+    "frontendVersion": "1.37.11"
+  },
+  "version": 0.4
+}

@@ -1,0 +1,1157 @@
+{
+  "id": "7d8440d5-3cea-4a2b-9ac7-08fa83f9713d",
+  "revision": 0,
+  "last_node_id": 54,
+  "last_link_id": 88,
+  "nodes": [
+    {
+      "id": 37,
+      "type": "DAFlux2Klein",
+      "pos": [
+        4006.2239685965646,
+        8533.063035219584
+      ],
+      "size": [
+        400,
+        184
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "image1",
+          "name": "images.image1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": [
+            58,
+            59
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DAFlux2Klein"
+      },
+      "widgets_values": [
+        1920,
+        1080,
+        "A realistic East Asian young woman with glossy black shoulder-length straight hair, wearing a light-gray turtleneck cashmere sweater and thin metal-framed glasses, seated by the window in a minimalist Ginza Tokyo café; rain streaks outside the glass with delicate water droplets on surface, soft ambient reflection on tabletop, left hand gently supporting chin with natural skin sheen, ultra-fine eyelashes and individual hair strands, cinematic volumetric lighting, hyper-detailed skin and textile texture, 8k photorealistic masterpiece",
+        1071615241154034,
+        "fixed"
+      ]
+    },
+    {
+      "id": 40,
+      "type": "DAFlux2Klein",
+      "pos": [
+        5232.183218070556,
+        8529.63725231692
+      ],
+      "size": [
+        400,
+        184
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "image1",
+          "name": "images.image1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": [
+            60,
+            61
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DAFlux2Klein"
+      },
+      "widgets_values": [
+        1920,
+        1080,
+        "A realistic portrait of a middle-aged Arab man with deep brown skin and thick gray-white beard, wearing a hand-embroidered off-white dishdasha robe, standing beneath a stone archway in Mutrah Souq, Muscat; cinematic lighting with strong volumetric afternoon sun casting defined shadows on his weathered face and beard texture; shallow depth of field, warm golden sandstone background blur; photorealistic, ultra-detailed skin pores and fabric weave, 8k, masterpiece, wide-angle composition",
+        1071615241154034,
+        "fixed"
+      ]
+    },
+    {
+      "id": 28,
+      "type": "DAQwenImageEdit",
+      "pos": [
+        4023.193427529751,
+        9011.99543296154
+      ],
+      "size": [
+        400,
+        204
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "image1",
+          "name": "images.image1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 59
+        },
+        {
+          "label": "image2",
+          "name": "images.image2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": [
+            22,
+            62
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DAQwenImageEdit"
+      },
+      "widgets_values": [
+        1280,
+        720,
+        "将图1转换成全身照",
+        43,
+        "fixed"
+      ]
+    },
+    {
+      "id": 29,
+      "type": "DAQwenImageEdit",
+      "pos": [
+        5251.115177297314,
+        9002.575299496753
+      ],
+      "size": [
+        400,
+        204
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "image1",
+          "name": "images.image1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 61
+        },
+        {
+          "label": "image2",
+          "name": "images.image2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": [
+            23,
+            63
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DAQwenImageEdit"
+      },
+      "widgets_values": [
+        1280,
+        720,
+        "将图1转换成全身照",
+        43,
+        "fixed"
+      ]
+    },
+    {
+      "id": 31,
+      "type": "DAQwenImageEdit",
+      "pos": [
+        4469.627741442332,
+        9672.723017862021
+      ],
+      "size": [
+        400,
+        224
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "image1",
+          "name": "images.image1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 62
+        },
+        {
+          "label": "image2",
+          "name": "images.image2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 63
+        },
+        {
+          "label": "image3",
+          "name": "images.image3",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": [
+            29
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DAQwenImageEdit"
+      },
+      "widgets_values": [
+        1280,
+        720,
+        "图片1和图2的人物相互拥抱在一起",
+        43,
+        "fixed"
+      ]
+    },
+    {
+      "id": 44,
+      "type": "DAQwenLLM",
+      "pos": [
+        4759.619330484594,
+        10309.518713942049
+      ],
+      "size": [
+        400,
+        676
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "en_prompts",
+          "shape": 6,
+          "type": "STRING",
+          "links": [
+            69
+          ]
+        },
+        {
+          "name": "zh_prompts",
+          "shape": 6,
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DAQwenLLM",
+        "savedPrompts": [
+          {
+            "zh_prompt": "将图1中的角色动态转换为单膝跪地、右手轻触地面、左手微微抬起呈倾听姿态，背景为黄昏下的空旷石阶广场，氛围静谧而充满叙事张力",
+            "en_prompt": "Convert figure 1 into a pose of kneeling on one knee, right hand lightly touching the ground, left hand raised slightly in a listening gesture; set in an empty stone-step plaza at dusk, cinematic lighting, volumetric atmosphere, ultra-detailed texture, 8k, masterpiece, wide angle"
+          },
+          {
+            "zh_prompt": "将图1中的角色动态转换为倚靠老式铸铁路灯柱站立、双臂环抱胸前、目光斜望远方，背景为雨夜湿润的维多利亚风格街道，霓虹与暖黄路灯交织出胶片质感光影",
+            "en_prompt": "Convert figure 1 into a standing pose leaning against a vintage cast-iron lamppost, arms crossed, gaze tilted toward the distance; set on a rain-slicked Victorian-style street at night, neon and warm lamplight interplay, cinematic lighting, film grain texture, volumetric mist, 8k, masterpiece, macro detail on fabric and metal"
+          },
+          {
+            "zh_prompt": "将图1中的角色动态转换为盘坐于悬浮水晶平台中央、双手结印置于膝上、闭目凝神，背景为星云旋转的深空穹顶，光线从头顶倾泻形成神圣光晕，整体呈现冥想与超现实融合的静谧力量感",
+            "en_prompt": "Convert figure 1 into a seated meditation pose atop a floating crystal platform, hands forming a mudra on knees, eyes closed in deep focus; background: swirling nebula under a cosmic dome, divine volumetric spotlight from above creating a halo effect, ethereal texture, photorealistic skin and crystal refraction, 8k, masterpiece, wide-angle celestial composition"
+          }
+        ],
+        "savedWidgetHeight": 420
+      },
+      "widgets_values": [
+        "qwen-plus",
+        "image",
+        3,
+        "同一个角色不同的动作，行为，场景的图片编辑提示词，不要具体的图像描述，只要转换之后的行为场景描述，写风格图片，请以“将图1 xxx”开头",
+        969651943854496,
+        "fixed",
+        true,
+        null
+      ]
+    },
+    {
+      "id": 42,
+      "type": "DASaveImage",
+      "pos": [
+        4280.789668635373,
+        10213.085179864598
+      ],
+      "size": [
+        401.36748519519097,
+        82
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 64
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": [
+            70
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DASaveImage"
+      },
+      "widgets_values": [
+        "no",
+        "ComfyUI"
+      ]
+    },
+    {
+      "id": 47,
+      "type": "DAQwenImageEdit",
+      "pos": [
+        5261.735032640878,
+        10197.9795823232
+      ],
+      "size": [
+        400,
+        204
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "image1",
+          "name": "images.image1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 70
+        },
+        {
+          "name": "prompts",
+          "type": "STRING",
+          "widget": {
+            "name": "prompts"
+          },
+          "link": 69
+        },
+        {
+          "label": "image2",
+          "name": "images.image2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": [
+            71
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DAQwenImageEdit"
+      },
+      "widgets_values": [
+        1280,
+        720,
+        "图片1和图2的人物相互拥抱在一起",
+        43,
+        "fixed"
+      ]
+    },
+    {
+      "id": 46,
+      "type": "DAFlux2Klein",
+      "pos": [
+        3775.4829252367485,
+        10209.349793260997
+      ],
+      "size": [
+        400,
+        184
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "image1",
+          "name": "images.image1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "prompts",
+          "type": "STRING",
+          "widget": {
+            "name": "prompts"
+          },
+          "link": 68
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": [
+            64,
+            65,
+            84
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DAFlux2Klein"
+      },
+      "widgets_values": [
+        1920,
+        1080,
+        "A realistic East Asian young woman with glossy black shoulder-length straight hair, wearing a light-gray turtleneck cashmere sweater and thin metal-framed glasses, seated by the window in a minimalist Ginza Tokyo café; rain streaks outside the glass with delicate water droplets on surface, soft ambient reflection on tabletop, left hand gently supporting chin with natural skin sheen, ultra-fine eyelashes and individual hair strands, cinematic volumetric lighting, hyper-detailed skin and textile texture, 8k photorealistic masterpiece",
+        367493967039596,
+        "fixed"
+      ]
+    },
+    {
+      "id": 52,
+      "type": "DAQwenImageEdit",
+      "pos": [
+        4379.343761277693,
+        11465.994109764797
+      ],
+      "size": [
+        400,
+        224
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "image1",
+          "name": "images.image1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 84
+        },
+        {
+          "label": "image2",
+          "name": "images.image2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 86
+        },
+        {
+          "label": "image3",
+          "name": "images.image3",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": [
+            85
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DAQwenImageEdit"
+      },
+      "widgets_values": [
+        1280,
+        720,
+        "图片1和图2的人物相互拥抱在一起",
+        43,
+        "fixed"
+      ]
+    },
+    {
+      "id": 53,
+      "type": "DAQwenImageEditConfig",
+      "pos": [
+        3044.6090292705408,
+        8498.064195267178
+      ],
+      "size": [
+        576.2572144857872,
+        400
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "DAQwenImageEditConfig"
+      },
+      "widgets_values": [
+        "qwen/qwen_2.5_vl_7b_fp8_scaled.safetensors",
+        "qwen/qwen_image_vae.safetensors",
+        "qwen-image-edit/qwen_image_edit_2511_fp8_e4m3fn_scaled_lightning_comfyui.safetensors",
+        4,
+        1,
+        1,
+        3.1,
+        "euler",
+        "simple",
+        1,
+        "",
+        "<|im_start|>system\nDescribe the key features of the input image (color, shape, size, texture, objects, background), then explain how the user's text instruction should alter or modify the image. Generate a new image that meets the user's requirements while maintaining consistency with the original input where appropriate.<|im_end|>\n<|im_start|>user\n{}<|im_end|>\n<|im_start|>assistant\n",
+        "false",
+        "[0]"
+      ]
+    },
+    {
+      "id": 38,
+      "type": "DASaveImage",
+      "pos": [
+        4607.669101264874,
+        8527.380317910429
+      ],
+      "size": [
+        411.9138399747044,
+        82
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 58
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DASaveImage"
+      },
+      "widgets_values": [
+        "no",
+        "ComfyUI"
+      ]
+    },
+    {
+      "id": 12,
+      "type": "DASaveImage",
+      "pos": [
+        4613.839788281275,
+        9005.626758850773
+      ],
+      "size": [
+        411.9138399747044,
+        82
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 22
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": [
+            12
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DASaveImage"
+      },
+      "widgets_values": [
+        "no",
+        "ComfyUI"
+      ]
+    },
+    {
+      "id": 39,
+      "type": "DASaveImage",
+      "pos": [
+        5765.189586301689,
+        8533.823931522516
+      ],
+      "size": [
+        380.5579481608456,
+        82
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 60
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DASaveImage"
+      },
+      "widgets_values": [
+        "no",
+        "ComfyUI"
+      ]
+    },
+    {
+      "id": 3,
+      "type": "DASaveImage",
+      "pos": [
+        5783.2537709727085,
+        9002.596410567316
+      ],
+      "size": [
+        411.9138399747044,
+        82
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 23
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DASaveImage"
+      },
+      "widgets_values": [
+        "no",
+        "ComfyUI"
+      ]
+    },
+    {
+      "id": 9,
+      "type": "DASaveImage",
+      "pos": [
+        5019.106563442452,
+        9669.907362337837
+      ],
+      "size": [
+        411.9138399747044,
+        82
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 29
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DASaveImage"
+      },
+      "widgets_values": [
+        "no",
+        "ComfyUI"
+      ]
+    },
+    {
+      "id": 41,
+      "type": "DAQwenLLM",
+      "pos": [
+        3275.993100395114,
+        10278.07814501376
+      ],
+      "size": [
+        400,
+        676
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "en_prompts",
+          "shape": 6,
+          "type": "STRING",
+          "links": [
+            68
+          ]
+        },
+        {
+          "name": "zh_prompts",
+          "shape": 6,
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DAQwenLLM",
+        "savedPrompts": [
+          {
+            "zh_prompt": "一位中年亚裔男性，穿着深蓝色工装夹克和磨损的牛仔裤，站在清晨雾气弥漫的旧火车站台边，侧脸被一束斜射的金色晨光勾勒，皮肤纹理清晰可见，胡茬微青，眼神沉静而略带思索，背景虚化中隐约可见老式绿皮火车和铁轨延伸线，写实风格，电影级光影，体积光与尘埃粒子悬浮，8K超高清，大师级肖像摄影",
+            "en_prompt": "A middle-aged East Asian man in a navy blue work jacket and worn denim jeans, standing on a misty early-morning vintage railway platform, golden sidelight sculpting his profile with visible skin texture and subtle stubble, calm and contemplative expression, shallow depth of field blurring an old green-painted train and receding rails in background, photorealistic, cinematic lighting, volumetric light with airborne dust particles, 8k, masterpiece, ultra-detailed portrait photography"
+          },
+          {
+            "zh_prompt": "一位非裔老年女性，银白卷发盘成优雅发髻，身着靛蓝蜡染棉麻长裙，坐在午后阳光洒落的陶艺工作室窗边，双手正轻抚一件未上釉的陶罐，皱纹深刻而富有生命力，指尖沾有湿润陶土，窗外梧桐叶影斑驳投在她手背与陶器表面，写实主义细节，柔焦与锐焦并存，高动态范围质感，8K，胶片模拟色调",
+            "en_prompt": "An elderly Black woman with silver curly hair coiled into an elegant chignon, wearing an indigo batik linen-cotton dress, seated by a sunlit window in a pottery studio, hands gently cradling an unglazed ceramic vessel, deeply textured yet dignified facial wrinkles, damp clay on fingertips, dappled shadows of plane tree leaves falling across her hands and the vessel surface, photorealistic, soft-focus background with tack-sharp foreground details, high dynamic range material rendering, 8k, film grain emulation, Kodak Portra tone"
+          },
+          {
+            "zh_prompt": "一位拉丁裔年轻女性，短发染成酒红色，佩戴黄铜几何耳环与细链颈饰，身穿剪裁利落的米白色亚麻西装外套与同色阔腿裤，站在现代美术馆纯白展厅中央，微微仰头凝视上方悬吊的巨型镜面装置，冷调顶光在她颧骨与锁骨投下精准阴影，睫毛与发丝根根分明，背景极简留白，强调人物轮廓与材质对比（哑光面料 vs 反光金属），写实人像，宽幅构图，电影感布光，8K分辨率，大师级静帧",
+            "en_prompt": "A young Latina woman with cropped burgundy hair, wearing brass geometric earrings and a delicate chain necklace, dressed in a tailored off-white linen blazer and wide-leg trousers, standing alone in the center of a minimalist white contemporary art gallery, gazing upward at a suspended large-scale mirrored installation, cool overhead lighting casting precise chiaroscuro on cheekbones and clavicles, individual eyelashes and hair strands rendered in extreme detail, pure white background emphasizing silhouette and material contrast (matte fabric vs reflective metal), photorealistic portrait, wide-angle composition, cinematic lighting setup, 8k resolution, masterpiece still frame"
+          }
+        ],
+        "savedWidgetHeight": 420
+      },
+      "widgets_values": [
+        "qwen-plus",
+        "image",
+        3,
+        "生成3个不同的角色，写实人物",
+        969651943854495,
+        "fixed",
+        true,
+        null
+      ]
+    },
+    {
+      "id": 45,
+      "type": "DASaveImage",
+      "pos": [
+        5800.2015465079585,
+        10203.595233181808
+      ],
+      "size": [
+        401.36748519519097,
+        82
+      ],
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 71
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DASaveImage"
+      },
+      "widgets_values": [
+        "no",
+        "ComfyUI"
+      ]
+    },
+    {
+      "id": 54,
+      "type": "DAFeishuLoad",
+      "pos": [
+        3787.1831808500488,
+        11466.416744750342
+      ],
+      "size": [
+        349.22455490401717,
+        228.62826265267358
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "text1",
+          "shape": 6,
+          "type": "STRING",
+          "links": []
+        },
+        {
+          "name": "image1",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": [
+            86
+          ]
+        },
+        {
+          "name": "audio1",
+          "shape": 6,
+          "type": "AUDIO",
+          "links": null
+        },
+        {
+          "name": "video1",
+          "shape": 6,
+          "type": "VIDEO",
+          "links": null
+        },
+        {
+          "name": "frame_count",
+          "shape": 6,
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "feishu_record_ids",
+          "shape": 6,
+          "type": "FEISHU_RECORD_IDS",
+          "links": [
+            87
+          ]
+        },
+        {
+          "name": "feishu_config",
+          "type": "FEISHU_CONFIG",
+          "links": [
+            88
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DAFeishuLoad"
+      },
+      "widgets_values": [
+        "V8XSbj2xuaWpiHsp4bkce7mqnhc",
+        "tblmQJQ6SSg4ObCz",
+        "vewmUA0kef"
+      ]
+    },
+    {
+      "id": 50,
+      "type": "DASaveImage",
+      "pos": [
+        5010.265506338311,
+        11471.298317203788
+      ],
+      "size": [
+        337.349609375,
+        358
+      ],
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 85
+        },
+        {
+          "label": "feishu_record_ids",
+          "name": "save_to_feishu.feishu_record_ids",
+          "type": "FEISHU_RECORD_IDS",
+          "link": 87
+        },
+        {
+          "label": "feishu_config",
+          "name": "save_to_feishu.feishu_config",
+          "type": "FEISHU_CONFIG",
+          "link": 88
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DASaveImage"
+      },
+      "widgets_values": [
+        "yes",
+        "feishu/image",
+        "image3"
+      ]
+    }
+  ],
+  "links": [
+    [
+      12,
+      12,
+      0,
+      15,
+      0,
+      "IMAGE"
+    ],
+    [
+      22,
+      28,
+      0,
+      12,
+      0,
+      "IMAGE"
+    ],
+    [
+      23,
+      29,
+      0,
+      3,
+      0,
+      "IMAGE"
+    ],
+    [
+      29,
+      31,
+      0,
+      9,
+      0,
+      "IMAGE"
+    ],
+    [
+      58,
+      37,
+      0,
+      38,
+      0,
+      "IMAGE"
+    ],
+    [
+      59,
+      37,
+      0,
+      28,
+      0,
+      "IMAGE"
+    ],
+    [
+      60,
+      40,
+      0,
+      39,
+      0,
+      "IMAGE"
+    ],
+    [
+      61,
+      40,
+      0,
+      29,
+      0,
+      "IMAGE"
+    ],
+    [
+      62,
+      28,
+      0,
+      31,
+      0,
+      "IMAGE"
+    ],
+    [
+      63,
+      29,
+      0,
+      31,
+      1,
+      "IMAGE"
+    ],
+    [
+      64,
+      46,
+      0,
+      42,
+      0,
+      "IMAGE"
+    ],
+    [
+      65,
+      46,
+      0,
+      43,
+      0,
+      "IMAGE"
+    ],
+    [
+      68,
+      41,
+      0,
+      46,
+      1,
+      "STRING"
+    ],
+    [
+      69,
+      44,
+      0,
+      47,
+      1,
+      "STRING"
+    ],
+    [
+      70,
+      42,
+      0,
+      47,
+      0,
+      "IMAGE"
+    ],
+    [
+      71,
+      47,
+      0,
+      45,
+      0,
+      "IMAGE"
+    ],
+    [
+      84,
+      46,
+      0,
+      52,
+      0,
+      "IMAGE"
+    ],
+    [
+      85,
+      52,
+      0,
+      50,
+      0,
+      "IMAGE"
+    ],
+    [
+      86,
+      54,
+      1,
+      52,
+      1,
+      "IMAGE"
+    ],
+    [
+      87,
+      54,
+      5,
+      50,
+      1,
+      "FEISHU_RECORD_IDS"
+    ],
+    [
+      88,
+      54,
+      6,
+      50,
+      2,
+      "FEISHU_CONFIG"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "workflowRendererVersion": "LG",
+    "ds": {
+      "scale": 0.6934334949441497,
+      "offset": [
+        -3506.112622197271,
+        -10817.29963294281
+      ]
+    },
+    "frontendVersion": "1.37.11"
+  },
+  "version": 0.4
+}

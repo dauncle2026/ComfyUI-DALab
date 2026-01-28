@@ -1,0 +1,14 @@
+{
+    "text_encoder_model": "flux/qwen_3_8b_fp8mixed.safetensors",
+    "vae_model": "flux/flux2-vae.safetensors",
+    "diffusion_model": "flux-klein/flux-2-klein-9b-fp8.safetensors",
+    "steps": 4,
+    "batch_size": 1,
+    "sampler": "euler",
+    "easycache": {
+        "easycache": "false"
+    },
+    "loras": {
+        "loras": "[0]"
+    }
+}

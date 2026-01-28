@@ -1,0 +1,4 @@
+{
+    "model_path": "/data/work/program/Comfy/models/dalab/sam2/sam2.1-hiera-large",
+    "precision": "bf16"
+}

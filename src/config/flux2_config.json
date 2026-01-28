@@ -1,0 +1,17 @@
+{
+    "text_encoder_model": "flux/mistral_3_small_flux2_fp8.safetensors",
+    "vae_model": "flux/flux2-vae.safetensors",
+    "diffusion_model": "flux2/flux2-dev-nvfp4.safetensors",
+    "steps": 8,
+    "guidance": 4.0,
+    "sampler": "euler",
+    "batch_size": 1,
+    "easycache": {
+        "easycache": "false"
+    },
+    "loras": {
+        "lora_name1": "flux/Flux_2-Turbo-LoRA_comfyui.safetensors",
+        "lora_strength1": 1.0,
+        "loras": "[1]"
+    }
+}

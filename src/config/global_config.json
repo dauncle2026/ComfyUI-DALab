@@ -1,0 +1,6 @@
+{
+    "debug": true,
+    "model_switch_offload": true,
+    "offload_after_run": false,
+    "release_after_run": false
+}

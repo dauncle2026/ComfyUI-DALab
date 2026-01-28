@@ -1,0 +1,9 @@
+{
+    "model_path": "/data/work/program/Comfy/models/dalab/index_tts2",
+    "device": "cuda",
+    "use_fp16": true,
+    "verbose": false,
+    "interval_silence": 100,
+    "speed": 1.0,
+    "glossary_text": "M.2|cn|M\u4e8c\nM.2|en|M dot two\nChatGPT|cn|G-P-T\n\u9632\u8303\u5c71\u6d2a|cn|\u9632\u8303-\u5c71\u6d2a\n\u94a6\u8fbe\u83ab\u5c3c|cn|\u79e6\u5927\u5927\u5927"
+}

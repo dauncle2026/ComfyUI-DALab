@@ -1,0 +1,1824 @@
+{
+  "id": "3527104f-dc8d-4be6-b60f-76fbc353f83a",
+  "revision": 0,
+  "last_node_id": 55,
+  "last_link_id": 59,
+  "nodes": [
+    {
+      "id": 15,
+      "type": "DASaveImage",
+      "pos": [
+        4750.489625629535,
+        11597.669043785005
+      ],
+      "size": [
+        337.349609375,
+        294
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 10
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": [
+            11
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DASaveImage"
+      },
+      "widgets_values": [
+        "no",
+        "ComfyUI"
+      ]
+    },
+    {
+      "id": 13,
+      "type": "DAZImage",
+      "pos": [
+        4187.906747708419,
+        11598.995200770873
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "prompts",
+          "type": "STRING",
+          "widget": {
+            "name": "prompts"
+          },
+          "link": 9
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": [
+            10
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DAZImage"
+      },
+      "widgets_values": [
+        1920,
+        1080,
+        "A beautiful girl",
+        0,
+        "fixed"
+      ]
+    },
+    {
+      "id": 16,
+      "type": "DASaveVideo",
+      "pos": [
+        5865.382714910378,
+        11609.486546491766
+      ],
+      "size": [
+        476.89568151546973,
+        430
+      ],
+      "flags": {},
+      "order": 24,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "videos",
+          "type": "VIDEO",
+          "link": 12
+        }
+      ],
+      "outputs": [
+        {
+          "name": "videos",
+          "shape": 6,
+          "type": "VIDEO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DASaveVideo",
+        "savedVideos": [
+          {
+            "filename": "ComfyUI_00953_.mp4",
+            "subfolder": "video",
+            "type": "output",
+            "format": "video/mp4",
+            "width": 1280,
+            "height": 720
+          },
+          {
+            "filename": "ComfyUI_00954_.mp4",
+            "subfolder": "video",
+            "type": "output",
+            "format": "video/mp4",
+            "width": 1280,
+            "height": 720
+          },
+          {
+            "filename": "ComfyUI_00955_.mp4",
+            "subfolder": "video",
+            "type": "output",
+            "format": "video/mp4",
+            "width": 1280,
+            "height": 720
+          }
+        ]
+      },
+      "widgets_values": [
+        "no",
+        "video/ComfyUI",
+        null
+      ]
+    },
+    {
+      "id": 32,
+      "type": "DALTX2",
+      "pos": [
+        6478.374769135768,
+        11621.354437985541
+      ],
+      "size": [
+        400,
+        272
+      ],
+      "flags": {},
+      "order": 21,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "first_frames",
+          "shape": 7,
+          "type": "IMAGE,VIDEO",
+          "link": 37
+        },
+        {
+          "name": "last_frames",
+          "shape": 7,
+          "type": "IMAGE,VIDEO",
+          "link": 38
+        },
+        {
+          "name": "audios",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "videos",
+          "shape": 6,
+          "type": "VIDEO",
+          "links": [
+            39
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DALTX2"
+      },
+      "widgets_values": [
+        1280,
+        720,
+        151,
+        25,
+        "slow",
+        989258955932464,
+        "fixed"
+      ]
+    },
+    {
+      "id": 12,
+      "type": "DAQwenLLM",
+      "pos": [
+        3515.9198239569387,
+        11143.17594373568
+      ],
+      "size": [
+        400,
+        676
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "en_prompts",
+          "shape": 6,
+          "type": "STRING",
+          "links": [
+            9,
+            20
+          ]
+        },
+        {
+          "name": "zh_prompts",
+          "shape": 6,
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DAQwenLLM",
+        "savedPrompts": [
+          {
+            "zh_prompt": "一位身着蒸汽朋克风格黄铜护目镜与皮革飞行夹克的女飞行员，正单手扶住螺旋桨飞机机翼，仰头大笑，风吹起她栗色短发，背景是晨曦中的浮空港口，云层间隐约可见飞艇剪影；镜头缓慢环绕人物半周，强调动态发丝与衣摆飘动",
+            "en_prompt": "Cinematic portrait shot, camera orbits slowly around a steampunk female pilot wearing brass aviator goggles and a leather flight jacket, she laughs confidently while gripping the wing of a vintage propeller plane, wind lifts her chestnut bob hair and flaps her coat hem, background reveals a dawn-lit floating harbor with distant airships drifting through layered clouds, motion blur on hair strands and fabric edges, realistic physics-based movement, ultra-detailed 8K"
+          },
+          {
+            "zh_prompt": "一位赤足站在雨后青石巷中的少年巫师，左手托着悬浮旋转的萤光蓝符文球，右手轻点眉心，一缕银雾从指尖蜿蜒升腾；雨水沿他靛蓝长袍滴落，在石板上溅起细小水花；镜头由低角度仰拍缓缓上移，捕捉符文自转与雾气螺旋上升的连续轨迹",
+            "en_prompt": "Low-angle cinematic shot, camera rises smoothly from puddle-level to eye-level as a barefoot teenage wizard stands in a rain-dampened bluestone alley, glowing cerulean runes orbit his left palm while silvery mist spirals upward from his right fingertip pressed to his forehead, raindrops fall rhythmically from his indigo robe creating micro-splashes on wet stone, fluid motion with accurate water physics and volumetric mist dispersion, photorealistic lighting with ambient occlusion"
+          },
+          {
+            "zh_prompt": "一位机械义肢泛着哑光钛合金光泽的赛博游牧女战士，跨坐在改装沙漠摩托上，头盔面罩半掀，露出沉静侧脸；沙尘正从车轮后方呈扇形扬起并随风向右飘散；镜头采用无人机俯冲跟拍，从高空30米急速下降至肩部高度，同步追踪沙粒轨迹与发丝摆动节奏",
+            "en_prompt": "Drone shot diving from 30 meters altitude into a dynamic tracking position at shoulder height, following a cybernetic nomadic warrior woman seated on a customized dune motorcycle, her matte titanium-arm prosthetic grips the handlebar while her helmet visor is half-raised revealing calm eyes, fine sand erupts in a wide radial plume behind the rear tire and streams rightward with wind velocity matching particle physics simulation, individual grains and loose strands of black hair move in synchronized inertia, hyper-realistic motion blur and atmospheric haze"
+          }
+        ],
+        "savedWidgetHeight": 420
+      },
+      "widgets_values": [
+        "qwen-plus",
+        "video",
+        3,
+        "生成3个不同的角色，用于文生图的提示词",
+        969651943854496,
+        "fixed",
+        true,
+        null
+      ]
+    },
+    {
+      "id": 33,
+      "type": "DASaveVideo",
+      "pos": [
+        6988.782757071774,
+        11616.677252905032
+      ],
+      "size": [
+        532.8780440571409,
+        462
+      ],
+      "flags": {},
+      "order": 26,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "videos",
+          "type": "VIDEO",
+          "link": 39
+        }
+      ],
+      "outputs": [
+        {
+          "name": "videos",
+          "shape": 6,
+          "type": "VIDEO",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DASaveVideo",
+        "savedVideos": [
+          {
+            "filename": "ComfyUI_00959_.mp4",
+            "subfolder": "video",
+            "type": "output",
+            "format": "video/mp4",
+            "width": 1280,
+            "height": 720
+          },
+          {
+            "filename": "ComfyUI_00960_.mp4",
+            "subfolder": "video",
+            "type": "output",
+            "format": "video/mp4",
+            "width": 1280,
+            "height": 720
+          },
+          {
+            "filename": "ComfyUI_00961_.mp4",
+            "subfolder": "video",
+            "type": "output",
+            "format": "video/mp4",
+            "width": 1280,
+            "height": 720
+          }
+        ]
+      },
+      "widgets_values": [
+        "no",
+        "video/ComfyUI",
+        null
+      ]
+    },
+    {
+      "id": 48,
+      "type": "DAGlobalConfig",
+      "pos": [
+        4306.903486926898,
+        8894.570036511228
+      ],
+      "size": [
+        286.63671875,
+        130
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "DAGlobalConfig"
+      },
+      "widgets_values": [
+        true,
+        false,
+        true,
+        false
+      ]
+    },
+    {
+      "id": 3,
+      "type": "DASaveVideo",
+      "pos": [
+        5312.961285051766,
+        9218.238343457586
+      ],
+      "size": [
+        401.421561340725,
+        351
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "videos",
+          "type": "VIDEO",
+          "link": 54
+        }
+      ],
+      "outputs": [
+        {
+          "name": "videos",
+          "shape": 6,
+          "type": "VIDEO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DASaveVideo",
+        "savedVideos": [
+          {
+            "filename": "ComfyUI_01096_.mp4",
+            "subfolder": "video",
+            "type": "output",
+            "format": "video/mp4",
+            "width": 1280,
+            "height": 720
+          }
+        ]
+      },
+      "widgets_values": [
+        "no",
+        "video/ComfyUI",
+        null
+      ]
+    },
+    {
+      "id": 51,
+      "type": "LoadImage",
+      "pos": [
+        3538.2389557810675,
+        9929.828281539558
+      ],
+      "size": [
+        282.798828125,
+        314
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": []
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "3c622277-1c11-465a-a65d-2ba8a0203d7e_1344x896.jpg",
+        "image"
+      ]
+    },
+    {
+      "id": 53,
+      "type": "DALTX2Config",
+      "pos": [
+        3404.6901015127255,
+        9076.996043798215
+      ],
+      "size": [
+        575.7822417520983,
+        556
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "DALTX2Config"
+      },
+      "widgets_values": [
+        "ltx2/gemma_3_12B_it_fp4_mixed.safetensors",
+        "ltx2/ltx2_text_proj.safetensors",
+        "ltx2/ltx2_distilled_diffusion_fp8.safetensors",
+        "ltx2/ltx2_video_vae.safetensors",
+        "ltx2/ltx2_audio_vae.safetensors",
+        "ltx/ltx-2-spatial-upscaler-x2-1.0.safetensors",
+        1,
+        "euler_ancestral",
+        "euler_ancestral",
+        33,
+        33,
+        1,
+        1,
+        "1., 0.99375, 0.9875, 0.98125, 0.975, 0.909375, 0.725, 0.421875, 0.0",
+        "0.909375, 0.725, 0.421875, 0.0",
+        "",
+        "[0]",
+        "[0]"
+      ]
+    },
+    {
+      "id": 6,
+      "type": "DASaveVideo",
+      "pos": [
+        5283.614061469692,
+        9767.92524594617
+      ],
+      "size": [
+        433.756771645707,
+        370
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "videos",
+          "type": "VIDEO",
+          "link": 3
+        }
+      ],
+      "outputs": [
+        {
+          "name": "videos",
+          "shape": 6,
+          "type": "VIDEO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DASaveVideo",
+        "savedVideos": [
+          {
+            "filename": "ComfyUI_01097_.mp4",
+            "subfolder": "video",
+            "type": "output",
+            "format": "video/mp4",
+            "width": 1280,
+            "height": 720
+          }
+        ]
+      },
+      "widgets_values": [
+        "no",
+        "video/ComfyUI",
+        null
+      ]
+    },
+    {
+      "id": 5,
+      "type": "LoadImage",
+      "pos": [
+        4122.842134862149,
+        9769.572389231558
+      ],
+      "size": [
+        282.798828125,
+        314
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            2,
+            5,
+            55
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "3c622277-1c11-465a-a65d-2ba8a0203d7e_1344x896.jpg",
+        "image"
+      ]
+    },
+    {
+      "id": 9,
+      "type": "DASaveImage",
+      "pos": [
+        4676.031872920406,
+        10396.949868988548
+      ],
+      "size": [
+        337.349609375,
+        294
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 4
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": [
+            44,
+            56
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DASaveImage"
+      },
+      "widgets_values": [
+        "no",
+        "ComfyUI"
+      ]
+    },
+    {
+      "id": 8,
+      "type": "DAQwenImageEdit",
+      "pos": [
+        4106.40110154224,
+        10401.282716947733
+      ],
+      "size": [
+        400,
+        204
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "image1",
+          "name": "images.image1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 5
+        },
+        {
+          "label": "image2",
+          "name": "images.image2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": [
+            4
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DAQwenImageEdit"
+      },
+      "widgets_values": [
+        1920,
+        1080,
+        "镜头左转",
+        685764544418181,
+        "fixed"
+      ]
+    },
+    {
+      "id": 11,
+      "type": "DASaveVideo",
+      "pos": [
+        5890.26344167436,
+        10385.5641737664
+      ],
+      "size": [
+        433.756771645707,
+        370
+      ],
+      "flags": {},
+      "order": 28,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "videos",
+          "type": "VIDEO",
+          "link": 57
+        }
+      ],
+      "outputs": [
+        {
+          "name": "videos",
+          "shape": 6,
+          "type": "VIDEO",
+          "links": [
+            34
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DASaveVideo",
+        "savedVideos": [
+          {
+            "filename": "ComfyUI_01098_.mp4",
+            "subfolder": "video",
+            "type": "output",
+            "format": "video/mp4",
+            "width": 1280,
+            "height": 720
+          }
+        ]
+      },
+      "widgets_values": [
+        "no",
+        "video/ComfyUI",
+        null
+      ]
+    },
+    {
+      "id": 28,
+      "type": "DALTX2",
+      "pos": [
+        6495.908754649484,
+        10386.13999364084
+      ],
+      "size": [
+        400,
+        272
+      ],
+      "flags": {},
+      "order": 29,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "first_frames",
+          "shape": 7,
+          "type": "IMAGE,VIDEO",
+          "link": 34
+        },
+        {
+          "name": "last_frames",
+          "shape": 7,
+          "type": "IMAGE,VIDEO",
+          "link": null
+        },
+        {
+          "name": "audios",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "videos",
+          "shape": 6,
+          "type": "VIDEO",
+          "links": [
+            32
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DALTX2"
+      },
+      "widgets_values": [
+        1280,
+        720,
+        151,
+        25,
+        "slow",
+        989258955932464,
+        "fixed"
+      ]
+    },
+    {
+      "id": 4,
+      "type": "DALTX2",
+      "pos": [
+        4639.651698137401,
+        9768.293780581362
+      ],
+      "size": [
+        400,
+        272
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "first_frames",
+          "shape": 7,
+          "type": "IMAGE,VIDEO",
+          "link": 2
+        },
+        {
+          "name": "last_frames",
+          "shape": 7,
+          "type": "IMAGE,VIDEO",
+          "link": null
+        },
+        {
+          "name": "audios",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "videos",
+          "shape": 6,
+          "type": "VIDEO",
+          "links": [
+            3
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DALTX2"
+      },
+      "widgets_values": [
+        1280,
+        720,
+        151,
+        25,
+        "talking",
+        989258955932524,
+        "fixed"
+      ]
+    },
+    {
+      "id": 54,
+      "type": "DALTX2",
+      "pos": [
+        4653.026439333367,
+        9221.231277216912
+      ],
+      "size": [
+        400,
+        272
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "first_frames",
+          "shape": 7,
+          "type": "IMAGE,VIDEO",
+          "link": null
+        },
+        {
+          "name": "last_frames",
+          "shape": 7,
+          "type": "IMAGE,VIDEO",
+          "link": null
+        },
+        {
+          "name": "audios",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "videos",
+          "shape": 6,
+          "type": "VIDEO",
+          "links": [
+            54
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DALTX2"
+      },
+      "widgets_values": [
+        1280,
+        720,
+        151,
+        25,
+        "Cinematic medium shot, static camera with shallow depth of field, slow push-in on a young East Asian woman walking barefoot on rain-dampened bluestone pavement, her indigo tie-dye robe flowing gently with each step, wind lifting loose strands of hair, bamboo basket overflowing with fresh purple perilla and mint leaves, droplets glistening on her fingertips, misty ink-wash-style background of white-walled, black-tiled courtyard",
+        1039814989341061,
+        "fixed"
+      ]
+    },
+    {
+      "id": 29,
+      "type": "DASaveVideo",
+      "pos": [
+        7096.600927116024,
+        10383.579910355356
+      ],
+      "size": [
+        522.3115679769926,
+        419
+      ],
+      "flags": {},
+      "order": 30,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "videos",
+          "type": "VIDEO",
+          "link": 32
+        }
+      ],
+      "outputs": [
+        {
+          "name": "videos",
+          "shape": 6,
+          "type": "VIDEO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DASaveVideo",
+        "savedVideos": [
+          {
+            "filename": "ComfyUI_01099_.mp4",
+            "subfolder": "video",
+            "type": "output",
+            "format": "video/mp4",
+            "width": 1280,
+            "height": 720
+          }
+        ]
+      },
+      "widgets_values": [
+        "no",
+        "video/ComfyUI",
+        null
+      ]
+    },
+    {
+      "id": 55,
+      "type": "DALTX2",
+      "pos": [
+        5303.975139276241,
+        10381.371321373215
+      ],
+      "size": [
+        400,
+        272
+      ],
+      "flags": {},
+      "order": 23,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "first_frames",
+          "shape": 7,
+          "type": "IMAGE,VIDEO",
+          "link": 55
+        },
+        {
+          "name": "last_frames",
+          "shape": 7,
+          "type": "IMAGE,VIDEO",
+          "link": 56
+        },
+        {
+          "name": "audios",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "videos",
+          "shape": 6,
+          "type": "VIDEO",
+          "links": [
+            57
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DALTX2"
+      },
+      "widgets_values": [
+        1280,
+        720,
+        151,
+        25,
+        "镜头左转",
+        989258955932523,
+        "fixed"
+      ]
+    },
+    {
+      "id": 21,
+      "type": "DALTX2",
+      "pos": [
+        5284.856330582256,
+        10995.677071848986
+      ],
+      "size": [
+        400,
+        272
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "first_frames",
+          "shape": 7,
+          "type": "IMAGE,VIDEO",
+          "link": null
+        },
+        {
+          "name": "last_frames",
+          "shape": 7,
+          "type": "IMAGE,VIDEO",
+          "link": null
+        },
+        {
+          "name": "audios",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        },
+        {
+          "name": "prompts",
+          "type": "STRING",
+          "widget": {
+            "name": "prompts"
+          },
+          "link": 20
+        }
+      ],
+      "outputs": [
+        {
+          "name": "videos",
+          "shape": 6,
+          "type": "VIDEO",
+          "links": [
+            19
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DALTX2"
+      },
+      "widgets_values": [
+        1280,
+        720,
+        151,
+        25,
+        "slow",
+        989258955932464,
+        "fixed"
+      ]
+    },
+    {
+      "id": 30,
+      "type": "DALTX2",
+      "pos": [
+        6498.755606057544,
+        10999.86626567048
+      ],
+      "size": [
+        400,
+        272
+      ],
+      "flags": {},
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "first_frames",
+          "shape": 7,
+          "type": "IMAGE,VIDEO",
+          "link": 35
+        },
+        {
+          "name": "last_frames",
+          "shape": 7,
+          "type": "IMAGE,VIDEO",
+          "link": null
+        },
+        {
+          "name": "audios",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "videos",
+          "shape": 6,
+          "type": "VIDEO",
+          "links": [
+            36
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DALTX2"
+      },
+      "widgets_values": [
+        1280,
+        720,
+        151,
+        25,
+        "slow",
+        989258955932464,
+        "fixed"
+      ]
+    },
+    {
+      "id": 22,
+      "type": "DASaveVideo",
+      "pos": [
+        5856.7634624159755,
+        10997.233010139285
+      ],
+      "size": [
+        477.14760726072745,
+        430
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "videos",
+          "type": "VIDEO",
+          "link": 19
+        }
+      ],
+      "outputs": [
+        {
+          "name": "videos",
+          "shape": 6,
+          "type": "VIDEO",
+          "links": [
+            35,
+            37,
+            38
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DASaveVideo",
+        "savedVideos": [
+          {
+            "filename": "ComfyUI_01100_.mp4",
+            "subfolder": "video",
+            "type": "output",
+            "format": "video/mp4",
+            "width": 1280,
+            "height": 720
+          },
+          {
+            "filename": "ComfyUI_01101_.mp4",
+            "subfolder": "video",
+            "type": "output",
+            "format": "video/mp4",
+            "width": 1280,
+            "height": 720
+          },
+          {
+            "filename": "ComfyUI_01102_.mp4",
+            "subfolder": "video",
+            "type": "output",
+            "format": "video/mp4",
+            "width": 1280,
+            "height": 720
+          }
+        ]
+      },
+      "widgets_values": [
+        "no",
+        "video/ComfyUI",
+        null
+      ]
+    },
+    {
+      "id": 31,
+      "type": "DASaveVideo",
+      "pos": [
+        7088.828179894111,
+        10994.184102309882
+      ],
+      "size": [
+        507.5782878623695,
+        448
+      ],
+      "flags": {},
+      "order": 25,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "videos",
+          "type": "VIDEO",
+          "link": 36
+        }
+      ],
+      "outputs": [
+        {
+          "name": "videos",
+          "shape": 6,
+          "type": "VIDEO",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DASaveVideo",
+        "savedVideos": [
+          {
+            "filename": "ComfyUI_01103_.mp4",
+            "subfolder": "video",
+            "type": "output",
+            "format": "video/mp4",
+            "width": 1280,
+            "height": 720
+          },
+          {
+            "filename": "ComfyUI_01104_.mp4",
+            "subfolder": "video",
+            "type": "output",
+            "format": "video/mp4",
+            "width": 1280,
+            "height": 720
+          },
+          {
+            "filename": "ComfyUI_01105_.mp4",
+            "subfolder": "video",
+            "type": "output",
+            "format": "video/mp4",
+            "width": 1280,
+            "height": 720
+          }
+        ]
+      },
+      "widgets_values": [
+        "no",
+        "video/ComfyUI",
+        null
+      ]
+    },
+    {
+      "id": 14,
+      "type": "DALTX2",
+      "pos": [
+        5325.629696902063,
+        11598.113436214384
+      ],
+      "size": [
+        400,
+        272
+      ],
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "first_frames",
+          "shape": 7,
+          "type": "IMAGE,VIDEO",
+          "link": 11
+        },
+        {
+          "name": "last_frames",
+          "shape": 7,
+          "type": "IMAGE,VIDEO",
+          "link": null
+        },
+        {
+          "name": "audios",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "videos",
+          "shape": 6,
+          "type": "VIDEO",
+          "links": [
+            12
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DALTX2"
+      },
+      "widgets_values": [
+        1280,
+        720,
+        151,
+        25,
+        "slow",
+        989258955932464,
+        "fixed"
+      ]
+    },
+    {
+      "id": 34,
+      "type": "LoadImage",
+      "pos": [
+        4729.981197421665,
+        12457.947489855376
+      ],
+      "size": [
+        282.798828125,
+        314
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            40,
+            43
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "3c622277-1c11-465a-a65d-2ba8a0203d7e_1344x896.jpg",
+        "image"
+      ]
+    },
+    {
+      "id": 35,
+      "type": "DALTX2",
+      "pos": [
+        5312.333108874428,
+        12466.453033561347
+      ],
+      "size": [
+        400,
+        272
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "first_frames",
+          "shape": 7,
+          "type": "IMAGE,VIDEO",
+          "link": 40
+        },
+        {
+          "name": "last_frames",
+          "shape": 7,
+          "type": "IMAGE,VIDEO",
+          "link": null
+        },
+        {
+          "name": "audios",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": 41
+        }
+      ],
+      "outputs": [
+        {
+          "name": "videos",
+          "shape": 6,
+          "type": "VIDEO",
+          "links": [
+            42
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DALTX2"
+      },
+      "widgets_values": [
+        1336,
+        720,
+        151,
+        25,
+        "slow",
+        989258955932464,
+        "fixed"
+      ]
+    },
+    {
+      "id": 37,
+      "type": "DASaveVideo",
+      "pos": [
+        5876.659248686132,
+        12470.302199004835
+      ],
+      "size": [
+        444.69742313557526,
+        366
+      ],
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "videos",
+          "type": "VIDEO",
+          "link": 42
+        }
+      ],
+      "outputs": [
+        {
+          "name": "videos",
+          "shape": 6,
+          "type": "VIDEO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DASaveVideo",
+        "savedVideos": [
+          {
+            "filename": "ComfyUI_01109_.mp4",
+            "subfolder": "video",
+            "type": "output",
+            "format": "video/mp4",
+            "width": 1336,
+            "height": 720
+          }
+        ]
+      },
+      "widgets_values": [
+        "no",
+        "video/ComfyUI",
+        null
+      ]
+    },
+    {
+      "id": 36,
+      "type": "LoadAudio",
+      "pos": [
+        4718.10583927759,
+        13013.060311931826
+      ],
+      "size": [
+        282.798828125,
+        136
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            41,
+            45
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadAudio"
+      },
+      "widgets_values": [
+        "feishu_preview_00056_.flac",
+        null,
+        null
+      ]
+    },
+    {
+      "id": 38,
+      "type": "DALTX2",
+      "pos": [
+        5297.522889721106,
+        12981.446802765064
+      ],
+      "size": [
+        400,
+        272
+      ],
+      "flags": {},
+      "order": 22,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "first_frames",
+          "shape": 7,
+          "type": "IMAGE,VIDEO",
+          "link": 43
+        },
+        {
+          "name": "last_frames",
+          "shape": 7,
+          "type": "IMAGE,VIDEO",
+          "link": 44
+        },
+        {
+          "name": "audios",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": 45
+        }
+      ],
+      "outputs": [
+        {
+          "name": "videos",
+          "shape": 6,
+          "type": "VIDEO",
+          "links": [
+            46
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DALTX2"
+      },
+      "widgets_values": [
+        1280,
+        720,
+        151,
+        25,
+        "slow",
+        989258955932464,
+        "fixed"
+      ]
+    },
+    {
+      "id": 40,
+      "type": "DASaveVideo",
+      "pos": [
+        5884.776898684662,
+        12980.050872943202
+      ],
+      "size": [
+        450.26964436792423,
+        379
+      ],
+      "flags": {},
+      "order": 27,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "videos",
+          "type": "VIDEO",
+          "link": 46
+        }
+      ],
+      "outputs": [
+        {
+          "name": "videos",
+          "shape": 6,
+          "type": "VIDEO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DASaveVideo",
+        "savedVideos": [
+          {
+            "filename": "ComfyUI_00963_.mp4",
+            "subfolder": "video",
+            "type": "output",
+            "format": "video/mp4",
+            "width": 1280,
+            "height": 720
+          }
+        ]
+      },
+      "widgets_values": [
+        "no",
+        "video/ComfyUI",
+        null
+      ]
+    }
+  ],
+  "links": [
+    [
+      2,
+      5,
+      0,
+      4,
+      0,
+      "IMAGE"
+    ],
+    [
+      3,
+      4,
+      0,
+      6,
+      0,
+      "VIDEO"
+    ],
+    [
+      4,
+      8,
+      0,
+      9,
+      0,
+      "IMAGE"
+    ],
+    [
+      5,
+      5,
+      0,
+      8,
+      0,
+      "IMAGE"
+    ],
+    [
+      9,
+      12,
+      0,
+      13,
+      0,
+      "STRING"
+    ],
+    [
+      10,
+      13,
+      0,
+      15,
+      0,
+      "IMAGE"
+    ],
+    [
+      11,
+      15,
+      0,
+      14,
+      0,
+      "IMAGE"
+    ],
+    [
+      12,
+      14,
+      0,
+      16,
+      0,
+      "VIDEO"
+    ],
+    [
+      19,
+      21,
+      0,
+      22,
+      0,
+      "VIDEO"
+    ],
+    [
+      20,
+      12,
+      0,
+      21,
+      3,
+      "STRING"
+    ],
+    [
+      32,
+      28,
+      0,
+      29,
+      0,
+      "VIDEO"
+    ],
+    [
+      34,
+      11,
+      0,
+      28,
+      0,
+      "VIDEO"
+    ],
+    [
+      35,
+      22,
+      0,
+      30,
+      0,
+      "VIDEO"
+    ],
+    [
+      36,
+      30,
+      0,
+      31,
+      0,
+      "VIDEO"
+    ],
+    [
+      37,
+      22,
+      0,
+      32,
+      0,
+      "VIDEO"
+    ],
+    [
+      38,
+      22,
+      0,
+      32,
+      1,
+      "VIDEO"
+    ],
+    [
+      39,
+      32,
+      0,
+      33,
+      0,
+      "VIDEO"
+    ],
+    [
+      40,
+      34,
+      0,
+      35,
+      0,
+      "IMAGE"
+    ],
+    [
+      41,
+      36,
+      0,
+      35,
+      2,
+      "AUDIO"
+    ],
+    [
+      42,
+      35,
+      0,
+      37,
+      0,
+      "VIDEO"
+    ],
+    [
+      43,
+      34,
+      0,
+      38,
+      0,
+      "IMAGE"
+    ],
+    [
+      44,
+      9,
+      0,
+      38,
+      1,
+      "IMAGE"
+    ],
+    [
+      45,
+      36,
+      0,
+      38,
+      2,
+      "AUDIO"
+    ],
+    [
+      46,
+      38,
+      0,
+      40,
+      0,
+      "VIDEO"
+    ],
+    [
+      54,
+      54,
+      0,
+      3,
+      0,
+      "VIDEO"
+    ],
+    [
+      55,
+      5,
+      0,
+      55,
+      0,
+      "IMAGE"
+    ],
+    [
+      56,
+      9,
+      0,
+      55,
+      1,
+      "IMAGE"
+    ],
+    [
+      57,
+      55,
+      0,
+      11,
+      0,
+      "VIDEO"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "workflowRendererVersion": "LG",
+    "ds": {
+      "scale": 0.5730855330117048,
+      "offset": [
+        -4374.661770886755,
+        -12328.11754021083
+      ]
+    },
+    "frontendVersion": "1.37.11"
+  },
+  "version": 0.4
+}

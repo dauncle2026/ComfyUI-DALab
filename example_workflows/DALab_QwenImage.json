@@ -1,0 +1,499 @@
+{
+  "id": "ee3f88cf-fab4-4aae-b8b4-4455e70310ae",
+  "revision": 0,
+  "last_node_id": 16,
+  "last_link_id": 17,
+  "nodes": [
+    {
+      "id": 12,
+      "type": "DAQwenImage",
+      "pos": [
+        6142.391075899368,
+        9608.29936473744
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "prompts",
+          "type": "STRING",
+          "widget": {
+            "name": "prompts"
+          },
+          "link": 15
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": [
+            11
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DAQwenImage"
+      },
+      "widgets_values": [
+        1280,
+        720,
+        "A beautiful girl",
+        367292783092320,
+        "randomize"
+      ]
+    },
+    {
+      "id": 13,
+      "type": "DAFeishuLoad",
+      "pos": [
+        5575.071578897357,
+        9681.512498950051
+      ],
+      "size": [
+        349.22455490401717,
+        228.62826265267358
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "text1",
+          "shape": 6,
+          "type": "STRING",
+          "links": [
+            15
+          ]
+        },
+        {
+          "name": "image1",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "name": "audio1",
+          "shape": 6,
+          "type": "AUDIO",
+          "links": null
+        },
+        {
+          "name": "video1",
+          "shape": 6,
+          "type": "VIDEO",
+          "links": null
+        },
+        {
+          "name": "frame_count",
+          "shape": 6,
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "feishu_record_ids",
+          "shape": 6,
+          "type": "FEISHU_RECORD_IDS",
+          "links": [
+            16
+          ]
+        },
+        {
+          "name": "feishu_config",
+          "type": "FEISHU_CONFIG",
+          "links": [
+            17
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DAFeishuLoad"
+      },
+      "widgets_values": [
+        "V8XSbj2xuaWpiHsp4bkce7mqnhc",
+        "tblmQJQ6SSg4ObCz",
+        "vewmUA0kef"
+      ]
+    },
+    {
+      "id": 15,
+      "type": "DAQwenImageConfig",
+      "pos": [
+        5401.407563331776,
+        8235.037989837212
+      ],
+      "size": [
+        400,
+        400
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "DAQwenImageConfig"
+      },
+      "widgets_values": [
+        "qwen/qwen_2.5_vl_7b_fp8_scaled.safetensors",
+        "qwen/qwen_image_vae.safetensors",
+        "qwen-image/qwen-image-2512-fp8.safetensors",
+        5,
+        1,
+        1,
+        3.1,
+        "euler",
+        "simple",
+        "低分辨率，低画质，肢体畸形，手指畸形，画面过饱和，蜡像感，人脸无细节，过度光滑，画面具有AI感。构图混乱。文字模糊，扭曲",
+        "false",
+        "[1]",
+        "qwen/Qwen-Image-2512-Lightning-4steps-V1.0-bf16.safetensors",
+        1
+      ]
+    },
+    {
+      "id": 5,
+      "type": "DAQwenLLM",
+      "pos": [
+        5519.1461621849685,
+        8855.887252199183
+      ],
+      "size": [
+        400,
+        676
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "en_prompts",
+          "shape": 6,
+          "type": "STRING",
+          "links": [
+            7
+          ]
+        },
+        {
+          "name": "zh_prompts",
+          "shape": 6,
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DAQwenLLM",
+        "savedPrompts": [
+          {
+            "zh_prompt": "一位中年非洲裔女性科学家，身穿深蓝色实验袍，佩戴无框眼镜，站在现代生物实验室中，手持透明培养皿，背景是柔和发光的基因测序仪与悬浮粒子光效；面部皱纹真实细腻，发丝根根分明，皮肤质感呈现自然油光与细微毛孔，侧逆光勾勒轮廓，体积光穿透玻璃窗洒在她专注的侧脸上，8K超高清写实摄影风格",
+            "en_prompt": "Photorealistic portrait of a middle-aged Black female scientist in a navy lab coat and rimless glasses, holding a transparent petri dish, standing in a state-of-the-art biotech lab with softly glowing DNA sequencers and volumetric light particles in the background; highly detailed skin texture with natural sebum sheen and visible pores, individual strands of curly hair, cinematic side-rembrandt lighting with volumetric sunbeams streaming through large glass windows, ultra-sharp 8k resolution, masterpiece, f/1.4 shallow depth of field"
+          },
+          {
+            "zh_prompt": "一位东亚老年男性茶艺师，身着素麻灰褐色长衫，盘坐于京都老宅枯山水庭院廊下，双手正缓慢注水入青瓷建盏，蒸腾热气缭绕指尖；面部布满深刻但温润的岁月褶皱，银白短发微乱，眉骨高耸，眼神沉静如潭；晨光斜照，竹影投于其手背与陶器表面，釉面反射出柔焦光斑，背景虚化见苔痕石径与远山剪影，胶片颗粒感写实风格",
+            "en_prompt": "Ultra-realistic portrait of an elderly East Asian male tea master in a muted hemp-textured gray-brown kimono-style robe, seated seiza on a wooden veranda overlooking a Kyoto-style karesansui garden; he pours hot water into a celadon Jianzhan bowl, delicate steam curling around his weathered fingers; deeply etched yet serene facial wrinkles, short silvery hair, prominent brow ridge, calm gaze; soft morning sidelight casting sharp bamboo shadows on his hands and ceramic glaze, subtle specular highlights on the釉 surface, shallow depth of field blurring mossy stone path and distant mountain silhouette, Fujifilm Velvia-inspired color grading, 8k photorealism, macro detail on skin texture and fabric weave"
+          },
+          {
+            "zh_prompt": "一位拉丁美洲年轻街头画家，头戴褪色红色棒球帽，左耳三枚银环，穿着喷漆渍斑驳的工装背心与破洞牛仔裤，正蹲在布宜诺斯艾利斯老城区彩绘墙前调色；手臂肌肉线条清晰，指腹沾有钴蓝与镉红颜料，汗水沿太阳穴滑落；午后强光从左侧高楼间隙射下，在墙面涂鸦与他汗湿的锁骨间形成强烈明暗对比，背景虚化可见铁艺阳台与晾晒床单，皮肤质感高度还原汗液反光与细微绒毛",
+            "en_prompt": "Hyperrealistic street portrait of a young Latin American muralist in a faded red baseball cap and three silver ear piercings, wearing a paint-splattered denim vest and ripped jeans, crouching before a vibrant graffiti wall in historic Buenos Aires; defined arm musculature, pigment-stained fingertips (cobalt blue and cadmium red), sweat glistening along temple and clavicle; dramatic afternoon chiaroscuro lighting from narrow alleyway, casting sharp volumetric shadows across mural textures and his damp skin; shallow-focus background reveals wrought-iron balconies and fluttering laundry; extreme skin texture fidelity including sweat sheen, fine vellus hair, and micro-pores, 8k resolution, cinematic wide-angle composition, Leica Noctilux rendering"
+          }
+        ],
+        "savedWidgetHeight": 420
+      },
+      "widgets_values": [
+        "qwen-plus",
+        "image",
+        3,
+        "生成3个不同的角色，写实人物",
+        969651943854495,
+        "fixed",
+        true,
+        null
+      ]
+    },
+    {
+      "id": 3,
+      "type": "DASaveImage",
+      "pos": [
+        6685.65331653376,
+        9061.143039653898
+      ],
+      "size": [
+        337.5161787479901,
+        82
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 8
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DASaveImage"
+      },
+      "widgets_values": [
+        "no",
+        "ComfyUI"
+      ]
+    },
+    {
+      "id": 8,
+      "type": "DASaveImage",
+      "pos": [
+        6694.108171548422,
+        9607.355941369806
+      ],
+      "size": [
+        337.349609375,
+        146
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 11
+        },
+        {
+          "label": "feishu_record_ids",
+          "name": "save_to_feishu.feishu_record_ids",
+          "type": "FEISHU_RECORD_IDS",
+          "link": 16
+        },
+        {
+          "label": "feishu_config",
+          "name": "save_to_feishu.feishu_config",
+          "type": "FEISHU_CONFIG",
+          "link": 17
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DASaveImage"
+      },
+      "widgets_values": [
+        "yes",
+        "feishu/image",
+        "image2"
+      ]
+    },
+    {
+      "id": 11,
+      "type": "DAQwenImage",
+      "pos": [
+        6168.837826213148,
+        9047.382875865882
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "prompts",
+          "type": "STRING",
+          "widget": {
+            "name": "prompts"
+          },
+          "link": 7
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": [
+            8
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DAQwenImage"
+      },
+      "widgets_values": [
+        1280,
+        720,
+        "A beautiful girl",
+        746479303019953,
+        "randomize"
+      ]
+    },
+    {
+      "id": 10,
+      "type": "DAQwenImage",
+      "pos": [
+        6153.155502649624,
+        8547.900495759766
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "images",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": [
+            6
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DAQwenImage"
+      },
+      "widgets_values": [
+        720,
+        720,
+        "Surreal cover design. A massive explosion of colorful particles, abstract shapes, liquid paint, and digital artifacts blossoming outwards. In the center of the chaos, the bold text \"DALab QwenImage\" is solidified, made of polished chrome reflecting the colorful explosion. Dreamlike, ethereal, highly detailed digital art, 3D render.",
+        185013834944148,
+        "increment"
+      ]
+    },
+    {
+      "id": 1,
+      "type": "DASaveImage",
+      "pos": [
+        6698.169274316237,
+        8547.143817111748
+      ],
+      "size": [
+        337.349609375,
+        82
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 6
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DASaveImage"
+      },
+      "widgets_values": [
+        "no",
+        "ComfyUI"
+      ]
+    }
+  ],
+  "links": [
+    [
+      6,
+      10,
+      0,
+      1,
+      0,
+      "IMAGE"
+    ],
+    [
+      7,
+      5,
+      0,
+      11,
+      0,
+      "STRING"
+    ],
+    [
+      8,
+      11,
+      0,
+      3,
+      0,
+      "IMAGE"
+    ],
+    [
+      11,
+      12,
+      0,
+      8,
+      0,
+      "IMAGE"
+    ],
+    [
+      15,
+      13,
+      0,
+      12,
+      0,
+      "STRING"
+    ],
+    [
+      16,
+      13,
+      5,
+      8,
+      1,
+      "FEISHU_RECORD_IDS"
+    ],
+    [
+      17,
+      13,
+      6,
+      8,
+      2,
+      "FEISHU_CONFIG"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "workflowRendererVersion": "LG",
+    "ds": {
+      "scale": 0.6303940863128532,
+      "offset": [
+        -4950.9253236440445,
+        -8045.440024960389
+      ]
+    },
+    "frontendVersion": "1.37.11"
+  },
+  "version": 0.4
+}

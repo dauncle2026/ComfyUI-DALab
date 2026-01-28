@@ -1,0 +1,20 @@
+{
+    "clip_model": "flux/clip_l.safetensors",
+    "t5_model": "flux/t5xxl_fp8_e4m3fn_scaled.safetensors",
+    "vae_model": "flux/flux1-vae.safetensors",
+    "diffusion_model": "flux1/flux1-dev-fp8.safetensors",
+    "steps": 20,
+    "batch_size": 1,
+    "guidance": 3.5,
+    "sampler": "euler",
+    "scheduler": "simple",
+    "easycache": {
+        "reuse_threshold": 0.2,
+        "start_percent": 0.1,
+        "end_percent": 0.95,
+        "easycache": "true"
+    },
+    "loras": {
+        "loras": "[0]"
+    }
+}

@@ -1,0 +1,572 @@
+{
+  "id": "dcfd3de7-4e3b-48af-837d-2b95d5ff3cd7",
+  "revision": 0,
+  "last_node_id": 24,
+  "last_link_id": 17,
+  "nodes": [
+    {
+      "id": 13,
+      "type": "DAWanT2V",
+      "pos": [
+        4716.652646363993,
+        7784.625847816975
+      ],
+      "size": [
+        400,
+        232
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "videos",
+          "shape": 6,
+          "type": "VIDEO",
+          "links": [
+            9
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DAWanT2V"
+      },
+      "widgets_values": [
+        640,
+        360,
+        81,
+        16,
+        "Cinematic shot, low-angle tracking push-in with slight tilt-up, following a serene female swordsman in indigo hanfu walking slowly through misty bamboo forest; her sleeves flow dynamically with wind, scabbard swaying subtly, bamboo leaves drifting down in slow motion as she passes; mist drifts organically and dappled light shifts across her silhouette to convey passage of time, ultra-detailed 8K",
+        448061559624804,
+        "fixed"
+      ]
+    },
+    {
+      "id": 5,
+      "type": "DAQwenLLM",
+      "pos": [
+        4080.930802872948,
+        8153.2612319264135
+      ],
+      "size": [
+        400,
+        676
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "en_prompts",
+          "shape": 6,
+          "type": "STRING",
+          "links": [
+            10
+          ]
+        },
+        {
+          "name": "zh_prompts",
+          "shape": 6,
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DAQwenLLM",
+        "savedPrompts": [
+          {
+            "zh_prompt": "一位身着靛蓝扎染长袍的年轻女舞者在晨光中的石板广场上旋转，裙摆随离心力向外飞扬，发丝在微风中流动；镜头采用低角度环绕运镜，缓慢升幅并轻微跟焦，捕捉衣料褶皱与光影变化的连续物理形变",
+            "en_prompt": "Cinematic shot, low-angle circular tracking camera slowly rising and maintaining focus, a young female dancer in indigo tie-dye robe spins gracefully on a sunlit stone plaza, fabric flaring dynamically with centrifugal force, hair flowing naturally in breeze, realistic cloth simulation and light interaction"
+          },
+          {
+            "zh_prompt": "一位戴黄铜齿轮护目镜的机械师正蹲在蒸汽朋克风格的悬浮列车旁，双手快速拧紧一枚发光螺栓，火花随每一次旋紧迸射飞溅；镜头从右侧平移推进（camera pan right + zoom in），精准框取手指动作与金属反光的节奏性变化",
+            "en_prompt": "Cinematic shot, camera pans right then zooms in smoothly to frame the mechanic’s hands tightening a glowing bolt on a steampunk hover-train, sparks erupting rhythmically with each rotation, brass goggles reflecting ambient steam and light, highly detailed physics-based particle motion"
+          },
+          {
+            "zh_prompt": "一位赤足老僧缓步走过雨后青苔覆盖的竹林小径，竹叶尖悬垂的水珠随他步伐震动而逐次滴落，涟漪在积水石洼中层层扩散；无人机俯角镜头（drone shot）以0.5x速度缓慢前移，保持人物居中，同步呈现水滴下落轨迹与涟漪传播的时间延迟物理过程",
+            "en_prompt": "Cinematic drone shot gliding forward at 0.5x speed, overhead angle following an barefoot elderly monk walking calmly along a rain-dampened bamboo path, water droplets falling sequentially from trembling leaves, ripples propagating outward in puddles with accurate temporal delay and fluid dynamics simulation"
+          }
+        ],
+        "savedWidgetHeight": 420
+      },
+      "widgets_values": [
+        "qwen-plus",
+        "video",
+        3,
+        "生成3个不同的角色",
+        969651943854495,
+        "fixed",
+        true,
+        null
+      ]
+    },
+    {
+      "id": 22,
+      "type": "DAWanT2VConfig",
+      "pos": [
+        3809.4768842188614,
+        7346.417029180296
+      ],
+      "size": [
+        726.4946752654896,
+        448
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "DAWanT2VConfig"
+      },
+      "widgets_values": [
+        "wan/umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+        "wan/wan_2.1_vae.safetensors",
+        "wan2.2/wan2.2_t2v_high_noise_14B_fp8_scaled.safetensors",
+        "wan2.2/wan2.2_t2v_low_noise_14B_fp8_scaled.safetensors",
+        4,
+        1,
+        5,
+        "simple",
+        "euler",
+        "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走，裸露，NSFW",
+        "[1]",
+        "wan2.2/wan2.2_t2v_A14b_high_noise_lora_rank64_lightx2v_4step_1217.safetensors",
+        1,
+        "[1]",
+        "wan2.2/wan2.2_t2v_A14b_low_noise_lora_rank64_lightx2v_4step_1217.safetensors",
+        1
+      ]
+    },
+    {
+      "id": 14,
+      "type": "DASaveVideo",
+      "pos": [
+        5253.958828661702,
+        7787.774406042233
+      ],
+      "size": [
+        408.1388805304259,
+        355
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "videos",
+          "type": "VIDEO",
+          "link": 9
+        }
+      ],
+      "outputs": [
+        {
+          "name": "videos",
+          "shape": 6,
+          "type": "VIDEO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DASaveVideo",
+        "savedVideos": [
+          {
+            "filename": "ComfyUI_00992_.mp4",
+            "subfolder": "video",
+            "type": "output",
+            "format": "video/mp4",
+            "width": 640,
+            "height": 360
+          }
+        ]
+      },
+      "widgets_values": [
+        "no",
+        "video/ComfyUI",
+        null
+      ]
+    },
+    {
+      "id": 15,
+      "type": "DAWanT2V",
+      "pos": [
+        4692.810614929196,
+        8286.363237660456
+      ],
+      "size": [
+        400,
+        232
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "prompts",
+          "type": "STRING",
+          "widget": {
+            "name": "prompts"
+          },
+          "link": 10
+        }
+      ],
+      "outputs": [
+        {
+          "name": "videos",
+          "shape": 6,
+          "type": "VIDEO",
+          "links": [
+            11
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DAWanT2V"
+      },
+      "widgets_values": [
+        640,
+        360,
+        81,
+        16,
+        "A beautiful girl",
+        448061559624804,
+        "fixed"
+      ]
+    },
+    {
+      "id": 16,
+      "type": "DASaveVideo",
+      "pos": [
+        5219.313042229317,
+        8287.381496868406
+      ],
+      "size": [
+        1404.2536530112693,
+        393
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "videos",
+          "type": "VIDEO",
+          "link": 11
+        }
+      ],
+      "outputs": [
+        {
+          "name": "videos",
+          "shape": 6,
+          "type": "VIDEO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DASaveVideo",
+        "savedVideos": [
+          {
+            "filename": "ComfyUI_00993_.mp4",
+            "subfolder": "video",
+            "type": "output",
+            "format": "video/mp4",
+            "width": 640,
+            "height": 360
+          },
+          {
+            "filename": "ComfyUI_00994_.mp4",
+            "subfolder": "video",
+            "type": "output",
+            "format": "video/mp4",
+            "width": 640,
+            "height": 360
+          },
+          {
+            "filename": "ComfyUI_00995_.mp4",
+            "subfolder": "video",
+            "type": "output",
+            "format": "video/mp4",
+            "width": 640,
+            "height": 360
+          }
+        ]
+      },
+      "widgets_values": [
+        "no",
+        "video/ComfyUI",
+        null
+      ]
+    },
+    {
+      "id": 24,
+      "type": "DAFeishuLoad",
+      "pos": [
+        4193.911064287456,
+        9139.704867607243
+      ],
+      "size": [
+        349.22455490401717,
+        228.62826265267358
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "text1",
+          "shape": 6,
+          "type": "STRING",
+          "links": [
+            15
+          ]
+        },
+        {
+          "name": "image1",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": []
+        },
+        {
+          "name": "audio1",
+          "shape": 6,
+          "type": "AUDIO",
+          "links": null
+        },
+        {
+          "name": "video1",
+          "shape": 6,
+          "type": "VIDEO",
+          "links": null
+        },
+        {
+          "name": "frame_count",
+          "shape": 6,
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "feishu_record_ids",
+          "shape": 6,
+          "type": "FEISHU_RECORD_IDS",
+          "links": [
+            16
+          ]
+        },
+        {
+          "name": "feishu_config",
+          "type": "FEISHU_CONFIG",
+          "links": [
+            17
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DAFeishuLoad"
+      },
+      "widgets_values": [
+        "V8XSbj2xuaWpiHsp4bkce7mqnhc",
+        "tblF2HW5o98cwi0F",
+        "vew0uhZW4u"
+      ]
+    },
+    {
+      "id": 18,
+      "type": "DASaveVideo",
+      "pos": [
+        5252.228662058028,
+        9020.78814558971
+      ],
+      "size": [
+        1098.7551745892024,
+        465
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "videos",
+          "type": "VIDEO",
+          "link": 13
+        },
+        {
+          "label": "feishu_record_ids",
+          "name": "save_to_feishu.feishu_record_ids",
+          "type": "FEISHU_RECORD_IDS",
+          "link": 16
+        },
+        {
+          "label": "feishu_config",
+          "name": "save_to_feishu.feishu_config",
+          "type": "FEISHU_CONFIG",
+          "link": 17
+        }
+      ],
+      "outputs": [
+        {
+          "name": "videos",
+          "shape": 6,
+          "type": "VIDEO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DASaveVideo",
+        "savedVideos": [
+          {
+            "filename": "video_00037_.mp4",
+            "subfolder": "feishu",
+            "type": "output",
+            "format": "video/mp4",
+            "width": 640,
+            "height": 480
+          },
+          {
+            "filename": "video_00038_.mp4",
+            "subfolder": "feishu",
+            "type": "output",
+            "format": "video/mp4",
+            "width": 640,
+            "height": 480
+          },
+          {
+            "filename": "video_00039_.mp4",
+            "subfolder": "feishu",
+            "type": "output",
+            "format": "video/mp4",
+            "width": 640,
+            "height": 480
+          }
+        ]
+      },
+      "widgets_values": [
+        "yes",
+        "feishu/video",
+        "video1",
+        null
+      ]
+    },
+    {
+      "id": 17,
+      "type": "DAWanT2V",
+      "pos": [
+        4714.751026650046,
+        9023.662315127862
+      ],
+      "size": [
+        400,
+        232
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "prompts",
+          "type": "STRING",
+          "widget": {
+            "name": "prompts"
+          },
+          "link": 15
+        }
+      ],
+      "outputs": [
+        {
+          "name": "videos",
+          "shape": 6,
+          "type": "VIDEO",
+          "links": [
+            13
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DAWanT2V"
+      },
+      "widgets_values": [
+        640,
+        360,
+        81,
+        16,
+        "A beautiful girl",
+        448061559624804,
+        "fixed"
+      ]
+    }
+  ],
+  "links": [
+    [
+      9,
+      13,
+      0,
+      14,
+      0,
+      "VIDEO"
+    ],
+    [
+      10,
+      5,
+      0,
+      15,
+      0,
+      "STRING"
+    ],
+    [
+      11,
+      15,
+      0,
+      16,
+      0,
+      "VIDEO"
+    ],
+    [
+      13,
+      17,
+      0,
+      18,
+      0,
+      "VIDEO"
+    ],
+    [
+      15,
+      24,
+      0,
+      17,
+      0,
+      "STRING"
+    ],
+    [
+      16,
+      24,
+      5,
+      18,
+      1,
+      "FEISHU_RECORD_IDS"
+    ],
+    [
+      17,
+      24,
+      6,
+      18,
+      2,
+      "FEISHU_CONFIG"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "workflowRendererVersion": "LG",
+    "ds": {
+      "scale": 0.47362440744767353,
+      "offset": [
+        -3232.4400839336563,
+        -6908.573235230833
+      ]
+    },
+    "frontendVersion": "1.37.11"
+  },
+  "version": 0.4
+}

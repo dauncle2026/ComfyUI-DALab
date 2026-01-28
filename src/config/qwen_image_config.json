@@ -1,0 +1,20 @@
+{
+    "text_encoder_model": "qwen/qwen_2.5_vl_7b_fp8_scaled.safetensors",
+    "vae_model": "qwen/qwen_image_vae.safetensors",
+    "diffusion_model": "qwen-image/qwen-image-2512-fp8.safetensors",
+    "steps": 5,
+    "cfg": 1.0,
+    "shift": 3.1,
+    "sampler": "euler",
+    "scheduler": "simple",
+    "batch_size": 1,
+    "negative_prompt": "\u4f4e\u5206\u8fa8\u7387\uff0c\u4f4e\u753b\u8d28\uff0c\u80a2\u4f53\u7578\u5f62\uff0c\u624b\u6307\u7578\u5f62\uff0c\u753b\u9762\u8fc7\u9971\u548c\uff0c\u8721\u50cf\u611f\uff0c\u4eba\u8138\u65e0\u7ec6\u8282\uff0c\u8fc7\u5ea6\u5149\u6ed1\uff0c\u753b\u9762\u5177\u6709AI\u611f\u3002\u6784\u56fe\u6df7\u4e71\u3002\u6587\u5b57\u6a21\u7cca\uff0c\u626d\u66f2",
+    "easycache": {
+        "easycache": "false"
+    },
+    "loras": {
+        "lora_name1": "qwen/Qwen-Image-2512-Lightning-4steps-V1.0-bf16.safetensors",
+        "lora_strength1": 1.0,
+        "loras": "[1]"
+    }
+}

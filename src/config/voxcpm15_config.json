@@ -1,0 +1,12 @@
+{
+    "model_path": "/data/work/program/Comfy/models/dalab/voxcpm15",
+    "device": "cuda",
+    "enable_denoiser": false,
+    "optimize": false,
+    "normalize": false,
+    "denoise": false,
+    "cfg_value": 2.0,
+    "inference_timesteps": 10,
+    "min_len": 2,
+    "max_len": 4096
+}

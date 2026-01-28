@@ -1,0 +1,462 @@
+{
+  "id": "893b0ef1-a390-4d91-8fcf-cfb12bee39c3",
+  "revision": 0,
+  "last_node_id": 16,
+  "last_link_id": 13,
+  "nodes": [
+    {
+      "id": 5,
+      "type": "DAQwenLLM",
+      "pos": [
+        5105.646061401221,
+        8656.539605748589
+      ],
+      "size": [
+        400,
+        676
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "en_prompts",
+          "shape": 6,
+          "type": "STRING",
+          "links": [
+            8
+          ]
+        },
+        {
+          "name": "zh_prompts",
+          "shape": 6,
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DAQwenLLM",
+        "savedPrompts": [
+          {
+            "zh_prompt": "一位中年非洲裔女性，身着靛蓝扎染棉麻长裙，站在清晨的陶艺工坊内，阳光斜射穿过高窗，在她雕刻陶罐的手部投下细腻阴影；皮肤纹理清晰可见，发辫缠绕琥珀珠饰，背景虚化呈现未烧制的陶坯与木质工作台，写实主义风格，电影级布光，体积光效，8K超高清，大师级肖像",
+            "en_prompt": "A realistic portrait of a middle-aged Black African woman wearing an indigo-dyed linen-cotton dress, standing in a sunlit ceramic studio at dawn; cinematic lighting with volumetric rays streaming through a high window, casting delicate shadows on her hands sculpting a clay vessel; highly detailed skin texture, braided hair adorned with amber beads, softly blurred background of unfired pottery and wooden workbench; photorealistic, 8k, masterpiece, wide-angle composition, shallow depth of field"
+          },
+          {
+            "zh_prompt": "一位东亚老年男性，银白短发，戴圆框玳瑁眼镜，身穿深灰羊毛马甲与米白亚麻衬衫，端坐于旧书店窗边藤椅上，左手持翻开的《雪国》日文原版书，右手轻抚茶杯边缘，窗外梧桐叶影斑驳映在皱纹密布的面颊上；真实皮肤质感、织物纤维细节、纸张微卷与釉面反光俱全，胶片模拟色调，柔焦前景，8K分辨率，静帧电影感",
+            "en_prompt": "A photorealistic portrait of an elderly East Asian man with silver short hair and tortoiseshell round-frame glasses, wearing a charcoal wool waistcoat over an off-white linen shirt, seated in a wicker chair beside a sunlit bookstore window; he holds an open Japanese edition of 'Snow Country' in his left hand and gently touches the rim of a ceramic teacup with his right; dappled maple leaf shadows fall across his deeply textured face; ultra-detailed skin pores, fabric weave, paper curl, and glaze reflection; cinematic film grain, soft-focus foreground, volumetric lighting, 8k, masterpiece"
+          },
+          {
+            "zh_prompt": "一位拉丁美洲年轻女性，橄榄色肌肤，浓密波浪黑发披肩，佩戴手工银质耳环与编织红绳手链，正俯身于墨西哥瓦哈卡州露天市集摊位前挑选彩绘陶鸟；晨光勾勒其侧脸轮廓，睫毛投下细影，指尖沾有陶土微粒，背景为虚化的缤纷挂毯与陶器堆叠；极致写实，微距级皮肤与材质表现，自然环境光混合漫反射，8K，广角构图，静帧叙事感",
+            "en_prompt": "A hyperrealistic close-up portrait of a young Latina woman with olive skin and voluminous black wavy hair, wearing handcrafted silver earrings and a red woven bracelet, leaning over a folk art stall in Oaxaca's open-air market to select a painted ceramic bird; morning light sculpts her profile with soft eyelash shadows, fingertips dusted with fine clay particles; background softly blurred with vibrant textiles and stacked pottery; macro-level detail on skin texture, metal sheen, fabric threads, and ceramic glaze; natural ambient + bounce lighting, volumetric atmosphere, 8k resolution, wide-angle cinematic framing, narrative stillness"
+          }
+        ],
+        "savedWidgetHeight": 420
+      },
+      "widgets_values": [
+        "qwen-plus",
+        "image",
+        3,
+        "生成3个不同的角色，写实人物",
+        969651943854495,
+        "fixed",
+        true,
+        null
+      ]
+    },
+    {
+      "id": 15,
+      "type": "DAZImageConfig",
+      "pos": [
+        4930.99698424663,
+        8196.5248395258
+      ],
+      "size": [
+        513.015857836901,
+        274
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "DAZImageConfig"
+      },
+      "widgets_values": [
+        "z-image/qwen_3_4b.safetensors",
+        "flux/flux1-vae.safetensors",
+        "z-image/z_image_turbo_bf16.safetensors",
+        9,
+        1,
+        3,
+        "res_multistep",
+        "simple",
+        "false",
+        "[0]"
+      ]
+    },
+    {
+      "id": 12,
+      "type": "DAZImage",
+      "pos": [
+        5721.082454111501,
+        8917.432045031386
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "prompts",
+          "type": "STRING",
+          "widget": {
+            "name": "prompts"
+          },
+          "link": 8
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": [
+            7
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DAZImage"
+      },
+      "widgets_values": [
+        1280,
+        720,
+        "A beautiful girl",
+        0,
+        "fixed"
+      ]
+    },
+    {
+      "id": 3,
+      "type": "DASaveImage",
+      "pos": [
+        6260.426871784953,
+        8917.841188515846
+      ],
+      "size": [
+        337.5161787479901,
+        294
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 7
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DASaveImage"
+      },
+      "widgets_values": [
+        "no",
+        "ComfyUI"
+      ]
+    },
+    {
+      "id": 13,
+      "type": "DAZImage",
+      "pos": [
+        5726.275123807676,
+        9460.533789243364
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "prompts",
+          "type": "STRING",
+          "widget": {
+            "name": "prompts"
+          },
+          "link": 13
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": [
+            10
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DAZImage"
+      },
+      "widgets_values": [
+        1280,
+        720,
+        "A beautiful girl",
+        0,
+        "fixed"
+      ]
+    },
+    {
+      "id": 16,
+      "type": "DAFeishuLoad",
+      "pos": [
+        5145.086270513329,
+        9541.097266802632
+      ],
+      "size": [
+        349.22455490401717,
+        228.62826265267358
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "text1",
+          "shape": 6,
+          "type": "STRING",
+          "links": [
+            13
+          ]
+        },
+        {
+          "name": "image1",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "name": "audio1",
+          "shape": 6,
+          "type": "AUDIO",
+          "links": null
+        },
+        {
+          "name": "video1",
+          "shape": 6,
+          "type": "VIDEO",
+          "links": null
+        },
+        {
+          "name": "frame_count",
+          "shape": 6,
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "feishu_record_ids",
+          "shape": 6,
+          "type": "FEISHU_RECORD_IDS",
+          "links": []
+        },
+        {
+          "name": "feishu_config",
+          "type": "FEISHU_CONFIG",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DAFeishuLoad"
+      },
+      "widgets_values": [
+        "V8XSbj2xuaWpiHsp4bkce7mqnhc",
+        "tblmQJQ6SSg4ObCz",
+        "vewmUA0kef"
+      ]
+    },
+    {
+      "id": 8,
+      "type": "DASaveImage",
+      "pos": [
+        6310.798611723297,
+        9461.436890819803
+      ],
+      "size": [
+        337.349609375,
+        294
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 10
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DASaveImage"
+      },
+      "widgets_values": [
+        "no",
+        "ComfyUI"
+      ]
+    },
+    {
+      "id": 10,
+      "type": "DAZImage",
+      "pos": [
+        5718.291617330993,
+        8491.565609623338
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "images",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": [
+            6
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DAZImage"
+      },
+      "widgets_values": [
+        1280,
+        720,
+        "Surreal cover design. A massive explosion of colorful particles, abstract shapes, liquid paint, and digital artifacts blossoming outwards. In the center of the chaos, the bold text \"DALab ZImage\" is solidified, made of polished chrome reflecting the colorful explosion. Dreamlike, ethereal, highly detailed digital art, 3D render.",
+        701276101029015,
+        "randomize"
+      ]
+    },
+    {
+      "id": 1,
+      "type": "DASaveImage",
+      "pos": [
+        6253.525468279237,
+        8497.108245470044
+      ],
+      "size": [
+        337.349609375,
+        294
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 6
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DASaveImage"
+      },
+      "widgets_values": [
+        "no",
+        "ComfyUI"
+      ]
+    }
+  ],
+  "links": [
+    [
+      6,
+      10,
+      0,
+      1,
+      0,
+      "IMAGE"
+    ],
+    [
+      7,
+      12,
+      0,
+      3,
+      0,
+      "IMAGE"
+    ],
+    [
+      8,
+      5,
+      0,
+      12,
+      0,
+      "STRING"
+    ],
+    [
+      10,
+      13,
+      0,
+      8,
+      0,
+      "IMAGE"
+    ],
+    [
+      13,
+      16,
+      0,
+      13,
+      0,
+      "STRING"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "workflowRendererVersion": "LG",
+    "ds": {
+      "scale": 1.2284597357367348,
+      "offset": [
+        -5602.515104478382,
+        -8292.166359827072
+      ]
+    },
+    "frontendVersion": "1.37.11"
+  },
+  "version": 0.4
+}

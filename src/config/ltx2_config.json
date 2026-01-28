@@ -1,0 +1,24 @@
+{
+    "text_encoder_model": "ltx2/gemma_3_12B_it_fp4_mixed.safetensors",
+    "text_proj": "ltx2/ltx2_text_proj.safetensors",
+    "diffusion_model": "ltx2/ltx2_distilled_diffusion_fp8.safetensors",
+    "video_vae_model": "ltx2/ltx2_video_vae.safetensors",
+    "audio_vae_model": "ltx2/ltx2_audio_vae.safetensors",
+    "upscale_model": "ltx/ltx-2-spatial-upscaler-x2-1.0.safetensors",
+    "cfg": 1.0,
+    "sampler1": "euler_ancestral",
+    "sampler2": "euler_ancestral",
+    "image_crf1": 33,
+    "image_crf2": 33,
+    "image_strength1": 1.0,
+    "image_strength2": 1.0,
+    "sigmas1": "1., 0.99375, 0.9875, 0.98125, 0.975, 0.909375, 0.725, 0.421875, 0.0",
+    "sigmas2": "0.909375, 0.725, 0.421875, 0.0",
+    "negative_prompt": "",
+    "step1_loras": {
+        "step1_loras": "[0]"
+    },
+    "step2_loras": {
+        "step2_loras": "[0]"
+    }
+}

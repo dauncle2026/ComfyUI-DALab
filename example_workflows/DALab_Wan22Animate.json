@@ -1,0 +1,331 @@
+{
+  "id": "c780c7be-55cc-44cb-8d79-d226da2e5e0e",
+  "revision": 0,
+  "last_node_id": 57,
+  "last_link_id": 63,
+  "nodes": [
+    {
+      "id": 56,
+      "type": "DAWanAnimate",
+      "pos": [
+        1208.0907954495929,
+        -280.24824908362496
+      ],
+      "size": [
+        400,
+        508
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "images",
+          "name": "images",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 59
+        },
+        {
+          "label": "videos",
+          "name": "videos",
+          "shape": 7,
+          "type": "VIDEO",
+          "link": 60
+        },
+        {
+          "name": "fps",
+          "type": "FLOAT",
+          "widget": {
+            "name": "fps"
+          },
+          "link": 63
+        }
+      ],
+      "outputs": [
+        {
+          "name": "videos",
+          "shape": 6,
+          "type": "VIDEO",
+          "links": [
+            61
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DAWanAnimate"
+      },
+      "widgets_values": [
+        640,
+        360,
+        -1,
+        16,
+        "default",
+        0,
+        "A beautiful girl dancing",
+        311703315949459,
+        "randomize"
+      ]
+    },
+    {
+      "id": 4,
+      "type": "LoadVideo",
+      "pos": [
+        450.6983952629092,
+        19.5535177213355
+      ],
+      "size": [
+        386.798828125,
+        460.798828125
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            60,
+            62
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadVideo"
+      },
+      "widgets_values": [
+        "ComfyUI_00509_.mp4",
+        "image"
+      ]
+    },
+    {
+      "id": 26,
+      "type": "LoadImage",
+      "pos": [
+        547.8321518108199,
+        -357.82492798784426
+      ],
+      "size": [
+        282.798828125,
+        314
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            59
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "pose.png",
+        "image"
+      ]
+    },
+    {
+      "id": 57,
+      "type": "GetVideoComponents",
+      "pos": [
+        927.809111423478,
+        14.389081320262264
+      ],
+      "size": [
+        193.530859375,
+        66
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": 62
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "links": null
+        },
+        {
+          "name": "fps",
+          "type": "FLOAT",
+          "links": [
+            63
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "GetVideoComponents"
+      }
+    },
+    {
+      "id": 27,
+      "type": "DASaveVideo",
+      "pos": [
+        1697.4943615902316,
+        -281.08416278175355
+      ],
+      "size": [
+        648,
+        490
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "videos",
+          "type": "VIDEO",
+          "link": 61
+        }
+      ],
+      "outputs": [
+        {
+          "name": "videos",
+          "shape": 6,
+          "type": "VIDEO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DASaveVideo",
+        "savedVideos": [
+          {
+            "filename": "ComfyUI_01042_.mp4",
+            "subfolder": "video",
+            "type": "output",
+            "format": "video/mp4",
+            "width": 640,
+            "height": 360
+          }
+        ]
+      },
+      "widgets_values": [
+        "no",
+        "video/ComfyUI",
+        null
+      ]
+    },
+    {
+      "id": 55,
+      "type": "DAWanAnimateConfig",
+      "pos": [
+        -121.48486553302922,
+        -610.5302316819316
+      ],
+      "size": [
+        400,
+        544
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "DAWanAnimateConfig"
+      },
+      "widgets_values": [
+        "wan/umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+        "wan/wan_2.1_vae.safetensors",
+        "wan2.2/Wan2_2-Animate-14B_fp8_e4m3fn_scaled_KJ.safetensors",
+        "infinite_talk/clip_vision_h.safetensors",
+        4,
+        1,
+        5,
+        "simple",
+        "euler",
+        77,
+        5,
+        32,
+        10,
+        20,
+        2,
+        0,
+        "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走",
+        "[1]",
+        "wan2.1/lightx2v_I2V_14B_480p_cfg_step_distill_rank64_bf16.safetensors",
+        1
+      ]
+    }
+  ],
+  "links": [
+    [
+      59,
+      26,
+      0,
+      56,
+      0,
+      "IMAGE"
+    ],
+    [
+      60,
+      4,
+      0,
+      56,
+      1,
+      "VIDEO"
+    ],
+    [
+      61,
+      56,
+      0,
+      27,
+      0,
+      "VIDEO"
+    ],
+    [
+      62,
+      4,
+      0,
+      57,
+      0,
+      "VIDEO"
+    ],
+    [
+      63,
+      57,
+      2,
+      56,
+      2,
+      "FLOAT"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "workflowRendererVersion": "LG",
+    "ds": {
+      "scale": 0.6303940863128661,
+      "offset": [
+        216.19142526111702,
+        812.0146197526052
+      ]
+    },
+    "frontendVersion": "1.37.11"
+  },
+  "version": 0.4
+}

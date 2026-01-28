@@ -1,0 +1,951 @@
+{
+  "id": "d36b3588-9274-49a6-a971-3bbf051f3b82",
+  "revision": 0,
+  "last_node_id": 50,
+  "last_link_id": 89,
+  "nodes": [
+    {
+      "id": 42,
+      "type": "DAVoxCPM15",
+      "pos": [
+        2391.443022051509,
+        1605.1969637327506
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "ref_audios",
+          "type": "AUDIO",
+          "link": 65
+        }
+      ],
+      "outputs": [
+        {
+          "name": "audios",
+          "shape": 6,
+          "type": "AUDIO",
+          "links": [
+            66
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DAVoxCPM15"
+      },
+      "widgets_values": [
+        "接下来关注天气。中央气象台预计，未来三天华南地区将迎来强降雨过程，部分地区有大暴雨并伴有雷暴大风。相关部门已发布预警，提醒公众减少外出，注意防范山洪和城市内涝等次生灾害。",
+        123510373187388,
+        "randomize"
+      ]
+    },
+    {
+      "id": 3,
+      "type": "LoadAudio",
+      "pos": [
+        1801.1695442820717,
+        1692.2845529497704
+      ],
+      "size": [
+        282.798828125,
+        136
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            65
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadAudio"
+      },
+      "widgets_values": [
+        "12月25日.FLAC",
+        null,
+        null
+      ]
+    },
+    {
+      "id": 43,
+      "type": "DAVoxCPM15",
+      "pos": [
+        2406.100732041957,
+        1983.322105106066
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "ref_audios",
+          "type": "AUDIO",
+          "link": 69
+        }
+      ],
+      "outputs": [
+        {
+          "name": "audios",
+          "shape": 6,
+          "type": "AUDIO",
+          "links": [
+            70
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DAVoxCPM15"
+      },
+      "widgets_values": [
+        "接下来关注天气。中央气象台预计，未来三天华南地区将迎来强降雨过程，部分地区有大暴雨并伴有雷暴大风。相关部门已发布预警，提醒公众减少外出，注意防范山洪和城市内涝等次生灾害。",
+        722446666302964,
+        "randomize"
+      ]
+    },
+    {
+      "id": 7,
+      "type": "LoadAudio",
+      "pos": [
+        1809.6254922937271,
+        2060.7467713315996
+      ],
+      "size": [
+        282.798828125,
+        136
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            69,
+            76,
+            79
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadAudio"
+      },
+      "widgets_values": [
+        "feishu_preview_00056_.flac",
+        null,
+        null
+      ]
+    },
+    {
+      "id": 11,
+      "type": "DAQwenLLM",
+      "pos": [
+        1735.5242782127461,
+        2409.3430304986077
+      ],
+      "size": [
+        400,
+        676
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "en_prompts",
+          "shape": 6,
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "zh_prompts",
+          "shape": 6,
+          "type": "STRING",
+          "links": [
+            74
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DAQwenLLM",
+        "savedPrompts": [
+          {
+            "zh_prompt": "今日快讯：我国成功发射新型遥感卫星，将用于环境监测与灾害预警。",
+            "en_prompt": "Breaking News: China successfully launched a new remote-sensing satellite for environmental monitoring and disaster early warning."
+          },
+          {
+            "zh_prompt": "本地要闻：市中心地铁新线开通首日客流超30万人次，市民反响热烈。",
+            "en_prompt": "Local News: A new downtown metro line opened today, welcoming over 300,000 passengers on its first day—citizens applaud the convenience."
+          },
+          {
+            "zh_prompt": "国际简讯：联合国宣布启动全球青年气候行动基金，首批资助10国项目。",
+            "en_prompt": "International Brief: The UN has launched the Global Youth Climate Action Fund, with initial funding allocated to projects in 10 countries."
+          }
+        ],
+        "savedWidgetHeight": 420
+      },
+      "widgets_values": [
+        "qwen-plus",
+        "default",
+        3,
+        "生成3个新闻朗读稿吧，字数少一点",
+        230670276886540,
+        "fixed",
+        true,
+        null
+      ]
+    },
+    {
+      "id": 44,
+      "type": "DAVoxCPM15",
+      "pos": [
+        2433.913116434719,
+        2483.930428312793
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "ref_audios",
+          "type": "AUDIO",
+          "link": 76
+        },
+        {
+          "name": "prompts",
+          "type": "STRING",
+          "widget": {
+            "name": "prompts"
+          },
+          "link": 74
+        }
+      ],
+      "outputs": [
+        {
+          "name": "audios",
+          "shape": 6,
+          "type": "AUDIO",
+          "links": [
+            75
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DAVoxCPM15"
+      },
+      "widgets_values": [
+        "接下来关注天气。中央气象台预计，未来三天华南地区将迎来强降雨过程，部分地区有大暴雨并伴有雷暴大风。相关部门已发布预警，提醒公众减少外出，注意防范山洪和城市内涝等次生灾害。",
+        231227497454241,
+        "randomize"
+      ]
+    },
+    {
+      "id": 46,
+      "type": "DAVoxCPM15",
+      "pos": [
+        2447.0857433316482,
+        3222.820383679713
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "ref_audios",
+          "type": "AUDIO",
+          "link": 79
+        },
+        {
+          "name": "prompts",
+          "type": "STRING",
+          "widget": {
+            "name": "prompts"
+          },
+          "link": 85
+        }
+      ],
+      "outputs": [
+        {
+          "name": "audios",
+          "shape": 6,
+          "type": "AUDIO",
+          "links": [
+            80
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DAVoxCPM15"
+      },
+      "widgets_values": [
+        "接下来关注天气。中央气象台预计，未来三天华南地区将迎来强降雨过程，部分地区有大暴雨并伴有雷暴大风。相关部门已发布预警，提醒公众减少外出，注意防范山洪和城市内涝等次生灾害。",
+        839794543551059,
+        "randomize"
+      ]
+    },
+    {
+      "id": 2,
+      "type": "DASaveAudio",
+      "pos": [
+        3043.639242344336,
+        1598.4446541398752
+      ],
+      "size": [
+        337.349609375,
+        169
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audios",
+          "type": "AUDIO",
+          "link": 66
+        }
+      ],
+      "outputs": [
+        {
+          "name": "audios",
+          "shape": 6,
+          "type": "AUDIO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DASaveAudio",
+        "savedAudios": [
+          {
+            "filename": "ComfyUI_00267_.flac",
+            "subfolder": "audio",
+            "type": "output",
+            "format": "flac"
+          }
+        ]
+      },
+      "widgets_values": [
+        "no",
+        "audio/ComfyUI",
+        null
+      ]
+    },
+    {
+      "id": 15,
+      "type": "DASaveAudio",
+      "pos": [
+        3060.646107311682,
+        1998.8243691891073
+      ],
+      "size": [
+        337.349609375,
+        169
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audios",
+          "type": "AUDIO",
+          "link": 70
+        }
+      ],
+      "outputs": [
+        {
+          "name": "audios",
+          "shape": 6,
+          "type": "AUDIO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DASaveAudio",
+        "savedAudios": [
+          {
+            "filename": "ComfyUI_00268_.flac",
+            "subfolder": "audio",
+            "type": "output",
+            "format": "flac"
+          }
+        ]
+      },
+      "widgets_values": [
+        "no",
+        "audio/ComfyUI",
+        null
+      ]
+    },
+    {
+      "id": 45,
+      "type": "DASaveAudio",
+      "pos": [
+        3065.176669233791,
+        2474.924722730691
+      ],
+      "size": [
+        337.349609375,
+        311
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audios",
+          "type": "AUDIO",
+          "link": 75
+        }
+      ],
+      "outputs": [
+        {
+          "name": "audios",
+          "shape": 6,
+          "type": "AUDIO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DASaveAudio",
+        "savedAudios": [
+          {
+            "filename": "ComfyUI_00269_.flac",
+            "subfolder": "audio",
+            "type": "output",
+            "format": "flac"
+          },
+          {
+            "filename": "ComfyUI_00270_.flac",
+            "subfolder": "audio",
+            "type": "output",
+            "format": "flac"
+          },
+          {
+            "filename": "ComfyUI_00271_.flac",
+            "subfolder": "audio",
+            "type": "output",
+            "format": "flac"
+          }
+        ]
+      },
+      "widgets_values": [
+        "no",
+        "audio/ComfyUI",
+        null
+      ]
+    },
+    {
+      "id": 23,
+      "type": "DASaveAudio",
+      "pos": [
+        3092.963698142449,
+        3223.336851125658
+      ],
+      "size": [
+        337.349609375,
+        311
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audios",
+          "type": "AUDIO",
+          "link": 80
+        }
+      ],
+      "outputs": [
+        {
+          "name": "audios",
+          "shape": 6,
+          "type": "AUDIO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DASaveAudio",
+        "savedAudios": [
+          {
+            "filename": "ComfyUI_00272_.flac",
+            "subfolder": "audio",
+            "type": "output",
+            "format": "flac"
+          },
+          {
+            "filename": "ComfyUI_00273_.flac",
+            "subfolder": "audio",
+            "type": "output",
+            "format": "flac"
+          },
+          {
+            "filename": "ComfyUI_00274_.flac",
+            "subfolder": "audio",
+            "type": "output",
+            "format": "flac"
+          }
+        ]
+      },
+      "widgets_values": [
+        "no",
+        "audio/ComfyUI",
+        null
+      ]
+    },
+    {
+      "id": 47,
+      "type": "DAVoxCPM15",
+      "pos": [
+        2374.587291702987,
+        3947.719698253111
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "ref_audios",
+          "type": "AUDIO",
+          "link": 87
+        },
+        {
+          "name": "prompts",
+          "type": "STRING",
+          "widget": {
+            "name": "prompts"
+          },
+          "link": 86
+        }
+      ],
+      "outputs": [
+        {
+          "name": "audios",
+          "shape": 6,
+          "type": "AUDIO",
+          "links": [
+            84
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DAVoxCPM15"
+      },
+      "widgets_values": [
+        "接下来关注天气。中央气象台预计，未来三天华南地区将迎来强降雨过程，部分地区有大暴雨并伴有雷暴大风。相关部门已发布预警，提醒公众减少外出，注意防范山洪和城市内涝等次生灾害。",
+        463922318090663,
+        "randomize"
+      ]
+    },
+    {
+      "id": 49,
+      "type": "DAFeishuLoad",
+      "pos": [
+        1761.0292740888028,
+        3289.4308517181007
+      ],
+      "size": [
+        349.22455490401717,
+        228.62826265267358
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "text1",
+          "shape": 6,
+          "type": "STRING",
+          "links": [
+            85
+          ]
+        },
+        {
+          "name": "image1",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "name": "audio1",
+          "shape": 6,
+          "type": "AUDIO",
+          "links": []
+        },
+        {
+          "name": "video1",
+          "shape": 6,
+          "type": "VIDEO",
+          "links": null
+        },
+        {
+          "name": "frame_count",
+          "shape": 6,
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "feishu_record_ids",
+          "shape": 6,
+          "type": "FEISHU_RECORD_IDS",
+          "links": []
+        },
+        {
+          "name": "feishu_config",
+          "type": "FEISHU_CONFIG",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DAFeishuLoad"
+      },
+      "widgets_values": [
+        "V8XSbj2xuaWpiHsp4bkce7mqnhc",
+        "tblxWCfIVo251wHS",
+        "vewS3mlxAo"
+      ]
+    },
+    {
+      "id": 27,
+      "type": "DASaveAudio",
+      "pos": [
+        3126.041106766471,
+        3938.5036191039476
+      ],
+      "size": [
+        337.349609375,
+        375
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audios",
+          "type": "AUDIO",
+          "link": 84
+        },
+        {
+          "label": "feishu_record_ids",
+          "name": "save_to_feishu.feishu_record_ids",
+          "type": "FEISHU_RECORD_IDS",
+          "link": 88
+        },
+        {
+          "label": "feishu_config",
+          "name": "save_to_feishu.feishu_config",
+          "type": "FEISHU_CONFIG",
+          "link": 89
+        }
+      ],
+      "outputs": [
+        {
+          "name": "audios",
+          "shape": 6,
+          "type": "AUDIO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DASaveAudio",
+        "savedAudios": [
+          {
+            "filename": "audio_00073_.flac",
+            "subfolder": "feishu",
+            "type": "output",
+            "format": "flac"
+          },
+          {
+            "filename": "audio_00074_.flac",
+            "subfolder": "feishu",
+            "type": "output",
+            "format": "flac"
+          },
+          {
+            "filename": "audio_00075_.flac",
+            "subfolder": "feishu",
+            "type": "output",
+            "format": "flac"
+          }
+        ]
+      },
+      "widgets_values": [
+        "yes",
+        "feishu/audio",
+        "audio2",
+        null
+      ]
+    },
+    {
+      "id": 50,
+      "type": "DAFeishuLoad",
+      "pos": [
+        1761.6266234391076,
+        3918.2720441820966
+      ],
+      "size": [
+        349.22455490401717,
+        228.62826265267358
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "text1",
+          "shape": 6,
+          "type": "STRING",
+          "links": [
+            86
+          ]
+        },
+        {
+          "name": "image1",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "name": "audio1",
+          "shape": 6,
+          "type": "AUDIO",
+          "links": [
+            87
+          ]
+        },
+        {
+          "name": "video1",
+          "shape": 6,
+          "type": "VIDEO",
+          "links": null
+        },
+        {
+          "name": "frame_count",
+          "shape": 6,
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "feishu_record_ids",
+          "shape": 6,
+          "type": "FEISHU_RECORD_IDS",
+          "links": [
+            88
+          ]
+        },
+        {
+          "name": "feishu_config",
+          "type": "FEISHU_CONFIG",
+          "links": [
+            89
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DAFeishuLoad"
+      },
+      "widgets_values": [
+        "V8XSbj2xuaWpiHsp4bkce7mqnhc",
+        "tblxWCfIVo251wHS",
+        "vewS3mlxAo"
+      ]
+    },
+    {
+      "id": 40,
+      "type": "DAVoxCPM15Config",
+      "pos": [
+        874.9359259255167,
+        1546.3355017234028
+      ],
+      "size": [
+        406.2990256495932,
+        307.55005063227645
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "DAVoxCPM15Config"
+      },
+      "widgets_values": [
+        "/data/work/program/Comfy/models/dalab/voxcpm15",
+        "cuda",
+        false,
+        false,
+        false,
+        false,
+        2,
+        10,
+        2,
+        4096
+      ]
+    }
+  ],
+  "links": [
+    [
+      65,
+      3,
+      0,
+      42,
+      0,
+      "AUDIO"
+    ],
+    [
+      66,
+      42,
+      0,
+      2,
+      0,
+      "AUDIO"
+    ],
+    [
+      69,
+      7,
+      0,
+      43,
+      0,
+      "AUDIO"
+    ],
+    [
+      70,
+      43,
+      0,
+      15,
+      0,
+      "AUDIO"
+    ],
+    [
+      74,
+      11,
+      1,
+      44,
+      1,
+      "STRING"
+    ],
+    [
+      75,
+      44,
+      0,
+      45,
+      0,
+      "AUDIO"
+    ],
+    [
+      76,
+      7,
+      0,
+      44,
+      0,
+      "AUDIO"
+    ],
+    [
+      79,
+      7,
+      0,
+      46,
+      0,
+      "AUDIO"
+    ],
+    [
+      80,
+      46,
+      0,
+      23,
+      0,
+      "AUDIO"
+    ],
+    [
+      84,
+      47,
+      0,
+      27,
+      0,
+      "AUDIO"
+    ],
+    [
+      85,
+      49,
+      0,
+      46,
+      1,
+      "STRING"
+    ],
+    [
+      86,
+      50,
+      0,
+      47,
+      1,
+      "STRING"
+    ],
+    [
+      87,
+      50,
+      2,
+      47,
+      0,
+      "AUDIO"
+    ],
+    [
+      88,
+      50,
+      5,
+      27,
+      1,
+      "FEISHU_RECORD_IDS"
+    ],
+    [
+      89,
+      50,
+      6,
+      27,
+      2,
+      "FEISHU_CONFIG"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "workflowRendererVersion": "LG",
+    "ds": {
+      "scale": 0.44006579386955186,
+      "offset": [
+        -220.37914878672186,
+        -672.0930171835822
+      ]
+    },
+    "frontendVersion": "1.37.11"
+  },
+  "version": 0.4
+}

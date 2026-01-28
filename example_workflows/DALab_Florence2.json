@@ -1,0 +1,1345 @@
+{
+  "id": "d3e7b5a3-3b46-4e15-98bf-44ad62cf62dc",
+  "revision": 0,
+  "last_node_id": 48,
+  "last_link_id": 51,
+  "nodes": [
+    {
+      "id": 17,
+      "type": "DAFlorence2",
+      "pos": [
+        -2243.6298124771433,
+        98.19367105544138
+      ],
+      "size": [
+        270,
+        386
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "images",
+          "name": "images",
+          "type": "IMAGE,VIDEO",
+          "link": 23
+        }
+      ],
+      "outputs": [
+        {
+          "name": "prompts",
+          "shape": 6,
+          "type": "STRING",
+          "links": [
+            33
+          ]
+        },
+        {
+          "name": "bbox_data",
+          "shape": 6,
+          "type": "BBOX_DATA",
+          "links": [
+            35
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DAFlorence2"
+      },
+      "widgets_values": [
+        "bbox_by_index",
+        "object",
+        -1,
+        19989781092910,
+        "randomize"
+      ]
+    },
+    {
+      "id": 19,
+      "type": "LoadImage",
+      "pos": [
+        -2640.4360283806914,
+        95.1117483475594
+      ],
+      "size": [
+        282.798828125,
+        314
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            23
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "3c622277-1c11-465a-a65d-2ba8a0203d7e_1344x896.jpg",
+        "image"
+      ]
+    },
+    {
+      "id": 30,
+      "type": "MergeTextLists",
+      "pos": [
+        -1857.1972564017099,
+        87.84552013723258
+      ],
+      "size": [
+        270,
+        58
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "texts",
+          "type": "STRING",
+          "widget": {
+            "name": "texts"
+          },
+          "link": 33
+        }
+      ],
+      "outputs": [
+        {
+          "name": "texts",
+          "type": "STRING",
+          "links": [
+            32
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MergeTextLists"
+      },
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": 32,
+      "type": "PreviewAny",
+      "pos": [
+        -1852.0424568399728,
+        274.03313958602337
+      ],
+      "size": [
+        303.241109256875,
+        219.594550118092
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "source",
+          "type": "*",
+          "link": 35
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "PreviewAny"
+      },
+      "widgets_values": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": 33,
+      "type": "MergeTextLists",
+      "pos": [
+        -1832.3062893775266,
+        694.8097336484586
+      ],
+      "size": [
+        270,
+        58
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "texts",
+          "type": "STRING",
+          "widget": {
+            "name": "texts"
+          },
+          "link": 37
+        }
+      ],
+      "outputs": [
+        {
+          "name": "texts",
+          "type": "STRING",
+          "links": [
+            36
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MergeTextLists"
+      },
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": 21,
+      "type": "DAFlorence2",
+      "pos": [
+        -2234.0689982657445,
+        705.8329722934363
+      ],
+      "size": [
+        270,
+        386
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "images",
+          "name": "images",
+          "type": "IMAGE,VIDEO",
+          "link": 24
+        }
+      ],
+      "outputs": [
+        {
+          "name": "prompts",
+          "shape": 6,
+          "type": "STRING",
+          "links": [
+            37
+          ]
+        },
+        {
+          "name": "bbox_data",
+          "shape": 6,
+          "type": "BBOX_DATA",
+          "links": [
+            38
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DAFlorence2"
+      },
+      "widgets_values": [
+        "bbox_by_index",
+        "object_with_detail",
+        -1,
+        438271166432880,
+        "randomize"
+      ]
+    },
+    {
+      "id": 35,
+      "type": "PreviewAny",
+      "pos": [
+        -1827.1514898157895,
+        880.9973530972494
+      ],
+      "size": [
+        303.241109256875,
+        219.594550118092
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "source",
+          "type": "*",
+          "link": 38
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "PreviewAny"
+      },
+      "widgets_values": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": 20,
+      "type": "LoadImage",
+      "pos": [
+        -2635.7512589006155,
+        705.5269527869685
+      ],
+      "size": [
+        282.798828125,
+        314
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            24
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "uncleda_tools_00067_.png",
+        "image"
+      ]
+    },
+    {
+      "id": 36,
+      "type": "MergeTextLists",
+      "pos": [
+        -1844.4204677299758,
+        1522.862642743073
+      ],
+      "size": [
+        270,
+        58
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "texts",
+          "type": "STRING",
+          "widget": {
+            "name": "texts"
+          },
+          "link": 39
+        }
+      ],
+      "outputs": [
+        {
+          "name": "texts",
+          "type": "STRING",
+          "links": [
+            41
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MergeTextLists"
+      },
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": 41,
+      "type": "LoadVideo",
+      "pos": [
+        -2631.7374542881644,
+        1530.9887501671649
+      ],
+      "size": [
+        282.798828125,
+        229.53935546875002
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            43
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadVideo"
+      },
+      "widgets_values": [
+        "ComfyUI_00165_.mp4",
+        "image"
+      ]
+    },
+    {
+      "id": 37,
+      "type": "DAFlorence2",
+      "pos": [
+        -2246.1831766181945,
+        1533.8858813880504
+      ],
+      "size": [
+        270,
+        386
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "images",
+          "name": "images",
+          "type": "IMAGE,VIDEO",
+          "link": 43
+        }
+      ],
+      "outputs": [
+        {
+          "name": "prompts",
+          "shape": 6,
+          "type": "STRING",
+          "links": [
+            39
+          ]
+        },
+        {
+          "name": "bbox_data",
+          "shape": 6,
+          "type": "BBOX_DATA",
+          "links": [
+            42
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DAFlorence2"
+      },
+      "widgets_values": [
+        "bbox_by_index",
+        "object_with_detail",
+        -1,
+        729694308234093,
+        "randomize"
+      ]
+    },
+    {
+      "id": 43,
+      "type": "MergeTextLists",
+      "pos": [
+        -1796.153452608211,
+        2286.903847674545
+      ],
+      "size": [
+        270,
+        58
+      ],
+      "flags": {},
+      "order": 24,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "texts",
+          "type": "STRING",
+          "widget": {
+            "name": "texts"
+          },
+          "link": 46
+        }
+      ],
+      "outputs": [
+        {
+          "name": "texts",
+          "type": "STRING",
+          "links": [
+            45
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MergeTextLists"
+      },
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": 44,
+      "type": "PreviewAny",
+      "pos": [
+        -1376.7049495090241,
+        2292.224605226133
+      ],
+      "size": [
+        334.46130603809,
+        209.15903817002481
+      ],
+      "flags": {},
+      "order": 28,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "source",
+          "type": "*",
+          "link": 45
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "PreviewAny"
+      },
+      "widgets_values": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": 45,
+      "type": "PreviewAny",
+      "pos": [
+        -1785.9876015476568,
+        2505.40089883108
+      ],
+      "size": [
+        303.241109256875,
+        219.594550118092
+      ],
+      "flags": {},
+      "order": 25,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "source",
+          "type": "*",
+          "link": 47
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "PreviewAny"
+      },
+      "widgets_values": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": 42,
+      "type": "DAFlorence2",
+      "pos": [
+        -2272.6240865204004,
+        2302.3582465010913
+      ],
+      "size": [
+        270,
+        362
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "images",
+          "name": "images",
+          "type": "IMAGE,VIDEO",
+          "link": 49
+        }
+      ],
+      "outputs": [
+        {
+          "name": "prompts",
+          "shape": 6,
+          "type": "STRING",
+          "links": [
+            46
+          ]
+        },
+        {
+          "name": "bbox_data",
+          "shape": 6,
+          "type": "BBOX_DATA",
+          "links": [
+            47
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DAFlorence2"
+      },
+      "widgets_values": [
+        "caption",
+        "short",
+        554707347474354,
+        "randomize"
+      ]
+    },
+    {
+      "id": 14,
+      "type": "DAQwenLLM",
+      "pos": [
+        -3383.7873009309246,
+        2371.9364405804354
+      ],
+      "size": [
+        400,
+        664
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "en_prompts",
+          "shape": 6,
+          "type": "STRING",
+          "links": [
+            48
+          ]
+        },
+        {
+          "name": "zh_prompts",
+          "shape": 6,
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DAQwenLLM",
+        "savedPrompts": [
+          {
+            "zh_prompt": "温馨家庭聚餐场景：六位不同年龄的家人围坐在木质圆桌旁，桌上摆满中式佳肴——热气腾腾的饺子、红亮油润的东坡肉、翠绿清炒时蔬与琥珀色黄酒；暖黄色吊灯投下柔和光晕，人物笑容自然，衣着日常而有质感，背景是浅灰墙与悬挂的中国结和老式挂历；镜头采用广角微俯视角，突出欢聚氛围与食物细节纹理。",
+            "en_prompt": "A warm family dinner scene: six family members of different ages seated around a rustic wooden round table, laden with authentic Chinese dishes — steaming dumplings, glossy braised Dongpo pork, vibrant stir-fried seasonal vegetables, and amber huangjiu in small ceramic cups; soft golden ambient lighting from a pendant lamp creates cinematic volumetric glow, natural joyful expressions, realistic fabric textures on casual clothing, background features light-gray walls with a red Chinese knot and vintage lunar calendar; wide-angle slightly overhead composition, ultra-detailed food textures, photorealistic skin tones, 8k, masterpiece, cinematic lighting, shallow depth of field"
+          },
+          {
+            "zh_prompt": "都市朋友聚餐夜景：八位年轻人围坐于霓虹映照的露天屋顶餐厅，玻璃桌面反射城市天际线与流动彩光；每人手持一杯特调鸡尾酒，桌上散落着烤串、开放式三明治、牛油果酱与新鲜柠檬片；人物姿态放松，服饰时尚多元，发丝与衣料在微风中轻扬；背景虚化呈现模糊光斑与远处摩天楼轮廓；特写级微距光影捕捉盐粒结晶、酱汁反光与冰块冷凝水珠。",
+            "en_prompt": "Urban friends' rooftop dinner at night: eight stylish young adults seated around a sleek glass-topped table under dynamic neon signage, city skyline softly reflected in the surface; each holds a crafted cocktail, table scattered with grilled skewers, open-faced sandwiches, creamy avocado dip, and fresh lemon wedges; relaxed postures, diverse contemporary fashion, hair and fabric subtly lifted by gentle breeze; background rendered as dreamy bokeh light orbs and distant skyscraper silhouettes; macro-level detail on salt crystals, glossy sauce reflections, and condensation beads on ice cubes; cinematic volumetric lighting, ultra-sharp focus, 8k, photorealistic texture rendering, masterpiece"
+          },
+          {
+            "zh_prompt": "传统节日团圆饭：十人大家庭齐聚于古风中式厅堂，雕花红木长桌铺朱红桌布，中央摆放整只金黄烤鸭与铜制火锅；长辈端坐主位，孩童依偎身旁，青花瓷碗筷整齐排列，蒸汽从锅中袅袅升腾；灯笼柔光漫射，墙面悬挂水墨山水卷轴与手写福字；镜头采用宽幅横构图，强调纵深空间与人物关系层次，木质肌理、丝绸光泽、陶瓷釉面与蒸汽体积感均极致细腻。",
+            "en_prompt": "Traditional Chinese festival reunion dinner: ten family members gathered in an elegant classical Chinese hall, seated along an ornate redwood long table draped in crimson brocade; centerpiece features a whole golden roasted duck and a brass hotpot emitting delicate steam; elders seated centrally, children nestled nearby, blue-and-white porcelain tableware arranged precisely; warm lantern light bathes the scene in cinematic volumetric diffusion, ink-wash landscape scrolls and hand-brushed 'Fu' character hang on lacquered walls; wide-angle horizontal composition emphasizing spatial depth and intergenerational connection; hyper-detailed rendering of wood grain, silk sheen, ceramic glaze, and ethereal steam volume; 8k, photorealistic, masterpiece, studio-quality lighting"
+          }
+        ],
+        "savedWidgetHeight": 420
+      },
+      "widgets_values": [
+        "qwen-plus",
+        "image",
+        3,
+        "多人的在聚餐",
+        230860595567702,
+        "fixed",
+        true,
+        null
+      ]
+    },
+    {
+      "id": 46,
+      "type": "DAFlux2Klein",
+      "pos": [
+        -2806.487389618708,
+        2297.2373898762453
+      ],
+      "size": [
+        400,
+        184
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "image1",
+          "name": "images.image1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "prompts",
+          "type": "STRING",
+          "widget": {
+            "name": "prompts"
+          },
+          "link": 48
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": [
+            49
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DAFlux2Klein"
+      },
+      "widgets_values": [
+        1920,
+        1080,
+        "A beautiful girl",
+        830143513473584,
+        "randomize"
+      ]
+    },
+    {
+      "id": 25,
+      "type": "DAFlorence2Config",
+      "pos": [
+        -2674.8149447605706,
+        -851.0555284125287
+      ],
+      "size": [
+        510.63638455168166,
+        215.05719178934294
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "DAFlorence2Config"
+      },
+      "widgets_values": [
+        "/data/work/program/Comfy/models/dalab/florence2/Florence-2-large-ft",
+        "fp16",
+        1024,
+        3,
+        false,
+        3,
+        24
+      ]
+    },
+    {
+      "id": 26,
+      "type": "MergeTextLists",
+      "pos": [
+        -1837.8318559502027,
+        -509.3876731334596
+      ],
+      "size": [
+        270,
+        58
+      ],
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "texts",
+          "type": "STRING",
+          "widget": {
+            "name": "texts"
+          },
+          "link": 27
+        }
+      ],
+      "outputs": [
+        {
+          "name": "texts",
+          "type": "STRING",
+          "links": [
+            28
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MergeTextLists"
+      },
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": 23,
+      "type": "DAFlorence2",
+      "pos": [
+        -2255.2282286333025,
+        -489.9293023468583
+      ],
+      "size": [
+        270,
+        362
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "images",
+          "name": "images",
+          "type": "IMAGE,VIDEO",
+          "link": 26
+        }
+      ],
+      "outputs": [
+        {
+          "name": "prompts",
+          "shape": 6,
+          "type": "STRING",
+          "links": [
+            27,
+            50
+          ]
+        },
+        {
+          "name": "bbox_data",
+          "shape": 6,
+          "type": "BBOX_DATA",
+          "links": [
+            29
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DAFlorence2"
+      },
+      "widgets_values": [
+        "caption",
+        "long",
+        503252767828106,
+        "fixed"
+      ]
+    },
+    {
+      "id": 22,
+      "type": "LoadImage",
+      "pos": [
+        -2652.924304797755,
+        -490.34840800106383
+      ],
+      "size": [
+        282.798828125,
+        314
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            26
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "3c622277-1c11-465a-a65d-2ba8a0203d7e_1344x896.jpg",
+        "image"
+      ]
+    },
+    {
+      "id": 27,
+      "type": "PreviewAny",
+      "pos": [
+        -1778.377794544527,
+        -313.27960380725193
+      ],
+      "size": [
+        210,
+        166
+      ],
+      "flags": {},
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "source",
+          "type": "*",
+          "link": 29
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "PreviewAny"
+      },
+      "widgets_values": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": 47,
+      "type": "DAFlux2Klein",
+      "pos": [
+        -1511.4979253570489,
+        -226.45621722141877
+      ],
+      "size": [
+        400,
+        184
+      ],
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "image1",
+          "name": "images.image1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "prompts",
+          "type": "STRING",
+          "widget": {
+            "name": "prompts"
+          },
+          "link": 50
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": [
+            51
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DAFlux2Klein"
+      },
+      "widgets_values": [
+        1920,
+        1080,
+        "A beautiful girl",
+        233545837857714,
+        "randomize"
+      ]
+    },
+    {
+      "id": 24,
+      "type": "PreviewAny",
+      "pos": [
+        -1476.0965638784764,
+        -520.0647697791721
+      ],
+      "size": [
+        334.46130603809,
+        209.15903817002481
+      ],
+      "flags": {},
+      "order": 26,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "source",
+          "type": "*",
+          "link": 28
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "PreviewAny"
+      },
+      "widgets_values": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": 31,
+      "type": "PreviewAny",
+      "pos": [
+        -1486.4491277747998,
+        85.6754211809637
+      ],
+      "size": [
+        334.46130603809,
+        209.15903817002481
+      ],
+      "flags": {},
+      "order": 21,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "source",
+          "type": "*",
+          "link": 32
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "PreviewAny"
+      },
+      "widgets_values": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": 34,
+      "type": "PreviewAny",
+      "pos": [
+        -1461.5581607506165,
+        692.6396346921897
+      ],
+      "size": [
+        334.46130603809,
+        209.15903817002481
+      ],
+      "flags": {},
+      "order": 22,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "source",
+          "type": "*",
+          "link": 36
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "PreviewAny"
+      },
+      "widgets_values": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": 38,
+      "type": "PreviewAny",
+      "pos": [
+        -1473.6723391030657,
+        1520.6925437868038
+      ],
+      "size": [
+        334.46130603809,
+        209.15903817002481
+      ],
+      "flags": {},
+      "order": 23,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "source",
+          "type": "*",
+          "link": 41
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "PreviewAny"
+      },
+      "widgets_values": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": 39,
+      "type": "PreviewAny",
+      "pos": [
+        -1839.2656681682388,
+        1709.0502621918633
+      ],
+      "size": [
+        303.241109256875,
+        219.594550118092
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "source",
+          "type": "*",
+          "link": 42
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "PreviewAny"
+      },
+      "widgets_values": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": 29,
+      "type": "DASaveImage",
+      "pos": [
+        -948.5081909338322,
+        -223.34274080765
+      ],
+      "size": [
+        337.349609375,
+        294
+      ],
+      "flags": {},
+      "order": 27,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 51
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DASaveImage"
+      },
+      "widgets_values": [
+        "no",
+        "ComfyUI"
+      ]
+    }
+  ],
+  "links": [
+    [
+      23,
+      19,
+      0,
+      17,
+      0,
+      "IMAGE"
+    ],
+    [
+      24,
+      20,
+      0,
+      21,
+      0,
+      "IMAGE"
+    ],
+    [
+      26,
+      22,
+      0,
+      23,
+      0,
+      "IMAGE"
+    ],
+    [
+      27,
+      23,
+      0,
+      26,
+      0,
+      "STRING"
+    ],
+    [
+      28,
+      26,
+      0,
+      24,
+      0,
+      "STRING"
+    ],
+    [
+      29,
+      23,
+      1,
+      27,
+      0,
+      "BBOX_DATA"
+    ],
+    [
+      32,
+      30,
+      0,
+      31,
+      0,
+      "STRING"
+    ],
+    [
+      33,
+      17,
+      0,
+      30,
+      0,
+      "STRING"
+    ],
+    [
+      35,
+      17,
+      1,
+      32,
+      0,
+      "BBOX_DATA"
+    ],
+    [
+      36,
+      33,
+      0,
+      34,
+      0,
+      "STRING"
+    ],
+    [
+      37,
+      21,
+      0,
+      33,
+      0,
+      "STRING"
+    ],
+    [
+      38,
+      21,
+      1,
+      35,
+      0,
+      "BBOX_DATA"
+    ],
+    [
+      39,
+      37,
+      0,
+      36,
+      0,
+      "STRING"
+    ],
+    [
+      41,
+      36,
+      0,
+      38,
+      0,
+      "STRING"
+    ],
+    [
+      42,
+      37,
+      1,
+      39,
+      0,
+      "BBOX_DATA"
+    ],
+    [
+      43,
+      41,
+      0,
+      37,
+      0,
+      "VIDEO"
+    ],
+    [
+      45,
+      43,
+      0,
+      44,
+      0,
+      "STRING"
+    ],
+    [
+      46,
+      42,
+      0,
+      43,
+      0,
+      "STRING"
+    ],
+    [
+      47,
+      42,
+      1,
+      45,
+      0,
+      "BBOX_DATA"
+    ],
+    [
+      48,
+      14,
+      0,
+      46,
+      1,
+      "STRING"
+    ],
+    [
+      49,
+      46,
+      0,
+      42,
+      0,
+      "IMAGE"
+    ],
+    [
+      50,
+      23,
+      0,
+      47,
+      1,
+      "STRING"
+    ],
+    [
+      51,
+      47,
+      0,
+      29,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "workflowRendererVersion": "LG",
+    "ds": {
+      "scale": 0.5209868481924415,
+      "offset": [
+        3723.7174394662156,
+        1139.2365657335527
+      ]
+    },
+    "frontendVersion": "1.37.11"
+  },
+  "version": 0.4
+}
