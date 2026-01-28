@@ -60,6 +60,5 @@ Documentation = "https://github.com/dauncle2026/ComfyUI-DALab/wiki"
 [tool.comfy]
 PublisherId = "dauncle2026"
 DisplayName = "ComfyUI-DALab"
-Icon = "" # 如果有图标URL请填入，例如 "https://raw.githubusercontent.com/.../icon.png"
-
+Icon = "https://github.com/dauncle2026/ComfyUI-DALab/blob/dev/dalab.jpg"
 requires-comfyui = ">=0.3.0"
