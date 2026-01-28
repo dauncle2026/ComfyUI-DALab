@@ -1,5 +1,5 @@
 [project]
-name = "dalab-nodes"
+name = "dalab"
 version = "0.0.1"
 description = "A comprehensive collection of ComfyUI nodes for Flux, Wan2.2, Qwen models, and Feishu integration."
 readme = "README.md"
@@ -9,14 +9,7 @@ requires-python = ">=3.10"
 keywords = ["comfyui", "flux", "wan", "qwen", "feishu", "audio", "video"]
 
 authors = [
-  { name = "dauncle2026", email = "dauncle@example.com" }
-]
-
-classifiers = [
-    "Operating System :: OS Independent",
-    "Environment :: GPU :: NVIDIA CUDA",
-    "Environment :: GPU :: Apple Metal",
-    "Programming Language :: Python :: 3.10",
+  { name = "dauncle2026", email = "dauncle2026@gmail.com" }
 ]
 
 dependencies = [
