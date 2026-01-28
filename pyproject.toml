@@ -60,5 +60,5 @@ Documentation = "https://github.com/dauncle2026/ComfyUI-DALab/wiki"
 [tool.comfy]
 PublisherId = "dauncle2026"
 DisplayName = "ComfyUI-DALab"
-Icon = "https://github.com/dauncle2026/ComfyUI-DALab/blob/dev/dalab.jpg"
+Icon = "https://github.com/dauncle2026/ComfyUI-DALab/blob/dev/DALab_icon.jpg"
 requires-comfyui = ">=0.3.0"
