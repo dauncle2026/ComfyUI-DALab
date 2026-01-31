@@ -47,21 +47,19 @@
 **DA Flux1** 采用 **“一次配置，重复使用”** 的设计理念，将复杂的模型加载与采样参数剥离。
 
 1.  **初始化配置（仅需一次）**：
-    *   添加 **DA Flux1 Config** 节点。
-    *   选择对应的模型文件，调整采样参数（如步数、CFG 等）。
-    *   **运行一次** (Queue Prompt)。此时配置信息会自动保存到本地。
-    *   *注：配置完成后，您可以删除或禁用 Config 节点，直到需要修改参数为止。*
+*   添加 **DA Flux1 Config** 节点。
+*   选择对应的模型文件，调整采样参数（如步数、CFG 等）。
+*   **运行一次** (Queue Prompt)。此时配置信息会自动保存到本地。
+*   *注：配置完成后，您可以删除或禁用 Config 节点，直到需要修改参数为止。*
 
-<div align="center"><img src="../assets/flux1_config.jpg" width="80%" /></div>
+<img src="../assets/flux1_config.jpg" width="80%" />
 
 2.  **日常生成**：
-    *   只需保留 **DA Flux1** 节点。
-    *   在 Prompts 输入框中输入提示词。
-    *   点击 **Queue Prompt** 即可生成。节点会自动读取之前保存的配置。
+*   只需保留 **DA Flux1** 节点。
+*   在 Prompts 输入框中输入提示词。
+*   点击 **Queue Prompt** 即可生成。节点会自动读取之前保存的配置。
 
-<div align="center"><img src="../assets/flux1_default.jpg" width="80%" /></div>
-
----
+<img src="../assets/flux1_default.jpg" width="80%" />
 
 ## 3. 详细配置参数
 
@@ -83,8 +81,6 @@
 | **easycache** | - | 开启模型缓存，显著提升连续生成的响应速度。 |
 | **loras** | - | 选择加载 LoRA 模型（支持多个 LoRA 叠加）。 |
 
----
-
 ## 4. 批量图片生成
 
 DA Flux1 节点原生支持批量列表输入。只要将提示词列表传入 `prompts` 端口，节点就会自动按序生成所有图片。
@@ -94,7 +90,7 @@ DA Flux1 节点原生支持批量列表输入。只要将提示词列表传入 `
 
 **[Qwen LLM 使用说明](../text/qwen_llm.md)**
 
-<div align="center"><img src="../assets/flux1_list_llm.jpg" width="80%" /></div>
+<img src="../assets/flux1_list_llm.jpg" width="80%" />
 
 ### 方法二：使用飞书多维表格 (Feishu)
 利用 **DA Feishu Load** 节点读取云端多维表格中的提示词列，实现自动化的批量生产。
@@ -106,7 +102,5 @@ DA Flux1 节点原生支持批量列表输入。只要将提示词列表传入 `
 3.  连接到 **DA Flux1** 节点进行生成。
 4.  (可选) 还可以配合 **DA Feishu Save** 将生成的图片自动回传至飞书表格。
 
-<div align="center">
 <img src="../assets/flux1_feishu_table.jpg" width="80%" />
 <img src="../assets/flux1_list_feishu.jpg" width="80%" />
-</div>
