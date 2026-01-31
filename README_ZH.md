@@ -47,20 +47,20 @@ pip install -r requirements.txt
 
 | 模型 | 说明 | 文档 |
 | :--- | :--- | :--- |
-| **Wan 2.2 T2V** | 阿里万相 2.2 文生视频模型 (14B)，电影级画质 | [使用说明](docs/video/wan22_t2v.md) |
-| **Wan 2.2 I2V** | 阿里万相 2.2 图生视频模型，精准的图像动态化 | [使用说明](docs/video/wan22_i2v.md) |
-| **Wan 2.2 S2V** | 阿里万相 2.2 视频转视频，强大的视频风格转换 | [使用说明](docs/video/wan22_s2v.md) |
-| **Wan Animate** | 阿里万相 2.2 视频驱动角色动画模型，支持姿态与表情迁移 | [使用说明](docs/video/wan22_t2v.md) |
-| **LTX Video** | Lightricks 开源的高效率 DiT 视频生成模型 | [使用说明](docs/video/ltx2.md) |
-| **Infinite Talk** | MeiGen-AI 开源的数字人说话与口型同步生成 | [使用说明](docs/video/infinite_talk.md) |
+| **Wan2.2 T2V** | Wan2.2 文生视频模型 (14B)，电影级画质 | [使用说明](docs/video/wan22_t2v.md) |
+| **Wan2.2 I2V** | Wan2.2 图生视频模型，精准的图像动态化 | [使用说明](docs/video/wan22_i2v.md) |
+| **Wan2.2 S2V** | Wan2.2 视频转视频，强大的视频风格转换 | [使用说明](docs/video/wan22_s2v.md) |
+| **Wan Animate** | Wan2.2 视频驱动角色动画模型，支持姿态与表情迁移 | [使用说明](docs/video/wan22_t2v.md) |
+| **LTX Video** | LTX2视频生成模型 | [使用说明](docs/video/ltx2.md) |
+| **Infinite Talk** | InfiniteTalk 数字人说话与口型同步生成 | [使用说明](docs/video/infinite_talk.md) |
 
 ### 3. 音频生成
 
 | 模型 | 说明 | 文档 |
 | :--- | :--- | :--- |
-| **CosyVoice 3** | 阿里通义实验室开源的多语言 Zero-shot 语音克隆 | [使用说明](docs/audio/cosyvoice3.md) |
-| **VoxCPM 1.5** | OpenBMB 开源的 Tokenizer-free 上下文感知语音合成 | [使用说明](docs/audio/voxcpm15.md) |
-| **IndexTTS 2** | 工业级高效可控的 Zero-shot 语音合成系统 | [使用说明](docs/audio/indextts2.md) |
+| **CosyVoice 3** | CosyVoice 3 Zero-shot 语音克隆 | [使用说明](docs/audio/cosyvoice3.md) |
+| **VoxCPM 1.5** | VoxCPM 1.5 Tokenizer-free 上下文感知语音合成 | [使用说明](docs/audio/voxcpm15.md) |
+| **IndexTTS 2** | IndexTTS2 Zero-shot 语音合成系统 | [使用说明](docs/audio/indextts2.md) |
 
 ### 4. 文本生成
 

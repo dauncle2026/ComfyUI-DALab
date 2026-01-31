@@ -47,20 +47,20 @@ pip install -r requirements.txt
 
 | Model | Description | Usage |
 | :--- | :--- | :--- |
-| **Wan 2.2 T2V** | Alibaba Wanxiang 2.2 Text-to-Video model (14B), cinema-grade quality | [Usage](docs/video/wan22_t2v.md) |
-| **Wan 2.2 I2V** | Alibaba Wanxiang 2.2 Image-to-Video model, precise image animation | [Usage](docs/video/wan22_i2v.md) |
-| **Wan 2.2 S2V** | Alibaba Wanxiang 2.2 Video-to-Video, powerful video style transfer | [Usage](docs/video/wan22_s2v.md) |
-| **Wan Animate** | Alibaba Wanxiang 2.2 video-driven character animation model, supporting pose and expression transfer | [Usage](docs/video/wan22_t2v.md) |
-| **LTX Video** | Lightricks open-source high-efficiency DiT video generation model | [Usage](docs/video/ltx2.md) |
-| **Infinite Talk** | MeiGen-AI open-source digital human speaking and lip-sync generation | [Usage](docs/video/infinite_talk.md) |
+| **Wan2.2 T2V** | Wan2.2 Text-to-Video model (14B), cinema-grade quality | [Usage](docs/video/wan22_t2v.md) |
+| **Wan2.2 I2V** | Wan2.2 Image-to-Video model, precise image animation | [Usage](docs/video/wan22_i2v.md) |
+| **Wan2.2 S2V** | Wan2.2 Video-to-Video, powerful video style transfer | [Usage](docs/video/wan22_s2v.md) |
+| **Wan Animate** | Wan2.2 video-driven character animation model, supporting pose and expression transfer | [Usage](docs/video/wan22_t2v.md) |
+| **LTX Video** | LTX2 Video generation model | [Usage](docs/video/ltx2.md) |
+| **Infinite Talk** | InfiniteTalk digital human speaking and lip-sync generation | [Usage](docs/video/infinite_talk.md) |
 
 ### 3. Audio Generation
 
 | Model | Description | Usage |
 | :--- | :--- | :--- |
-| **CosyVoice 3** | Alibaba Tongyi Lab open-source multi-lingual Zero-shot voice cloning | [Usage](docs/audio/cosyvoice3.md) |
-| **VoxCPM 1.5** | OpenBMB open-source Tokenizer-free context-aware speech synthesis | [Usage](docs/audio/voxcpm15.md) |
-| **IndexTTS 2** | Industrial-grade efficient controllable Zero-shot speech synthesis system | [Usage](docs/audio/indextts2.md) |
+| **CosyVoice 3** | CosyVoice 3 multi-lingual Zero-shot voice cloning | [Usage](docs/audio/cosyvoice3.md) |
+| **VoxCPM 1.5** | VoxCPM 1.5 Tokenizer-free context-aware speech synthesis | [Usage](docs/audio/voxcpm15.md) |
+| **IndexTTS 2** | IndexTTS2 Zero-shot speech synthesis system | [Usage](docs/audio/indextts2.md) |
 
 ### 4. Text Generation
 
