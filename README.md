@@ -39,8 +39,8 @@ pip install -r requirements.txt
 | **Flux.1** | Black Forest Labs flagship T2I model, supporting Dev/Schnell | [Usage](docs/image/flux1.md) |
 | **Flux.2** | Upgraded Flux series version, providing stronger detail generation capabilities | [Usage](docs/image/flux2.md) |
 | **Flux2 Klein** | Quantized/distilled optimized version of Flux2 model | [Usage](docs/image/flux2_klein.md) |
-| **Qwen Image** | Alibaba Tongyi Qwen T2I model, supporting multi-resolution generation | [Usage](docs/image/qwen_image.md) |
-| **Qwen Edit** | Alibaba Tongyi Qwen image editing model, supporting repainting and modification | [Usage](docs/image/qwen_image_edit.md) |
+| **Qwen Image** | Qwen Image T2I model, supporting multi-resolution generation | [Usage](docs/image/qwen_image.md) |
+| **Qwen Image Edit** | Qwen Image Edit model, supporting repainting and modification | [Usage](docs/image/qwen_image_edit.md) |
 | **ZImage** | Alibaba Tongyi Lab open-source 6B parameter efficient T2I model | [Usage](docs/image/zimage.md) |
 
 ### 2. Video Generation

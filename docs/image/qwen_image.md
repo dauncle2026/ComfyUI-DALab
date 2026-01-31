@@ -56,14 +56,14 @@ Path: `models/diffusion_models/`
 
 | Version | Description | Download |
 | :--- | :--- | :--- |
-| **Qwen Image (FP8)** | Tongyi Wanxiang 2.5 Diffusion Model | [Download](https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/tree/main/split_files/diffusion_models) |
+| **Qwen Image** | Qwen Image Diffusion Model | [Download](https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/tree/main/split_files/diffusion_models) |
 
 #### 2. Text Encoder (VL)
 Path: `models/text_encoders/`
 
 | Version | Description | Download |
 | :--- | :--- | :--- |
-| **Qwen 2.5 VL (FP8)** | Tongyi Qwen 2.5 VL Model | [Download](https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/tree/main/split_files/text_encoders) |
+| **Qwen 2.5 VL** | Qwen 2.5 VL Model | [Download](https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/tree/main/split_files/text_encoders) |
 
 #### 3. VAE Model
 Path: `models/vae/`

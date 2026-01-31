@@ -1,47 +1,44 @@
-# DA Qwen Image 节点说明
-[English](qwen_image.md) | [中文文档](qwen_image_zh.md)
+# DA Qwen Image Edit 节点说明
+[English](qwen_image_edit.md) | [中文文档](qwen_image_edit_zh.md)
 
 ## 1. 基本示意
 
-### 基础文生图 (Basic T2I)
-最简单的使用方式：配置完成后，输入提示词即可生成图片。
+### 基础图像编辑 (Single I2I)
+支持图像编辑与重绘。将输入图像连接至 `images` 端口，并提供提示词以引导编辑过程。
 
-<img src="../assets/qwen_image_single_t2v.jpg" width="80%" />
+<img src="../assets/qwen_image_edit_single_i2i.jpg" width="80%" />
 
-### 批量文生图：搭配 Qwen LLM
-利用 **DA Qwen LLM** 批量生成创意提示词，实现自动化连续生成。
-[Qwen LLM 节点说明](../text/qwen_llm.md)
-
-<img src="../assets/qwen_image_multi_llm_t2v.jpg" width="80%" />
-
-### 批量文生图：搭配 Feishu 多维表格
-利用 **DA Feishu Load** 读取表格中的提示词，实现全自动化的批量生产。
+### 批量图像编辑：搭配 Feishu 多维表格
+利用 **DA Feishu Load** 读取表格中的提示词与图片链接，实现全自动化的批量图像编辑。
 [Feishu 节点说明](../tools/feishu.md)
 
-<img src="../assets/qwen_image_multi_feishu_t2v.jpg" width="80%" />
+<img src="../assets/flux2_feishu_table.jpg" width="80%" />
+<img src="../assets/qwen_image_edit_multi_i2i.jpg" width="80%" />
 
 ## 2. 节点配置说明
 
-**DA Qwen Image Config** 节点用于管理 Qwen Image 模型的参数配置。
+**DA Qwen Image Edit Config** 节点用于管理 Qwen Image Edit 模型的参数配置。
 > Global Config (全局配置): 搭配 [Global Config](../tools/global_config.md) 节点使用，用来管理运行时的显存控制。
 
-<img src="../assets/qwen_image_config.jpg" width="80%" />
+<img src="../assets/qwen_image_edit_config.jpg" width="80%" />
 
 | 参数名 | 默认值 | 说明 |
 | :--- | :--- | :--- |
 | text_encoder_model | Qwen 2.5 VL | Qwen VL 文本编码器 (FP8)。 |
-| vae_model | Qwen VAE | Qwen Image 专用 VAE 模型。 |
-| diffusion_model | Qwen Image | Qwen Image 核心扩散模型 (FP8)。 |
-| steps | 5 | 采样步数。默认为 5 步。 |
+| vae_model | Qwen VAE | Qwen 专用 VAE 模型。 |
+| diffusion_model | Qwen Image Edit | Qwen Image Edit 核心扩散模型。 |
+| steps | 20 | 采样步数。默认为 20 步。 |
 | batch_size | 1 | 单次生成的图片数量。 |
-| cfg | 1.0 | 提示词引导系数。默认为 1.0 (Lightning LoRA)。 |
-| shift | 3.10 | 采样偏移参数。默认为 3.10。 |
-| sampler | euler | 采样算法。推荐使用 euler。 |
-| scheduler | simple | 噪声调度器。推荐使用 simple。 |
+| cfg | 1.0 | 提示词引导系数。 |
+| guide_scale | 4.0 | 编辑引导系数。 |
+| sampler | euler | 采样算法。 |
+| scheduler | simple | 噪声调度器。 |
 | negative_prompt | (默认负面词) | 负面提示词，配置节点内置了针对性的通用负面词。 |
 | easycache | - | 开启模型缓存，显著提升连续生成的响应速度。 |
 | loras | - | 选择加载 LoRA 模型。 |
 
+**DA Qwen Image Edit (生成节点)**
+需要连接 **prompts** (提示词) 和 **pixels** (像素图像) 输入。
 
 ## 3. 环境依赖
 **无特殊依赖**。安装 **ComfyUI-DALab** 插件即可直接使用。
@@ -54,7 +51,7 @@
 
 | 模型版本 | 说明 | 下载地址 |
 | :--- | :--- | :--- |
-| **Qwen Image** | Qwen Image 扩散模型 | [下载](https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/tree/main/split_files/diffusion_models) |
+| **Qwen Image Edit** | Qwen 图像编辑扩散模型 | [下载](https://huggingface.co/Comfy-Org/Qwen-Image-Edit_ComfyUI/tree/main/split_files/diffusion_models) |
 
 #### 2. Text Encoder (VL)
 存放路径: `models/text_encoders/`
@@ -76,3 +73,4 @@
 | 模型版本 | 说明 | 下载地址 |
 | :--- | :--- | :--- |
 | **Lightx2v** | 加速 LoRA | [下载](https://huggingface.co/lightx2v/Qwen-Image-Lightning/tree/main) |
+| **Multiple Angles** | 多视角生成 LoRA | [下载](https://huggingface.co/fal/Qwen-Image-Edit-2511-Multiple-Angles-LoRA) |

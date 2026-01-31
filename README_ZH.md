@@ -39,8 +39,8 @@ pip install -r requirements.txt
 | **Flux.1** | Black Forest Labs 旗舰级文生图模型，支持 Dev/Schnell | [使用说明](docs/image/flux1.md) |
 | **Flux.2** | Flux 系列升级版本，提供更强的细节生成能力 | [使用说明](docs/image/flux2.md) |
 | **Flux2 Klein** | Flux2 模型的量化/蒸馏优化版 | [使用说明](docs/image/flux2_klein.md) |
-| **Qwen Image** | 阿里通义千问 Qwen 文生图模型，支持多分辨率生成 | [使用说明](docs/image/qwen_image.md) |
-| **Qwen Edit** | 阿里通义千问 Qwen 图像编辑模型，支持重绘与修改 | [使用说明](docs/image/qwen_image_edit.md) |
+| **Qwen Image** | Qwen Image 文生图模型，支持多分辨率生成 | [使用说明](docs/image/qwen_image.md) |
+| **Qwen Image Edit** | Qwen Image Edit 图像编辑模型，支持重绘与修改 | [使用说明](docs/image/qwen_image_edit.md) |
 | **ZImage** | 阿里通义实验室开源的 6B 参数高效文生图模型 | [使用说明](docs/image/zimage.md) |
 
 ### 2. 视频生成
