@@ -42,9 +42,6 @@ Use **DA Feishu Load** to read prompts from a table for fully automated batch ge
 | easycache | - | Enable model caching to significantly speed up continuous generation. |
 | loras | - | Select LoRA models. |
 
-**DA Qwen Image (Generation Node)**
-Only supports **prompts** list input for batch text-to-image generation.
-
 ## 3. Environment Dependencies
 **No special dependencies**. Just install **ComfyUI-DALab** extension to use.
 
