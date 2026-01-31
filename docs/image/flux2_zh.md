@@ -36,6 +36,8 @@
 **DA Flux2 Config** 节点用于管理 Flux.2 模型的参数配置。
 > Global Config (全局配置): 搭配 [Global Config](../tools/global_config.md) 节点使用，用来管理运行时的显存控制。
 
+<img src="../assets/flux2_config.jpg" width="80%" />
+
 | 参数名 | 默认值 | 说明 |
 | :--- | :--- | :--- |
 | text_encoder_model | Mistral Small | Flux2 文本编码器 (Mistral)。 |

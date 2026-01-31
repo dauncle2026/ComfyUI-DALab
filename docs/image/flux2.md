@@ -36,6 +36,8 @@ Use **DA Feishu Load** to read prompts and image URLs from a table for fully aut
 **DA Flux2 Config** node manages parameters for the Flux.2 model.
 > Global Config: Use with [Global Config](../tools/global_config.md) node to manage runtime VRAM control.
 
+<img src="../assets/flux2_config.jpg" width="80%" />
+
 | Parameter | Default | Description |
 | :--- | :--- | :--- |
 | text_encoder_model | Mistral Small | Flux2 Text Encoder (Mistral). |
