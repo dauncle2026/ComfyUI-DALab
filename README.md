@@ -5,24 +5,13 @@
 
 [English](README.md) | [中文文档](README_ZH.md)
 
-**—— Da Uncle's ComfyUI Toolkit**
+ComfyUI-DALab is a collection of ComfyUI nodes focused on improving production efficiency.
 
-ComfyUI-DALab is a collection of ComfyUI nodes focused on improving production efficiency. Its core aim is to encapsulate complex underlying operations and tedious logic flows into concise and easy-to-use single nodes, significantly simplifying the wiring complexity of workflows and thereby improving ComfyUI production efficiency. In addition, this collection integrates support for cutting-edge AI generation models, covering image, video, and audio generation, along with practical productivity tools.
+By encapsulating complex underlying operations and tedious logic flows into concise and easy-to-use single nodes, it significantly simplifies workflow complexity.
 
 ## Version History
 
-*   **v0.0.3** (Jan 2026)
-    *   **Initial Release**: First version launched, including 40+ high-efficiency encapsulated nodes.
-    *   **Core Support**: Comprehensive support for Flux, Qwen, Z-Image image generation; Wan 2.2 video generation; and IndexTTS, CosyVoice, VoxCPM audio cloning.
-    *   **Workflow Integration**: Built-in Feishu (Lark) connector for automated productivity workflows.
-
-## Key Features
-
-*   **Image Generation**: Deep integration of top text-to-image models like **Flux.1 / Flux.2**, **Qwen-VL**, **Z-Image**, supporting LoRA and advanced controls.
-*   **Video Creation**: Supports the full **Wan2.2 (Wanxiang)** series (Text-to-Video, Image-to-Video, Video-to-Video, Image Animation), as well as **LTX-Video** and **InfiniteTalk** digital human generation.
-*   **Audio Cloning**: Integrates high-definition speech synthesis and cloning models like **CosyVoice 3**, **VoxCPM 1.5**, **IndexTTS 2**.
-*   **Vision Tools**: Provides visual analysis tools such as **Florence 2** (Image Captioning), **SAM 2** (Automatic Segmentation), and **DWPose** (Pose Detection).
-*   **Productivity Integration**: Exclusive support for **Feishu (Lark)** integration, enabling reading prompts directly from Feishu multidimensional tables or uploading generation results to Feishu.
+*   **v0.0.3** (Jan 2026): First release, including 20+ high-efficiency encapsulated nodes.
 
 ## Installation
 
@@ -49,7 +38,7 @@ pip install -r requirements.txt
 | :--- | :--- | :--- |
 | **Flux.1** | Black Forest Labs flagship T2I model, supporting Dev/Schnell | [Usage](docs/image/flux1.md) |
 | **Flux.2** | Upgraded Flux series version, providing stronger detail generation capabilities | [Usage](docs/image/flux2.md) |
-| **Flux Klein** | Quantized/distilled optimized version of Flux model, usable with only 4GB VRAM | [Usage](docs/image/flux2_klein.md) |
+| **Flux2 Klein** | Quantized/distilled optimized version of Flux2 model | [Usage](docs/image/flux2_klein.md) |
 | **Qwen Image** | Alibaba Tongyi Qwen T2I model, supporting multi-resolution generation | [Usage](docs/image/qwen_image.md) |
 | **Qwen Edit** | Alibaba Tongyi Qwen image editing model, supporting repainting and modification | [Usage](docs/image/qwen_image_edit.md) |
 | **ZImage** | Alibaba Tongyi Lab open-source 6B parameter efficient T2I model | [Usage](docs/image/zimage.md) |

@@ -1,8 +1,8 @@
 {
   "id": "dcfd3de7-4e3b-48af-837d-2b95d5ff3cd7",
   "revision": 0,
-  "last_node_id": 30,
-  "last_link_id": 19,
+  "last_node_id": 33,
+  "last_link_id": 22,
   "nodes": [
     {
       "id": 8,
@@ -16,7 +16,7 @@
         200
       ],
       "flags": {},
-      "order": 5,
+      "order": 4,
       "mode": 0,
       "inputs": [
         {
@@ -50,18 +50,200 @@
       ]
     },
     {
-      "id": 18,
-      "type": "DAFeishuLoad",
+      "id": 5,
+      "type": "DAQwenLLM",
       "pos": [
-        3960.746961752709,
-        9173.470151472595
+        3978.0793215300823,
+        8278.602304927463
       ],
       "size": [
-        349.22455490401717,
-        228.62826265267358
+        401.97669010077243,
+        676
       ],
       "flags": {},
       "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "en_prompts",
+          "shape": 6,
+          "type": "STRING",
+          "links": [
+            5
+          ]
+        },
+        {
+          "name": "zh_prompts",
+          "shape": 6,
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DAQwenLLM",
+        "savedPrompts": [
+          {
+            "zh_prompt": "一位中年非洲裔男性，身穿深蓝色工装夹克与磨损牛仔裤，站在清晨雾气弥漫的旧金山码头，手持一杯热咖啡，胡茬清晰，皮肤纹理真实，眼神沉静而睿智，背景有模糊的货轮与冷色调晨光， cinematic lighting, volumetric fog, ultra-detailed skin pores and fabric weave, 8k, masterpiece",
+            "en_prompt": "A middle-aged Black man in a navy blue work jacket and worn denim jeans, standing on the misty early-morning pier of San Francisco, holding a steaming mug of coffee; visible stubble, realistic skin texture with subsurface scattering, calm and intelligent gaze; background features softly blurred cargo ships and cool-toned dawn light; cinematic lighting, volumetric fog, macro skin detail, intricate fabric texture, 8k, photorealistic, masterpiece"
+          },
+          {
+            "zh_prompt": "一位东亚年轻女性，扎低马尾，穿着米白色高领羊绒衫与玳瑁框眼镜，坐在东京老式咖啡馆木质窗边，手捧翻开的日文诗集，窗外飘着细雨，玻璃上凝结水珠，柔焦背景中可见暖黄灯光与书架，强调丝绸质感、湿润睫毛与纸张纤维细节， wide angle, shallow depth of field, 8k, cinematic lighting",
+            "en_prompt": "A young East Asian woman with a low ponytail, wearing an off-white cashmere turtleneck and tortoiseshell glasses, seated by a wooden window in a vintage Tokyo café, holding an open Japanese poetry book; rain streaks gently outside the glass, condensation droplets visible on the pane; warm ambient light from within reflects softly on her lenses; emphasis on silk fabric sheen, wet eyelashes, paper fiber texture, shallow depth of field, wide-angle composition, cinematic lighting, 8k, photorealistic, masterpiece"
+          },
+          {
+            "zh_prompt": "一位拉丁裔老年女性，银白卷发盘成松散发髻，佩戴手工银耳环与靛蓝刺绣围巾，双手布满岁月痕迹却灵巧地编织彩色羊毛线，坐在墨西哥瓦哈卡阳光斑驳的泥土地院中，背景是赭石色土坯墙与悬挂的干辣椒串，光影强烈对比，皮肤皱纹与毛线绒感极致写实， volumetric sunlight, macro hand detail, 8k, textured realism",
+            "en_prompt": "An elderly Latina woman with silver curly hair pinned loosely, wearing handcrafted silver earrings and an indigo-embroidered shawl, her weathered yet dexterous hands weaving vibrant wool yarn; seated in a sun-dappled earthen courtyard in Oaxaca, Mexico; adobe wall in burnt sienna and strings of dried chili peppers in background; dramatic chiaroscuro lighting, extreme macro focus on wrinkled hands and wool fiber texture, volumetric sunlight rays, rich material authenticity, 8k, photorealistic, masterpiece"
+          },
+          {
+            "zh_prompt": "一位北欧青年男性，浅金短发、冰蓝色眼睛，身着功能性灰黑户外羽绒服与防风镜，站在挪威特罗姆瑟雪原边缘，呼出白气，睫毛挂霜，远处极光微泛绿紫辉光，雪粒在逆光中悬浮如星尘，面部冻红质感、织物压痕与雪晶微观结构纤毫毕现， wide angle landscape framing, cinematic lighting, 8k, ultra-detailed texture",
+            "en_prompt": "A young Nordic man with short blond hair and icy blue eyes, wearing a technical gray-black insulated down jacket and windproof goggles, standing at the edge of a snowfield near Tromsø, Norway; visible breath vapor and frost on his lashes; faint aurora borealis glowing in green-purple hues on the distant horizon; suspended snow crystals catching backlight like stardust; hyperrealistic rendering of wind-chapped facial skin, fabric compression folds, individual snowflake geometry; wide-angle landscape composition, cinematic lighting, volumetric atmosphere, 8k, photorealistic, masterpiece"
+          }
+        ],
+        "savedWidgetHeight": 420
+      },
+      "widgets_values": [
+        "qwen-plus",
+        "image",
+        4,
+        "生成4个不同的角色，写实人物",
+        969651943854637,
+        "fixed",
+        true,
+        null
+      ]
+    },
+    {
+      "id": 7,
+      "type": "DASaveImage",
+      "pos": [
+        5016.968908472663,
+        8209.46335482276
+      ],
+      "size": [
+        859.0773254000314,
+        572.6800683251768
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 6
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DASaveImage"
+      },
+      "widgets_values": [
+        "no",
+        "ComfyUI"
+      ]
+    },
+    {
+      "id": 1,
+      "type": "DAFlux1",
+      "pos": [
+        4488.741037071828,
+        7457.492709947937
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "images",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": [
+            2
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DAFlux1"
+      },
+      "widgets_values": [
+        1280,
+        720,
+        "A young East Asian woman with a low ponytail, wearing an off-white cashmere turtleneck and tortoiseshell glasses, seated by a wooden window in a vintage Tokyo café, holding an open Japanese poetry book; rain streaks gently outside the glass, condensation droplets visible on the pane; warm ambient light from within reflects softly on her lenses; emphasis on silk fabric sheen, wet eyelashes, paper fiber texture, shallow depth of field, wide-angle composition, cinematic lighting, 8k, photorealistic, masterpiece",
+        813368518142658,
+        "fixed"
+      ]
+    },
+    {
+      "id": 11,
+      "type": "DAFlux1",
+      "pos": [
+        4506.355896175694,
+        9102.955202670692
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "prompts",
+          "type": "STRING",
+          "widget": {
+            "name": "prompts"
+          },
+          "link": 20
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": [
+            8
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DAFlux1"
+      },
+      "widgets_values": [
+        1280,
+        720,
+        "A beautiful girl",
+        571014901072072,
+        "fixed"
+      ]
+    },
+    {
+      "id": 32,
+      "type": "DAFeishuLoad",
+      "pos": [
+        4086.377777798497,
+        9175.052134561818
+      ],
+      "size": [
+        270,
+        226
+      ],
+      "flags": {},
+      "order": 2,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -70,7 +252,7 @@
           "shape": 6,
           "type": "STRING",
           "links": [
-            16
+            20
           ]
         },
         {
@@ -102,14 +284,14 @@
           "shape": 6,
           "type": "FEISHU_RECORD_IDS",
           "links": [
-            17
+            21
           ]
         },
         {
           "name": "feishu_config",
           "type": "FEISHU_CONFIG",
           "links": [
-            18
+            22
           ]
         }
       ],
@@ -117,61 +299,24 @@
         "Node name for S&R": "DAFeishuLoad"
       },
       "widgets_values": [
-        "V8XSbj2xuaWpiHsp4bkce7mqnhc",
-        "tblmQJQ6SSg4ObCz",
-        "vewmUA0kef"
-      ]
-    },
-    {
-      "id": 7,
-      "type": "DASaveImage",
-      "pos": [
-        5032.83200144438,
-        8211.02487803716
-      ],
-      "size": [
-        337.5161787479901,
-        82
-      ],
-      "flags": {},
-      "order": 8,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 6
-        }
-      ],
-      "outputs": [
-        {
-          "name": "images",
-          "shape": 6,
-          "type": "IMAGE",
-          "links": []
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "DASaveImage"
-      },
-      "widgets_values": [
-        "no",
-        "ComfyUI"
+        "FBGHbi7JgaUFuwssROWcvEUkn9f",
+        "tblGzCUdzm6j6muQ",
+        "vewyfJvQjU"
       ]
     },
     {
       "id": 10,
       "type": "DASaveImage",
       "pos": [
-        5060.204573070733,
-        9102.83715221925
+        5015.531442685754,
+        9100.286543984552
       ],
       "size": [
-        337.349609375,
-        146
+        858.5230894019251,
+        633.0333390815176
       ],
       "flags": {},
-      "order": 7,
+      "order": 8,
       "mode": 0,
       "inputs": [
         {
@@ -183,13 +328,13 @@
           "label": "feishu_record_ids",
           "name": "save_to_feishu.feishu_record_ids",
           "type": "FEISHU_RECORD_IDS",
-          "link": 17
+          "link": 21
         },
         {
           "label": "feishu_config",
           "name": "save_to_feishu.feishu_config",
           "type": "FEISHU_CONFIG",
-          "link": 18
+          "link": 22
         }
       ],
       "outputs": [
@@ -213,15 +358,15 @@
       "id": 29,
       "type": "DAFlux1Config",
       "pos": [
-        3594.188822119922,
-        7588.590502410655
+        3759.2219970161236,
+        7462.068703615709
       ],
       "size": [
         599.9406686010461,
         370
       ],
       "flags": {},
-      "order": 1,
+      "order": 3,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -246,159 +391,18 @@
       ]
     },
     {
-      "id": 11,
-      "type": "DAFlux1",
-      "pos": [
-        4518.420521963167,
-        9103.686392112355
-      ],
-      "size": [
-        400,
-        200
-      ],
-      "flags": {},
-      "order": 4,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "prompts",
-          "type": "STRING",
-          "widget": {
-            "name": "prompts"
-          },
-          "link": 16
-        }
-      ],
-      "outputs": [
-        {
-          "name": "images",
-          "shape": 6,
-          "type": "IMAGE",
-          "links": [
-            8
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "DAFlux1"
-      },
-      "widgets_values": [
-        1224,
-        720,
-        "A beautiful girl",
-        571014901072072,
-        "fixed"
-      ]
-    },
-    {
-      "id": 5,
-      "type": "DAQwenLLM",
-      "pos": [
-        3921.777734521879,
-        8279.494603907124
-      ],
-      "size": [
-        400,
-        676
-      ],
-      "flags": {},
-      "order": 2,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "en_prompts",
-          "shape": 6,
-          "type": "STRING",
-          "links": [
-            5
-          ]
-        },
-        {
-          "name": "zh_prompts",
-          "shape": 6,
-          "type": "STRING",
-          "links": null
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "DAQwenLLM",
-        "savedPrompts": [
-          {
-            "zh_prompt": "一位中年阿拉伯男性，深褐色皮肤，浓密灰白胡须，穿着手工刺绣的米白色长袍，站在开罗老城黄昏的斑驳石巷中，侧光勾勒出皱纹与织物纹理，眼神沉静而睿智，背景虚化呈现模糊的拱门与铜灯轮廓，写实风格，电影级布光，体积光穿透尘埃，8K超高清，大师级肖像",
-            "en_prompt": "A realistic portrait of a middle-aged Arab man with deep brown skin and thick salt-and-pepper beard, wearing a hand-embroidered ivory thobe, standing in a weathered stone alley in historic Cairo at golden hour; cinematic side lighting accentuates facial wrinkles and textile texture; his gaze is calm and wise; shallow depth of field blurs background arches and antique brass lanterns; photorealistic, volumetric lighting with visible dust particles, ultra-detailed skin pores and fabric weave, 8k resolution, masterpiece, medium close-up"
-          },
-          {
-            "zh_prompt": "一位年轻东亚女性科学家，黑发扎成利落低马尾，佩戴无框眼镜，身穿浅灰实验服，正俯身观察全息显微镜投影，蓝白冷光映在她专注的面庞与金属托架上，背景为洁净现代实验室，玻璃幕墙外透入柔和阴天自然光，皮肤细腻、发丝分明、镜片反光精准，写实主义，微距细节强化，8K超精细渲染",
-            "en_prompt": "A realistic portrait of a young East Asian female scientist with sleek black hair in a low bun and thin-rimless glasses, wearing a light-gray lab coat, leaning over a holographic microscope display; cool blue-white interface light reflects precisely on her focused face and metallic stand; background: minimalist modern lab with frosted glass walls diffusing soft overcast daylight; hyper-detailed skin texture, individual eyelashes, subsurface scattering on ears, accurate lens reflections, macro-level clarity on fabric weave and micro-display glyphs, 8k, photorealistic, cinematic volumetric lighting, masterpiece"
-          },
-          {
-            "zh_prompt": "一位非裔老年女性手工艺人，银白卷发盘于头顶，戴琥珀色圆框眼镜，双手布满岁月痕迹却灵巧地编织彩色羊毛线，特写镜头聚焦指尖缠绕的毛线与木质织机纹理，暖光从左上方斜射，凸显皱纹走向、棉麻围裙褶皱与羊毛纤维绒感，背景为阿巴拉契亚山区木屋工作间，柔和虚化展现工具墙与干花束，写实静帧，电影感光影，8K质感大师作",
-            "en_prompt": "A hyperrealistic close-up portrait of an elderly Black female artisan with silver curly hair pinned atop her head and amber-rimmed round glasses, her weathered yet dexterous hands weaving vibrant wool yarn on a hand-carved wooden loom; warm directional key light from upper left emphasizes skin topography, linen apron folds, and wool fiber fuzz; background: softly blurred Appalachian mountain cabin workshop with tool rack and dried flower bundles; ultra-sharp focus on fingertips, yarn twist, wood grain, and lens glare; cinematic chiaroscuro, subsurface scattering, 8k resolution, tactile texture emphasis, masterpiece, photorealistic"
-          }
-        ],
-        "savedWidgetHeight": 420
-      },
-      "widgets_values": [
-        "qwen-plus",
-        "image",
-        3,
-        "生成3个不同的角色，写实人物",
-        969651943854637,
-        "fixed",
-        true,
-        null
-      ]
-    },
-    {
-      "id": 1,
-      "type": "DAFlux1",
-      "pos": [
-        4486.109932420765,
-        7731.893235755145
-      ],
-      "size": [
-        400,
-        200
-      ],
-      "flags": {},
-      "order": 3,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "images",
-          "shape": 6,
-          "type": "IMAGE",
-          "links": [
-            2
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "DAFlux1"
-      },
-      "widgets_values": [
-        1280,
-        720,
-        "Surreal cover design. A massive explosion of colorful particles, abstract shapes, liquid paint, and digital artifacts blossoming outwards. In the center of the chaos, the bold text \"DALab Flux1\" is solidified, made of polished chrome reflecting the colorful explosion. Dreamlike, ethereal, highly detailed digital art, 3D render.",
-        813368518142658,
-        "fixed"
-      ]
-    },
-    {
       "id": 4,
       "type": "DASaveImage",
       "pos": [
-        5016.766577334831,
-        7731.044724385833
+        4997.095226676177,
+        7455.399565432415
       ],
       "size": [
-        337.349609375,
-        294
+        832.4763987546448,
+        608.4610320814754
       ],
       "flags": {},
-      "order": 6,
+      "order": 5,
       "mode": 0,
       "inputs": [
         {
@@ -458,24 +462,24 @@
       "IMAGE"
     ],
     [
-      16,
-      18,
+      20,
+      32,
       0,
       11,
       0,
       "STRING"
     ],
     [
-      17,
-      18,
+      21,
+      32,
       5,
       10,
       1,
       "FEISHU_RECORD_IDS"
     ],
     [
-      18,
-      18,
+      22,
+      32,
       6,
       10,
       2,
@@ -487,10 +491,10 @@
   "extra": {
     "workflowRendererVersion": "LG",
     "ds": {
-      "scale": 0.5730855330116891,
+      "scale": 0.47362440744767687,
       "offset": [
-        -2979.1434803352226,
-        -7213.729639335971
+        -3082.3196344004245,
+        -6853.327335920263
       ]
     },
     "frontendVersion": "1.37.11"
