@@ -18,6 +18,7 @@
 利用 **DA Feishu Load** 读取表格中的提示词，实现全自动化的批量生产。
 [Feishu 节点说明](../tools/feishu.md)
 
+<img src="../assets/flux1_feishu_table.jpg" width="80%" />
 <img src="../assets/qwen_image_multi_feishu_t2v.jpg" width="80%" />
 
 ## 2. 节点配置说明

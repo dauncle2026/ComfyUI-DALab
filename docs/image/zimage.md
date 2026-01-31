@@ -18,6 +18,7 @@ Use **DA Qwen LLM** to generate creative prompts in batch for automated continuo
 Use **DA Feishu Load** to read prompts from a table for fully automated batch generation.
 [Feishu Node Usage](../tools/feishu.md)
 
+<img src="../assets/flux1_feishu_table.jpg" width="80%" />
 <img src="../assets/zimage_multi_feishu_t2v.jpg" width="80%" />
 
 ## 2. Configuration Setup
