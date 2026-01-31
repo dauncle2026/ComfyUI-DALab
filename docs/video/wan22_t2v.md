@@ -65,19 +65,26 @@ Path: `models/diffusion_models/`
 
 | Version | Description | Download |
 | :--- | :--- | :--- |
-| **High Noise 14B** | Wan 2.2 High Noise Model (14B) | [Pending Update] |
-| **Low Noise 14B** | Wan 2.2 Low Noise Model (14B) | [Pending Update] |
+| **High Noise 14B** | Wan 2.2 High Noise Model (14B) | [Download](https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/tree/main/split_files/diffusion_models) |
+| **Low Noise 14B** | Wan 2.2 Low Noise Model (14B) | [Download](https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/tree/main/split_files/diffusion_models) |
 
 #### 2. Text Encoder (UMT5)
 Path: `models/text_encoders/`
 
 | Version | Description | Download |
 | :--- | :--- | :--- |
-| **UMT5 XXL** | Wan T5 Text Encoder | [Pending Update] |
+| **UMT5 XXL** | Wan T5 Text Encoder | [Download](https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/tree/main/split_files/text_encoders) |
 
 #### 3. VAE Model
 Path: `models/vae/`
 
 | Version | Description | Download |
 | :--- | :--- | :--- |
-| **Wan 2.1 VAE** | Wan VAE Model | [Pending Update] |
+| **Wan 2.1 VAE** | Wan VAE Model | [Download](https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/tree/main/split_files/vae) |
+
+#### 4. LoRA Model (Optional)
+Path: `models/loras/`
+
+| Version | Description | Download |
+| :--- | :--- | :--- |
+| **Lightx2v** | Acceleration LoRA | [Download](https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/tree/main/split_files/loras) |

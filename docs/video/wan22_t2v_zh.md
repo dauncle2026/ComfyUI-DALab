@@ -65,19 +65,26 @@
 
 | 模型版本 | 说明 | 下载地址 |
 | :--- | :--- | :--- |
-| **High Noise 14B** | Wan 2.2 High Noise 模型 (14B) | [待更新] |
-| **Low Noise 14B** | Wan 2.2 Low Noise 模型 (14B) | [待更新] |
+| **High Noise 14B** | Wan 2.2 High Noise 模型 (14B) | [下载](https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/tree/main/split_files/diffusion_models) |
+| **Low Noise 14B** | Wan 2.2 Low Noise 模型 (14B) | [下载](https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/tree/main/split_files/diffusion_models) |
 
 #### 2. Text Encoder (UMT5)
 存放路径: `models/text_encoders/`
 
 | 模型版本 | 说明 | 下载地址 |
 | :--- | :--- | :--- |
-| **UMT5 XXL** | Wan T5 文本编码器 | [待更新] |
+| **UMT5 XXL** | Wan T5 文本编码器 | [下载](https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/tree/main/split_files/text_encoders) |
 
 #### 3. VAE 模型
 存放路径: `models/vae/`
 
 | 模型版本 | 说明 | 下载地址 |
 | :--- | :--- | :--- |
-| **Wan 2.1 VAE** | Wan VAE 模型 | [待更新] |
+| **Wan 2.1 VAE** | Wan VAE 模型 | [下载](https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/tree/main/split_files/vae) |
+
+#### 4. LoRA 模型 (可选)
+存放路径: `models/loras/`
+
+| 模型版本 | 说明 | 下载地址 |
+| :--- | :--- | :--- |
+| **Lightx2v** | 加速 LoRA | [下载](https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/tree/main/split_files/loras) |
