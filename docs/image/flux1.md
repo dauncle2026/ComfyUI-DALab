@@ -1,4 +1,4 @@
-# DA Flux1 节点
+# DA Flux1 节点说明
 
 ## 1. 基本示意
 
@@ -9,13 +9,13 @@
 
 ### 批量生成：搭配 Qwen LLM
 利用 **DA Qwen LLM** 节点批量生成创意提示词，实现自动连播。
-[Qwen LLM 使用说明](../text/qwen_llm.md)
+[Qwen LLM 节点说明](../text/qwen_llm.md)
 
 <img src="../assets/flux1_list_llm.jpg" width="80%" />
 
 ### 批量生成：搭配 Feishu 多维表格
 利用 **DA Feishu Load** 读取云端表格内容，实现自动化生产流。
-[Feishu 飞书集成说明](../tools/feishu.md)
+[Feishu 节点说明](../tools/feishu.md)
 
 <img src="../assets/flux1_feishu_table.jpg" width="80%" />
 <img src="../assets/flux1_list_feishu.jpg" width="80%" />
@@ -23,7 +23,7 @@
 
 ## 2. 节点配置说明
 
-**DA Flux1 Config** 节点用于管理模型路径与采样参数。
+**DA Flux1 Config** 节点用于管理模型路径与采样参数，只需要配置一次，后续直接复用即可。
 > Global Config (全局配置): 搭配 [Global Config](../tools/global_config.md) 节点使用，用来管理运行时的显存控制。
 
 <img src="../assets/flux1_config.jpg" width="80%" />
