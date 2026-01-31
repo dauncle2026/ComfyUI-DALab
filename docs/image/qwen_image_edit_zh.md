@@ -27,18 +27,19 @@
 | text_encoder_model | Qwen 2.5 VL | Qwen VL 文本编码器 (FP8)。 |
 | vae_model | Qwen VAE | Qwen 专用 VAE 模型。 |
 | diffusion_model | Qwen Image Edit | Qwen Image Edit 核心扩散模型。 |
-| steps | 20 | 采样步数。默认为 20 步。 |
+| steps | 4 | 采样步数。默认为 4 步。 |
 | batch_size | 1 | 单次生成的图片数量。 |
 | cfg | 1.0 | 提示词引导系数。 |
-| guide_scale | 4.0 | 编辑引导系数。 |
+| shift | 3.10 | 采样偏移参数。默认为 3.10。 |
+| cfg_norm_strength | 1.0 | CFG 归一化强度。默认为 1.0。 |
 | sampler | euler | 采样算法。 |
 | scheduler | simple | 噪声调度器。 |
-| negative_prompt | (默认负面词) | 负面提示词，配置节点内置了针对性的通用负面词。 |
+| negative_prompt | - | 负面提示词。默认为空。 |
 | easycache | - | 开启模型缓存，显著提升连续生成的响应速度。 |
 | loras | - | 选择加载 LoRA 模型。 |
 
 **DA Qwen Image Edit (生成节点)**
-需要连接 **prompts** (提示词) 和 **pixels** (像素图像) 输入。
+需要连接 **prompts** (提示词) 和 **images** (像素图像) 输入。
 
 ## 3. 环境依赖
 **无特殊依赖**。安装 **ComfyUI-DALab** 插件即可直接使用。

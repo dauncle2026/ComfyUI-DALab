@@ -27,18 +27,19 @@ Use **DA Feishu Load** to read prompts and image URLs from a table for fully aut
 | text_encoder_model | Qwen 2.5 VL | Qwen VL Text Encoder (FP8). |
 | vae_model | Qwen VAE | Qwen dedicated VAE model. |
 | diffusion_model | Qwen Image Edit | Qwen Image Edit Core Diffusion Model. |
-| steps | 20 | Sampling steps. Default is 20. |
+| steps | 4 | Sampling steps. Default is 4. |
 | batch_size | 1 | Number of images per generation. |
 | cfg | 1.0 | CFG Scale. |
-| guide_scale | 4.0 | Guidance scale for editing. |
+| shift | 3.10 | Model sampling shift parameter. Default is 3.10. |
+| cfg_norm_strength | 1.0 | CFG Norm Strength. Default is 1.0. |
 | sampler | euler | Sampling algorithm. |
 | scheduler | simple | Noise scheduler. |
-| negative_prompt | (Default) | Built-in general negative prompts. |
+| negative_prompt | - | Negative prompt. Default is empty. |
 | easycache | - | Enable model caching to significantly speed up continuous generation. |
 | loras | - | Select LoRA models. |
 
 **DA Qwen Image Edit (Generation Node)**
-Requires both **prompts** and **pixels** (image) input.
+Requires both **prompts** and **images** (image) input.
 
 ## 3. Environment Dependencies
 **No special dependencies**. Just install **ComfyUI-DALab** extension to use.
