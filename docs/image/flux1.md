@@ -1,4 +1,4 @@
-# Flux.1 集成节点
+# DA Flux1 节点
 
 ## 1. 基本示意
 
@@ -34,9 +34,9 @@
 | t5_model | t5xxl_fp8... | T5 文本编码器，推荐使用 FP8 版本以节省显存。 |
 | vae_model | flux1-vae.safetensors | 图像解码 VAE 模型。 |
 | diffusion_model | flux1-dev-fp8.safetensors | Flux 核心扩散模型 (Transformer)。 |
-| steps | 20 | 采样步数。Dev 模型推荐 20-30 步，Schnell 模型 4 步即可。 |
+| steps | 20 | 采样步数。Dev 模型推荐 20-30 步。 |
 | batch_size | 1 | 单次生成的图片数量。 |
-| guidance | 3.5 | 提示词引导系数。Flux Dev 推荐 3.5，Schnell 推荐 1.0 (或更低)。 |
+| guidance | 3.5 | 提示词引导系数。Flux Dev 推荐 3.5。 |
 | sampler | euler | 采样算法。推荐使用 euler。 |
 | scheduler | simple | 噪声调度器。推荐使用 simple。 |
 | easycache | - | 开启模型缓存，显著提升连续生成的响应速度。 |
