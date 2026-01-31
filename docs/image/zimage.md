@@ -38,7 +38,6 @@ Use **DA Feishu Load** to read prompts from a table for fully automated batch ge
 | shift | 3.0 | Sampling shift parameter. Default is 3.0. |
 | sampler | res_multistep | Sampling algorithm. 'res_multistep' recommended. |
 | scheduler | simple | Noise scheduler. |
-
 | easycache | - | Enable model caching to significantly speed up continuous generation. |
 | loras | - | Select LoRA models. |
 

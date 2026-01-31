@@ -38,7 +38,6 @@
 | shift | 3.0 | 采样偏移参数。默认为 3.0。 |
 | sampler | res_multistep | 采样算法。推荐使用 res_multistep。 |
 | scheduler | simple | 噪声调度器。 |
-
 | easycache | - | 开启模型缓存，显著提升连续生成的响应速度。 |
 | loras | - | 选择加载 LoRA 模型。 |
 
